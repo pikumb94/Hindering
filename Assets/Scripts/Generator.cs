@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour
         for (float ft = 1f; ft >= 0; ft -= 0.1f)
         {
             GameObject cube= ObjectPoolingManager.Instance.GetObject("Cube");
-            cube.transform.position = new Vector2(0,5);
+            cube.transform.position =new Vector3(Random.Range(-10,10),20, Random.Range(-10, 10)); ;
             yield return new WaitForSeconds(3f);
         }
     }

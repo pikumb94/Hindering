@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\addforce.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\BackgroundScroll.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\EventSystemExample\Script\EventListener1.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\EventSystemExample\Script\EventListener2.cs" />
@@ -326,10 +327,17 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
+<<<<<<< master
       <HintPath>C:/Users/RedFury/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
       <HintPath>C:/Users/RedFury/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+=======
+      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps-Unity5">
+      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+>>>>>>> Added trial scene
     </Reference>
     <Reference Include="KdTreeLib">
       <HintPath>C:/Users/RedFury/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
@@ -338,7 +346,11 @@
       <HintPath>C:/Users/RedFury/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
+<<<<<<< master
       <HintPath>C:/Users/RedFury/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+=======
+      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+>>>>>>> Added trial scene
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

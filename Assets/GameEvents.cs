@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 {public static GameEvents current;
-    public event Action onTimeStop;
+    public event Action onTimeChange;
 
-    public void TimeStop()
+    public void TimeChange()
     {
-        if (onTimeStop != null)
+        if (onTimeChange != null)
         {
-            onTimeStop();
+            onTimeChange();
         }
     }
         private void Awake()

@@ -6,12 +6,13 @@ public class Cube : MonoBehaviour
 {
     public CubeSet cubeSet;
     private Rigidbody rb;
+    private Vector3 velocity;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        GameEvents.current.onTimeStop += switchToKinematic;
+        velocity = new Vector3();
+        GameEvents.current.onTimeChange += switchKinematic;
 //        GameEvents.current.onTimeStop += ;
 
         rb = GetComponent<Rigidbody>();
@@ -24,14 +25,16 @@ public class Cube : MonoBehaviour
             rb.isKinematic = true;
         }
     }
-    private void switchToKinematic()
+    private void switchKinematic()
     {
         if (rb.isKinematic == true)
         {
             rb.isKinematic = false;
+            rb.velocity = velocity;
         }
         else
         {
+            velocity = rb.velocity;
             rb.isKinematic = true;
         }
     }

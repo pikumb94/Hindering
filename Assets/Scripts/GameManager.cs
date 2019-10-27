@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     [Header("Sets handling")]
     public CubeSet cubeSet;
     [Header("Others")]
-
+    private List<Vector3> forceToApply;
     public GameObject objPrefab;
     public int quantity = 1;
     public Transform spawnPosition;
@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-
+        forceToApply = new List<Vector3>();
         FirstLevel();
     }
     private void addCubeToList()
@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
     }
     void timeSwitch()
     {
-        GameEvents.current.TimeStop();
+        GameEvents.current.TimeChange();
         if (time == true)
         {
             time = false;
@@ -58,7 +58,19 @@ public class GameManager : Singleton<GameManager>
         else
         {
             time = true;
+
+
         }
+
+        int count=0;
+
+        foreach (var go in cubeList)
+        {
+            go.GetComponent<Rigidbody>().AddForce(forceToApply[count]);
+            count++;
+
+        }
+
     }
     IEnumerator SpawnObjects()
     {
@@ -89,7 +101,11 @@ public class GameManager : Singleton<GameManager>
             Debug.Log(cubeList.Count);
                foreach (var go in cubeList)
            {
-               go.GetComponent<Rigidbody>().AddForce(0, 600, 0);
+                if (time == false) { forceToApply.Add(new Vector3(0, 600, 0)); }
+                else
+                {
+                    go.GetComponent<Rigidbody>().AddForce(0, 600, 0);
+                }
          }
         }
 

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5a4299d440ec84aaf693a1e813c975, type: 3}
+  m_Name: CubeSet
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: -7344234593551180855, guid: 9af7b52c96103bb4898d9ff1057fc4d7, type: 3}

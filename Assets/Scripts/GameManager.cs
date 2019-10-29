@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,17 +10,19 @@ public class GameManager : Singleton<GameManager>
     public bool time=true;
     [Header("Sets handling")]
     public CubeSet cubeSet;
-    private List<Vector3> forceToApply;
-    [Header("Obj Generator")]
+    [Header("Object Spawner")]
     public GameObject objPrefab;
-    public int times = 1;
-    public int quantity = 1;
+    public int HowManyTimes = 1;
+    public int ObjectQuantity = 1;
     public Transform spawnPosition;
-    private List<GameObject> cubeList = new List<GameObject>();
 
-    // public Screen screen;
+    //qui bisognerebbe fare una classe a parte
+    //private List<GameObject> cubeList = new List<GameObject>(); //lista dei cubi nell ascena
+    //private List<Vector3> forceToApply; // lista di forze da applicare ai cubi nella scena
 
-    // private GameObject _player;
+
+    //sostutisco le due variabili sopra
+    private List<TimeObject> objectsList = new List<TimeObject>();
 
 
     void Awake()
@@ -32,7 +35,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        forceToApply = new List<Vector3>();
+       // forceToApply = new List<Vector3>();
         FirstLevel();
     }
     private void addCubeToList()
@@ -60,13 +63,11 @@ public class GameManager : Singleton<GameManager>
         else
         {
             time = true;
-            int count = 0;
 
-            foreach (var go in cubeList)
+            foreach (var go in objectsList)
             {
-                go.GetComponent<Rigidbody>().AddForce(forceToApply[count]);
-                forceToApply[count] = new Vector3(0, 0, 0);
-                count++;
+                go.applyForce();
+                go.resetForceToApply();
 
             }
 
@@ -78,22 +79,20 @@ public class GameManager : Singleton<GameManager>
     }
     IEnumerator SpawnObjects()
     {
-        for (int j=0; j< times;j++)
+        for (int j=0; j< HowManyTimes;j++)
         {
-            for (int i = 0; i < quantity; i++)
+            for (int i = 0; i < ObjectQuantity; i++)
             {
-                forceToApply.Add(new Vector3(0,0,0));
+               // forceToApply.Add(new Vector3(0,0,0));
+
                 GameObject obj = ObjectPoolingManager.Instance.GetObject(objPrefab.name);
                 Vector3 basePosition = spawnPosition.position;
                 Vector3 CasualAdd = new Vector3(Random.Range(-10, 10), 20, Random.Range(-5, 5));
-
                 obj.transform.position = basePosition + CasualAdd;
                 obj.transform.rotation = Random.rotation;
-                // GameEvents.current.CubeCreation(obj);
-                if (objPrefab.name == "Cube")
-                {
-                    cubeList.Add(obj);
-                }
+             
+                objectsList.Add(new TimeObject(obj));
+
             }
 
             yield return new WaitForSeconds(3f);
@@ -103,17 +102,22 @@ public class GameManager : Singleton<GameManager>
     {
         if (Input.GetKeyDown("z"))
         {
-            int count1 = 0;
-            Debug.Log(cubeList.Count);
-               foreach (var go in cubeList)
+            //int count1 = 0;
+           Debug.Log(objectsList.Count);
+               foreach (var go in objectsList)
            {
                 if (time == false) {
-                    forceToApply[count1] = forceToApply[count1] + new Vector3(0, 600, 0);
-                    count1++;
+                  
+                    go.addForceToApply(new Vector3(0,600,0));
+                    go.stampForcetoApply();
                      }
                 else
                 {
-                    go.GetComponent<Rigidbody>().AddForce(0, 600, 0);
+                    // more correct!:
+                    go.setForceToApply(new Vector3(0, 600, 0));
+                    go.applyForce();
+                    //it's ok
+                   // go.getObject().GetComponent<Rigidbody>().AddForce(0, 600, 0);
                 }
          }
         }
@@ -125,4 +129,42 @@ public class GameManager : Singleton<GameManager>
 
     }
 
+}
+public class TimeObject
+{
+    GameObject Object;
+    Vector3 forceToApply;
+
+    public GameObject getObject()
+    {
+        return Object;
+    }
+    public TimeObject(GameObject c)
+    {
+        Object = c;
+        forceToApply = new Vector3(0, 0, 0);
+    }
+    public void setForceToApply(Vector3 force)
+    {
+        forceToApply = force;
+    }
+    public void addForceToApply(Vector3 force)
+    {
+        forceToApply= forceToApply + force;
+    }
+    public void applyForce()
+    {
+        Object.GetComponent<Rigidbody>().AddForce(0,600,0);
+
+    }
+
+    public void resetForceToApply()
+    {
+        forceToApply = new Vector3(0, 0, 0);
+    }
+
+    public void stampForcetoApply()
+    {
+        Debug.Log(forceToApply.ToString());
+    }
 }

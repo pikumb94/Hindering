@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\addforce.cs" />
+    <Compile Include="Assets\DDOL.cs" />
     <Compile Include="Assets\GameEvents.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\BackgroundScroll.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\EventSystemExample\Script\EventListener1.cs" />
@@ -95,7 +96,8 @@
     <Compile Include="Assets\Scripts\Cube.cs" />
     <Compile Include="Assets\Scripts\CubeSet.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Generator.cs" />
+    <Compile Include="Assets\Scripts\LoadingComplete.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />

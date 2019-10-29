@@ -16,12 +16,6 @@ public class GameManager : Singleton<GameManager>
     public int ObjectQuantity = 1;
     public Transform spawnPosition;
 
-    //qui bisognerebbe fare una classe a parte
-    //private List<GameObject> cubeList = new List<GameObject>(); //lista dei cubi nell ascena
-    //private List<Vector3> forceToApply; // lista di forze da applicare ai cubi nella scena
-
-
-    //sostutisco le due variabili sopra
     private List<TimeObject> objectsList = new List<TimeObject>();
 
 

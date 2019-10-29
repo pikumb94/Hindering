@@ -154,7 +154,7 @@ public class TimeObject
     }
     public void applyForce()
     {
-        Object.GetComponent<Rigidbody>().AddForce(0,600,0);
+        Object.GetComponent<Rigidbody>().AddForce(forceToApply);
 
     }
 

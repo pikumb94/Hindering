@@ -143,6 +143,7 @@ MonoBehaviour:
   cubeSet: {fileID: 11400000, guid: ac1187138e2780146a572d0de0fd434c, type: 2}
   objPrefab: {fileID: 177230277814700216, guid: 9af7b52c96103bb4898d9ff1057fc4d7,
     type: 3}
+  times: 1
   quantity: 5
   spawnPosition: {fileID: 491181733}
 --- !u!4 &306409399 stripped

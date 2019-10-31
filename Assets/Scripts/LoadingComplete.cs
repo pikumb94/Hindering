@@ -16,7 +16,7 @@ public class LoadingComplete : MonoBehaviour
         if (isFirstUpdate == true)
         {
             isFirstUpdate = false;
-            SceneLoader.LoadTargetScene();
+            SceneLoader.LoadTargetSceneWithCallback();
         }
     }
 }

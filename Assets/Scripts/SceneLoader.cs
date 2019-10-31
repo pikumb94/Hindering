@@ -13,7 +13,8 @@ public static class SceneLoader
         intro,
         tutorial,
         loading,
-        firstScene,
+        SampleScene,
+        MainMenu,
     }
     // Start is called before the first frame update
     public static void HandleSceneSwitch(Scenes scene)
@@ -28,7 +29,7 @@ public static class SceneLoader
         //questo per far eseguire almeno un frame nella scena di caricamento e mostrarla a scermo MENTRE la scena target viene caricata in background
         SceneManager.LoadScene(Scenes.loading.ToString());
     }
-    public static void LoadTargetScene()
+    public static void LoadTargetSceneWithCallback()
     {
         if (targetScene!=null)
         {

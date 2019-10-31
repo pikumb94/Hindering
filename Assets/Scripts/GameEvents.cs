@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {public static GameEvents current;
     public event Action onTimeChange;
-
+    public event Action onAddForceAll;
     public void TimeChange()
     {
         if (onTimeChange != null)
@@ -14,19 +14,15 @@ public class GameEvents : MonoBehaviour
             onTimeChange();
         }
     }
-        private void Awake()
+    private void Awake()
     {
         current = this;
     }
-    // Start is called before the first frame update
-    void Start()
+    public void AddForceAll()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(onAddForceAll!= null)
+        {
+            onAddForceAll();
+        }
     }
 }

@@ -22,6 +22,7 @@ public class PlayerMovement_CC : MonoBehaviour
     public float decreaseRateFlying = 0.5f;         //Velocity that slow downs the player movement when he/she is in the air
     public float increaseRateGrounded = 0.1f;       //Velocity to go from "initialFallenSpeed" to the final desired velocity when player is grounded
     public float initialFallenSpeed = 0.25f;        //Initial velocity of the player as soon as he/she touches the grounds and moves
+    public float slopeLimitGrounded = 45.0f;        //Use this to tune slope limit instead of the CC field
 
     private float interpFall = 0f;
     private float interpFly = 0f;
@@ -29,9 +30,9 @@ public class PlayerMovement_CC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = new Vector3 (transform.position.x, transform.position.y,0);
 
-
-        isGrounded = controller.isGrounded;//Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = controller.isGrounded; //Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); //controller.isGrounded;//
 
         if (isGrounded)
         {
@@ -47,6 +48,7 @@ public class PlayerMovement_CC : MonoBehaviour
 
         if (isGrounded && velocity.y < 0)
         {
+            controller.slopeLimit = slopeLimitGrounded;
             velocity.y = -8f;
         }
 
@@ -61,9 +63,11 @@ public class PlayerMovement_CC : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            controller.slopeLimit = 90.0f;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
+        Debug.Log(isGrounded);
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }

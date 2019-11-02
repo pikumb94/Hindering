@@ -47,7 +47,7 @@ public class timeControlled : MonoBehaviour
             //reimposto il corpo a Dynamic e gli applico la velocità che aveva prima
             //poi gli aggiungo le forze applicate in stop mode e azzero forceToApply
             rb.isKinematic = false;
-            rb.velocity = velocity;
+           rb.velocity = velocity;
             rb.AddForce(forceToApply);
             forceToApply = new Vector3(0, 0, 0);
         }

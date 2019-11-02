@@ -36,7 +36,7 @@ public class GameManager : Singleton<GameManager>
 
         //Carico la prima scena ---> IL MENU
         Debug.Log("All done... Loading Menu");
-       // SceneLoader.HandleSceneSwitch(SceneLoader.Scenes.MainMenu);
+        SceneLoader.LoadMainMenu();
 
        // FirstLevel();
     }

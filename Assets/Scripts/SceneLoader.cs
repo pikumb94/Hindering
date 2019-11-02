@@ -29,6 +29,13 @@ public static class SceneLoader
         //questo per far eseguire almeno un frame nella scena di caricamento e mostrarla a scermo MENTRE la scena target viene caricata in background
         SceneManager.LoadScene(Scenes.loading.ToString());
     }
+
+    internal static void LoadMainMenu()
+    {
+                SceneManager.LoadScene(Scenes.MainMenu.ToString());
+
+    }
+
     public static void LoadTargetSceneWithCallback()
     {
         if (targetScene!=null)

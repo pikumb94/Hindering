@@ -29,8 +29,10 @@ public class IndicatorMouseFollow : MonoBehaviour
         {
             mousePos=ray.GetPoint(distanceToPlane);
         }
+
         dst = mousePos - transform.position;
         transform.up = dst;
+
         if (Input.GetMouseButtonDown(0))
         {
             Debug.DrawRay(transform.position, dst, Color.green,1);
@@ -45,18 +47,18 @@ public class IndicatorMouseFollow : MonoBehaviour
                 if (hit.transform.gameObject.GetComponent<LineRenderer>())
                 {
                     lineRenderer.SetPosition(0, hit.point);
-                    lineRenderer.SetPosition(1, 2 * dst);
+                    lineRenderer.SetPosition(1, hit.point+ 3 * dst.normalized);
                 }
                 else
                 {
                     lineRenderer = hit.transform.gameObject.AddComponent<LineRenderer>();
-                    lineRenderer.useWorldSpace = false;
+                    lineRenderer.useWorldSpace = true;
                     lineRenderer.startWidth = 0.01f;
                     lineRenderer.endWidth = 0.2f;
                     lineRenderer.startColor = Color.red;
                     lineRenderer.endColor = Color.red;
-                    lineRenderer.SetPosition(0, hit.transform.position- hit.point );
-                    lineRenderer.SetPosition(1, 2 * dst);
+                    lineRenderer.SetPosition(0, hit.point);
+                    lineRenderer.SetPosition(1, hit.point+3 * dst.normalized);
                 }
 
             }
@@ -76,19 +78,19 @@ public class IndicatorMouseFollow : MonoBehaviour
 
                 if (hit.transform.gameObject.GetComponent<LineRenderer>())
                 {
-                    lineRenderer.SetPosition(0, Vector3.zero);
-                    lineRenderer.SetPosition(1, 2 * dst);
+                    lineRenderer.SetPosition(0, hit.transform.position);
+                    lineRenderer.SetPosition(1, hit.transform.position+3 * dst.normalized);
                 }
                 else
                 {
                     lineRenderer = hit.transform.gameObject.AddComponent<LineRenderer>();
-                    lineRenderer.useWorldSpace = false;
+                    lineRenderer.useWorldSpace = true;
                     lineRenderer.startWidth = 0.01f;
                     lineRenderer.endWidth = 0.2f;
                     lineRenderer.startColor = Color.red;
                     lineRenderer.endColor = Color.red;
-                    lineRenderer.SetPosition(0, Vector3.zero);
-                    lineRenderer.SetPosition(1, 2 * dst);
+                    lineRenderer.SetPosition(0, hit.transform.position);
+                    lineRenderer.SetPosition(1, hit.transform.position+3 * dst.normalized);
                 }
                 
 

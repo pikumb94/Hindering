@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":false,"showMaterialUpdate":false,"showSkybox":false,"showFlares":false,"showImageEffects":false,"showParticleSystems":false},"in2DMode":false,"pivot":{"x":5.588887691497803,"y":21.450027465820314,"z":0.45997047424316409},"rotation":{"x":0.10867553949356079,"y":-0.011928665451705456,"z":0.0013041578931733966,"w":0.9940071702003479},"size":27.940475463867189,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":false,"showMaterialUpdate":false,"showSkybox":false,"showFlares":false,"showImageEffects":false,"showParticleSystems":false},"in2DMode":true,"pivot":{"x":545.9000244140625,"y":240.10000610351563,"z":0.0},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":661.7373657226563,"orthographic":true}
->>>>>>> TimeManager(Lore)

@@ -117303,6 +117303,7 @@ MonoBehaviour:
   hitRadius: 1
   forceMagnitude: 1
   lParams: {fileID: 11400000, guid: 6dbd25c0a18c9d24ca192f5eb536b200, type: 2}
+  fadeParameterCollidingObjects: 0.25
 --- !u!136 &1979503330
 CapsuleCollider:
   m_ObjectHideFlags: 0

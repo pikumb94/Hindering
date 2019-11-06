@@ -14,6 +14,8 @@ public class ForceLineApplication : MonoBehaviour
     HashSet<Collider> collidingObjects; 
     private bool catchInput;
     public LineParameters lParams;
+    [Range(0,1)]
+    public float fadeParameterCollidingObjects;
 
     // Start is called before the first frame update
     void Start()
@@ -53,11 +55,10 @@ public class ForceLineApplication : MonoBehaviour
         {
             catchInput = true;
             collidingObjects.Add(other);
-            /* Fade out when colliding NOT WORKING!
+
             Color c = other.gameObject.GetComponent <MeshRenderer>().material.color;
-            c.a = 0;
-            other.gameObject.GetComponent<MeshRenderer>().sharedMaterial.color = c;
-            */
+            c.a = fadeParameterCollidingObjects;
+            other.gameObject.GetComponent<MeshRenderer>().material.color = c;
         }
     }
 
@@ -67,11 +68,11 @@ public class ForceLineApplication : MonoBehaviour
         {
             
             collidingObjects.Remove(other);
-            /* Fade in when get distance from the object NOT WORKING!
+
             Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
-            c.a = 0;
+            c.a = 1;
             other.gameObject.GetComponent<MeshRenderer>().material.color = c;
-            */
+
             if (collidingObjects.Count==0)
                 catchInput = false;
         }

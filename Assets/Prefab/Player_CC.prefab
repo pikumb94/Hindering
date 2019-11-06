@@ -117252,6 +117252,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1896487246}
   - component: {fileID: 1896487247}
+  - component: {fileID: 9003727754286180273}
+  - component: {fileID: 1979503330}
   m_Layer: 0
   m_Name: ArmPivot
   m_TagString: Untagged
@@ -117286,8 +117288,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a850af6ebcf3704baad540685c511a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9003727754286180273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896487245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc1266a40fef6843b4901932d7fd352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   hitRadius: 1
   forceMagnitude: 1
+  lParams: {fileID: 11400000, guid: 6dbd25c0a18c9d24ca192f5eb536b200, type: 2}
+--- !u!136 &1979503330
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896487245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2031456082
 GameObject:
   m_ObjectHideFlags: 0
@@ -126517,7 +126546,7 @@ GameObject:
   - component: {fileID: 3050032350860596447}
   - component: {fileID: 3050032350860596446}
   - component: {fileID: 3050032350860596432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player_CC
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,7 @@ public class ForceLineApplication : MonoBehaviour
 
     LineRenderer lineRenderer;
     public float hitRadius = 1f;
-    public float forceMagnitude = 1f;
+    public float forceMagnitude = 10f;
     CapsuleCollider coll;
     private int playerLayer;
     private IndicatorMouseFollow mouseScript;
@@ -94,7 +94,7 @@ public class ForceLineApplication : MonoBehaviour
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, 0), mouseScript.getDst(), out hit, hitRadius))
         {
 
-            //hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
+            hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
             lineRenderer = hit.transform.gameObject.GetComponent<LineRenderer>();
             if (lineRenderer)
             {
@@ -120,7 +120,7 @@ public class ForceLineApplication : MonoBehaviour
 
     void addBarycentricForce(Collider other)
     {
-        //other.attachedRigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, other.transform.position, ForceMode.Impulse);
+        other.attachedRigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, other.transform.position, ForceMode.Impulse);
         lineRenderer = other.transform.gameObject.GetComponent<LineRenderer>();
         if (lineRenderer)
         {

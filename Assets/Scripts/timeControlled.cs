@@ -13,7 +13,9 @@ public class TimeControlled : MonoBehaviour
     //in order to save the velocity when siwitch to Kinematic we store a private Vector3
     private Vector3 velocity;
     // in order to save the forces added in stop mode i create a Vector3
-    private Vector3 forceToApply;
+    private Vector3 BaricentricforceToApply;
+    private Vector3 PointForceToApply;
+    private Vector3 PointWhereApply;
     private Vector3 defaultForce = new Vector3(0, 600, 0);
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,9 @@ public class TimeControlled : MonoBehaviour
         }
         else
         {
-            forceToApply = new Vector3();
-
+            BaricentricforceToApply = new Vector3();
+            PointForceToApply = new Vector3();
+            PointWhereApply = transform.position;
             //dico al sistema che quando viene chiamato "timeChange" io devo eseguire switchKinematic ecc..
             GameEvents.current.onTimeChange += switchKinematic;
             GameEvents.current.onAddForceAll += addForce;
@@ -107,7 +110,7 @@ public class TimeControlled : MonoBehaviour
                 lineRenderer.SetPosition(1, transform.position + mouseScript.getDst().normalized);
             }
 
-            forceToApply += mouseScript.getDst().normalized * magnitude;
+            BaricentricforceToApply += mouseScript.getDst().normalized * magnitude;
         }
         else
         {
@@ -150,11 +153,17 @@ public class TimeControlled : MonoBehaviour
         if (rb.isKinematic == true)
         {   //il tempo riprendere a scorrere..
             //reimposto il corpo a Dynamic e gli applico la velocità che aveva prima
-            //poi gli aggiungo le forze applicate in stop mode e azzero forceToApply
+            //poi gli aggiungo le forze applicate in stop mode e azzero BaricentricforceToApply
             rb.isKinematic = false;
            rb.velocity = velocity;
-            rb.AddForceAtPosition(forceToApply,transform.position,ForceMode.Impulse);
-            forceToApply = new Vector3(0, 0, 0);
+
+
+            rb.AddForceAtPosition(PointForceToApply,PointWhereApply,ForceMode.Impulse);
+            rb.AddForceAtPosition(BaricentricforceToApply,transform.position,ForceMode.Impulse);
+
+            BaricentricforceToApply = new Vector3(0, 0, 0);
+            PointForceToApply = new Vector3(0, 0, 0);
+            PointWhereApply = transform.position;
         }
         else
         {   //il tempo si ferma..
@@ -164,11 +173,13 @@ public class TimeControlled : MonoBehaviour
         }
     }
     //funzione che Aggiunge una forza al punto di contatto
-  public   void addPointForce(IndicatorMouseFollow mouseScript,LineParameters lParams,float hitRadius,RaycastHit hit )
+  public   void addPointForce(IndicatorMouseFollow mouseScript,LineParameters lParams,float hitRadius,RaycastHit hit,float magnitude )
     {
-       
+                
             LineRenderer lineRenderer;
-            // hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
+        PointForceToApply = mouseScript.getDst().normalized * magnitude;
+        PointWhereApply = hit.point;
+        // hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
             lineRenderer = hit.transform.gameObject.GetComponent<LineRenderer>();
             if (lineRenderer)
             {

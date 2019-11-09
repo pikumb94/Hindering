@@ -109,27 +109,19 @@ public class ForceLineApplication : MonoBehaviour
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, 0), mouseScript.getDst(), out hit, hitRadius))
         {
 
-           // hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
-            lineRenderer = hit.transform.gameObject.GetComponent<LineRenderer>();
-            if (lineRenderer)
+
+            TimeControlled timeControlled = hit.transform.gameObject.GetComponent<TimeControlled>();
+            if (timeControlled == null)
             {
-               // updateForceLine(hit.point, lineRenderer);
+                Debug.Log("non posso applicare forze a corpi non timecontrolled");
             }
             else
             {
-                lineRenderer = hit.transform.gameObject.AddComponent<LineRenderer>();
-
-                lineRenderer.material = lParams.material;
-                lineRenderer.useWorldSpace = lParams.useWorldSpace;
-                lineRenderer.startWidth = lParams.startWidth;
-                lineRenderer.endWidth = lParams.endWidth;
-                lineRenderer.startColor = lParams.startColor;
-                lineRenderer.endColor = lParams.endColor;
-
-                lineRenderer.SetPosition(0, hit.point);
-                lineRenderer.SetPosition(1, hit.point + mouseScript.getDst().normalized);
+                timeControlled.addPointForce(mouseScript, lParams, hitRadius, hit,forceMagnitude);
             }
 
+        
+          
         }
     }
  

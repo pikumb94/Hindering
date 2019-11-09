@@ -27,9 +27,15 @@ public class PlayerMovement_CC : MonoBehaviour
     private float interpFall = 0f;
     private float interpFly = 0f;
 
+
+    private void Start()
+    {
+        controller = gameObject.GetComponent<CharacterController>();
+    }
     // Update is called once per frame
     void Update()
     {
+       
         transform.position = new Vector3 (transform.position.x, transform.position.y,0);
 
         isGrounded = controller.isGrounded; //Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); //controller.isGrounded;//

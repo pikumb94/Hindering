@@ -15,6 +15,7 @@ public static class SceneLoader
         loading,
         SampleScene,
         MainMenu,
+        Puzzle1,
     }
     // Start is called before the first frame update
     public static void HandleSceneSwitch(Scenes scene)

@@ -13,7 +13,7 @@ public class MenuFunctions :MonoBehaviour
     public void startGame()
     {
         Debug.Log("");
-        SceneLoader.HandleSceneSwitch(SceneLoader.Scenes.SampleScene);
+        SceneLoader.HandleSceneSwitch(SceneLoader.Scenes.Puzzle1);
 
     }
 }

@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//rinominerei questo script "ForceApplication" o una cosa simile
 public class ForceLineApplication : MonoBehaviour
 {
-
-    LineRenderer lineRenderer;
+    //non ho capito
     public float hitRadius = 1f;
+
+    //magntudine della forza
     public float forceMagnitude = 10f;
     CapsuleCollider coll;
     private int playerLayer;
     private IndicatorMouseFollow mouseScript;
     HashSet<Collider> collidingObjects; 
     private bool catchInput;
-    public LineParameters lParams;
+   // public LineParameters lParams;
     [Range(0,1)]
     public float fadeParameterCollidingObjects;
 
@@ -49,14 +52,14 @@ public class ForceLineApplication : MonoBehaviour
                 foreach (Collider c in collidingObjects)
                 {
                     //aggiungo una forza al baricentro
-                    TimeControlled timeControlled = c.GetComponent<TimeControlled>();
-                    if (timeControlled==null)
+                    ForceHandler forceHandler = c.GetComponent<ForceHandler>();
+                    if (forceHandler == null)
                     {
-                        Debug.Log("non posso applicare forze a corpi non timecontrolled");
+                        Debug.Log("non posso applicare forze a corpi senza un ForceHandler");
                     }
                     else
                     {
-                        timeControlled.addBaricentricForce(mouseScript,forceMagnitude,lParams);
+                        forceHandler.addBaricentricForce(mouseScript.getDst().normalized,forceMagnitude);
                     }
                 }
             
@@ -69,14 +72,14 @@ public class ForceLineApplication : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //se l'oggeto con cui mi sono scontrato non e un player 
-        //NB: qui forse c'era un modo un filo piu corretto -> da sistemare alla fine nel caso
-        if (other.gameObject.layer != playerLayer)
+        //NB: qui forse c'era un modo piu corretto -> da sistemare alla fine nel caso
+        if (other.gameObject.tag != "Player")
         {
             //abilito l'applicazione della forza nell 'update
             catchInput = true;
             //aggiungo l'oggetto alla lista degli oggetti che stanno collidendo
             collidingObjects.Add(other);
-
+            Debug.Log(other.name);
             //set roba visiva
             Color c = other.gameObject.GetComponent <MeshRenderer>().material.color;
             c.a = fadeParameterCollidingObjects;
@@ -86,7 +89,7 @@ public class ForceLineApplication : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != playerLayer)
+        if (other.gameObject.tag != "Player")
         {
             //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);
@@ -100,8 +103,9 @@ public class ForceLineApplication : MonoBehaviour
         }
     }
 
-    
-    //funzione che Aggiunge una forza al punto di contatto
+
+
+    //se ho capito bene controllo con un ray cast se la pallina interseca qualcosa
     void addPointForce(Collider other)
     {
         RaycastHit hit;
@@ -109,15 +113,15 @@ public class ForceLineApplication : MonoBehaviour
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, 0), mouseScript.getDst(), out hit, hitRadius))
         {
 
-
-            TimeControlled timeControlled = hit.transform.gameObject.GetComponent<TimeControlled>();
-            if (timeControlled == null)
+            //se interseza applico la forza nel punto
+            ForceHandler forceHandler = hit.transform.gameObject.GetComponent<ForceHandler>();
+            if (forceHandler == null)
             {
-                Debug.Log("non posso applicare forze a corpi non timecontrolled");
+                Debug.Log("non posso applicare forze a corpi senza un forceHandler");
             }
             else
             {
-                timeControlled.addPointForce(mouseScript, lParams, hitRadius, hit,forceMagnitude);
+                forceHandler.addPointForce(mouseScript.getDst().normalized,hit.point, forceMagnitude);
             }
 
         

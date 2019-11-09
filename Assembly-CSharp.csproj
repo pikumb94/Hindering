@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
+    <Compile Include="Assets\NextPuzzleTrigger.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\BackgroundScroll.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\EventSystemExample\Script\EventListener1.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\EventSystemExample\Script\EventListener2.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Scripts\Cube.cs" />
     <Compile Include="Assets\Scripts\CubeSet.cs" />
     <Compile Include="Assets\Scripts\DDOL.cs" />
+    <Compile Include="Assets\Scripts\ForceHandler.cs" />
     <Compile Include="Assets\Scripts\ForceLineApplication.cs" />
     <Compile Include="Assets\Scripts\GameEvents.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement_CC.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\textTimeControlled.cs" />
     <Compile Include="Assets\Scripts\TimeControlled.cs" />
     <Compile Include="Assets\Scripts\TimeHandler.cs" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />

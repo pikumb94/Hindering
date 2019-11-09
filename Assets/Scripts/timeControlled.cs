@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class timeControlled : MonoBehaviour
+public class TimeControlled : MonoBehaviour
 {
     //questa variabile è molto importante! ->> settata a true rende un oggetto soggetto alla fisica quando il tempo scorre e immobile quando il tempo si ferma
     //                                     ->> settata a false da il comportamento opposto
     public bool ActiveOnTime=true;
-    
+
     private Rigidbody rb;
     //in order to save the velocity when siwitch to Kinematic we store a private Vector3
     private Vector3 velocity;
@@ -79,6 +79,56 @@ public class timeControlled : MonoBehaviour
 
     }
 
+
+
+    public void addBaricentricForce(IndicatorMouseFollow mouseScript,float magnitude,LineParameters lParams)
+    {
+        if (rb.isKinematic)
+        {
+            LineRenderer lineRenderer;
+
+            lineRenderer = transform.gameObject.GetComponent<LineRenderer>();
+            if (lineRenderer)
+            {
+                updateForceLine(transform.position, lineRenderer, mouseScript,lParams);
+            }
+            else
+            {
+                lineRenderer = transform.gameObject.AddComponent<LineRenderer>();
+
+                lineRenderer.material = lParams.material;
+                lineRenderer.useWorldSpace = lParams.useWorldSpace;
+                lineRenderer.startWidth = lParams.startWidth;
+                lineRenderer.endWidth = lParams.endWidth;
+                lineRenderer.startColor = lParams.startColor;
+                lineRenderer.endColor = lParams.endColor;
+
+                lineRenderer.SetPosition(0, transform.position);
+                lineRenderer.SetPosition(1, transform.position + mouseScript.getDst().normalized);
+            }
+
+            forceToApply += mouseScript.getDst().normalized * magnitude;
+        }
+        else
+        {
+            //FORBIDDEN
+
+            //  rb.AddForce(defaultForce);
+        }
+       
+    }
+
+    private void updateForceLine(Vector3 hitPoint, LineRenderer line,IndicatorMouseFollow mouseScript, LineParameters lParams)
+    {
+
+        Vector3 startPos = line.GetPosition(0);
+        Vector3 endPos = line.GetPosition(1);
+
+        line.SetPosition(0, (hitPoint + startPos) / 2);
+        line.SetPosition(1, (hitPoint + startPos) / 2 + ((endPos - startPos).magnitude + lParams.increaseFactor) * mouseScript.getDst().normalized);
+
+    }
+
     private void setKinematic(bool activeOnTime)
     {
         if (activeOnTime==true)
@@ -93,16 +143,7 @@ public class timeControlled : MonoBehaviour
     }
     public void addForce()
     {
-        if (rb.isKinematic)
-        {
-           forceToApply += defaultForce;
-        }
-        else
-        {
-            //FORBIDDEN
-
-          //  rb.AddForce(defaultForce);
-        }
+       
     }
     private void switchKinematic()
     {
@@ -112,7 +153,7 @@ public class timeControlled : MonoBehaviour
             //poi gli aggiungo le forze applicate in stop mode e azzero forceToApply
             rb.isKinematic = false;
            rb.velocity = velocity;
-            rb.AddForce(forceToApply);
+            rb.AddForceAtPosition(forceToApply,transform.position,ForceMode.Impulse);
             forceToApply = new Vector3(0, 0, 0);
         }
         else
@@ -121,6 +162,34 @@ public class timeControlled : MonoBehaviour
             velocity = rb.velocity;
             rb.isKinematic = true;
         }
+    }
+    //funzione che Aggiunge una forza al punto di contatto
+  public   void addPointForce(IndicatorMouseFollow mouseScript,LineParameters lParams,float hitRadius,RaycastHit hit )
+    {
+       
+            LineRenderer lineRenderer;
+            // hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
+            lineRenderer = hit.transform.gameObject.GetComponent<LineRenderer>();
+            if (lineRenderer)
+            {
+                updateForceLine(hit.point, lineRenderer,mouseScript,lParams);
+            }
+            else
+            {
+                lineRenderer = hit.transform.gameObject.AddComponent<LineRenderer>();
+
+                lineRenderer.material = lParams.material;
+                lineRenderer.useWorldSpace = lParams.useWorldSpace;
+                lineRenderer.startWidth = lParams.startWidth;
+                lineRenderer.endWidth = lParams.endWidth;
+                lineRenderer.startColor = lParams.startColor;
+                lineRenderer.endColor = lParams.endColor;
+
+                lineRenderer.SetPosition(0, hit.point);
+                lineRenderer.SetPosition(1, hit.point + mouseScript.getDst().normalized);
+            }
+
+        
     }
     // Update is called once per frame
     void Update()

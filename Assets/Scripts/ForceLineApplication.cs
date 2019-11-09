@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,8 +47,19 @@ public class ForceLineApplication : MonoBehaviour
             {
                 //per ogni oggetto con cui collido
                 foreach (Collider c in collidingObjects)
+                {
                     //aggiungo una forza al baricentro
-                    addBarycentricForce(c);
+                    TimeControlled timeControlled = c.GetComponent<TimeControlled>();
+                    if (timeControlled==null)
+                    {
+                        Debug.Log("non posso applicare forze a corpi non timecontrolled");
+                    }
+                    else
+                    {
+                        timeControlled.addBaricentricForce(mouseScript,forceMagnitude,lParams);
+                    }
+                }
+            
             }
         }
         
@@ -89,14 +100,7 @@ public class ForceLineApplication : MonoBehaviour
         }
     }
 
-    void updateForceLine(Vector3 hitPoint,LineRenderer line)
-    {
-        Vector3 startPos = line.GetPosition(0);
-        Vector3 endPos = line.GetPosition(1);
-        
-        lineRenderer.SetPosition(0, (hitPoint+startPos)/2);
-        lineRenderer.SetPosition(1, (hitPoint + startPos) / 2 +  ((endPos-startPos).magnitude+lParams.increaseFactor) * mouseScript.getDst().normalized);
-    }
+    
     //funzione che Aggiunge una forza al punto di contatto
     void addPointForce(Collider other)
     {
@@ -109,7 +113,7 @@ public class ForceLineApplication : MonoBehaviour
             lineRenderer = hit.transform.gameObject.GetComponent<LineRenderer>();
             if (lineRenderer)
             {
-                updateForceLine(hit.point, lineRenderer);
+               // updateForceLine(hit.point, lineRenderer);
             }
             else
             {
@@ -128,28 +132,5 @@ public class ForceLineApplication : MonoBehaviour
 
         }
     }
-    //funzione che aggiunge una forza al baricentro e crea la linea visiva
-    void addBarycentricForce(Collider other)
-    {
-       // other.attachedRigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, other.transform.position, ForceMode.Impulse);
-        lineRenderer = other.transform.gameObject.GetComponent<LineRenderer>();
-        if (lineRenderer)
-        {
-            updateForceLine(other.transform.position, lineRenderer);
-        }
-        else
-        {
-            lineRenderer = other.transform.gameObject.AddComponent<LineRenderer>();
-
-            lineRenderer.material = lParams.material;
-            lineRenderer.useWorldSpace = lParams.useWorldSpace;
-            lineRenderer.startWidth = lParams.startWidth;
-            lineRenderer.endWidth = lParams.endWidth;
-            lineRenderer.startColor = lParams.startColor;
-            lineRenderer.endColor = lParams.endColor;
-
-            lineRenderer.SetPosition(0, other.transform.position);
-            lineRenderer.SetPosition(1, other.transform.position + mouseScript.getDst().normalized);
-        }
-    }
+ 
 }

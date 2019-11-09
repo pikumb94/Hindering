@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class timeControlled : MonoBehaviour
 {
-
+    //questa variabile è molto importante! ->> settata a true rende un oggetto soggetto alla fisica quando il tempo scorre e immobile quando il tempo si ferma
+    //                                     ->> settata a false da il comportamento opposto
+    public bool ActiveOnTime=true;
+    
     private Rigidbody rb;
     //in order to save the velocity when siwitch to Kinematic we store a private Vector3
     private Vector3 velocity;
@@ -15,31 +19,91 @@ public class timeControlled : MonoBehaviour
     void Start()
     {
         velocity = new Vector3();
-        forceToApply = new Vector3();
-        GameEvents.current.onTimeChange += switchKinematic;
-        GameEvents.current.onAddForceAll += addForce;
-        rb = GetComponent<Rigidbody>();
-        if (TimeHandler.Instance.time == true)
+        if (gameObject.tag == "Player")
         {
-            rb.isKinematic = false;
+            GameEvents.current.onTimeChange += switchBehaviour;
+            setComponents(ActiveOnTime);
         }
         else
         {
-            rb.isKinematic = true;
-        }
-    }
-    private void addForce()
-    {
-        if (rb.isKinematic)
-        {
-            forceToApply += defaultForce;
-        }
-        else
-        {
-            rb.AddForce(defaultForce);
+            forceToApply = new Vector3();
+
+            //dico al sistema che quando viene chiamato "timeChange" io devo eseguire switchKinematic ecc..
+            GameEvents.current.onTimeChange += switchKinematic;
+            GameEvents.current.onAddForceAll += addForce;
+
+            rb = GetComponent<Rigidbody>();
+
+            //setto il rigidbody in base a ActiveOnTime
+            setKinematic(ActiveOnTime);
         }
     }
 
+    private void switchBehaviour()
+    {
+        if (gameObject.GetComponent<PlayerMovement_CC>().enabled==true)
+        {
+            stopPlayer();
+        }
+        else
+        {
+            startPlayer();
+        }
+
+    }
+    private void stopPlayer()
+    {
+        PlayerMovement_CC playerMovement = gameObject.GetComponent<PlayerMovement_CC>();
+        playerMovement.enabled = false;
+        ForceLineApplication forceApplication = GetComponentInChildren<ForceLineApplication>();
+        forceApplication.enabled = false;
+    }
+    private void startPlayer()
+    {
+        PlayerMovement_CC playerMovement = gameObject.GetComponent<PlayerMovement_CC>();
+        playerMovement.enabled = true;
+        ForceLineApplication forceApplication = GetComponentInChildren<ForceLineApplication>();
+        forceApplication.enabled = true;
+    }
+
+    private void setComponents(bool activeOnTime)
+    {
+        if (activeOnTime == false)
+        {
+            stopPlayer();
+        }
+        else
+        {
+            startPlayer();
+        }
+
+    }
+
+    private void setKinematic(bool activeOnTime)
+    {
+        if (activeOnTime==true)
+        {
+            
+                rb.isKinematic = !TimeHandler.Instance.time;
+        }
+        else
+        {
+            rb.isKinematic = TimeHandler.Instance.time;
+        }
+    }
+    public void addForce()
+    {
+        if (rb.isKinematic)
+        {
+           forceToApply += defaultForce;
+        }
+        else
+        {
+            //FORBIDDEN
+
+          //  rb.AddForce(defaultForce);
+        }
+    }
     private void switchKinematic()
     {
         if (rb.isKinematic == true)

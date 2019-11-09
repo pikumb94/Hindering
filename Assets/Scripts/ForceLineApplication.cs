@@ -20,6 +20,7 @@ public class ForceLineApplication : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      
         coll = GetComponent<CapsuleCollider>();
         playerLayer = transform.parent.gameObject.layer;
         mouseScript = GetComponent<IndicatorMouseFollow>();
@@ -30,18 +31,23 @@ public class ForceLineApplication : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //se sto collidendo con uno o piu oggetti..
         if (catchInput)
         {
+            //se premo il mouse sinistro
             if (Input.GetMouseButtonDown(0))
             {
+                //per ogni oggetto con cui sto collidendo
                 foreach (Collider c in collidingObjects)
+                    //applico la forza nel punto in cui collide la pallina rossa
                     addPointForce(c);
             }
 
             if (Input.GetMouseButtonDown(1))
             {
+                //per ogni oggetto con cui collido
                 foreach (Collider c in collidingObjects)
+                    //aggiungo una forza al baricentro
                     addBarycentricForce(c);
             }
         }
@@ -51,11 +57,16 @@ public class ForceLineApplication : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //se l'oggeto con cui mi sono scontrato non e un player 
+        //NB: qui forse c'era un modo un filo piu corretto -> da sistemare alla fine nel caso
         if (other.gameObject.layer != playerLayer)
         {
+            //abilito l'applicazione della forza nell 'update
             catchInput = true;
+            //aggiungo l'oggetto alla lista degli oggetti che stanno collidendo
             collidingObjects.Add(other);
 
+            //set roba visiva
             Color c = other.gameObject.GetComponent <MeshRenderer>().material.color;
             c.a = fadeParameterCollidingObjects;
             other.gameObject.GetComponent<MeshRenderer>().material.color = c;
@@ -66,13 +77,13 @@ public class ForceLineApplication : MonoBehaviour
     {
         if (other.gameObject.layer != playerLayer)
         {
-            
+            //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);
-
+            //tolgo roba visiva
             Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
             c.a = 1;
             other.gameObject.GetComponent<MeshRenderer>().material.color = c;
-
+            //se non ho piu oggetti in lista disabilito l'applicazione delle forze
             if (collidingObjects.Count==0)
                 catchInput = false;
         }
@@ -86,7 +97,7 @@ public class ForceLineApplication : MonoBehaviour
         lineRenderer.SetPosition(0, (hitPoint+startPos)/2);
         lineRenderer.SetPosition(1, (hitPoint + startPos) / 2 +  ((endPos-startPos).magnitude+lParams.increaseFactor) * mouseScript.getDst().normalized);
     }
-
+    //funzione che Aggiunge una forza al punto di contatto
     void addPointForce(Collider other)
     {
         RaycastHit hit;
@@ -94,7 +105,7 @@ public class ForceLineApplication : MonoBehaviour
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, 0), mouseScript.getDst(), out hit, hitRadius))
         {
 
-            hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
+           // hit.rigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, hit.point, ForceMode.Impulse);
             lineRenderer = hit.transform.gameObject.GetComponent<LineRenderer>();
             if (lineRenderer)
             {
@@ -117,10 +128,10 @@ public class ForceLineApplication : MonoBehaviour
 
         }
     }
-
+    //funzione che aggiunge una forza al baricentro e crea la linea visiva
     void addBarycentricForce(Collider other)
     {
-        other.attachedRigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, other.transform.position, ForceMode.Impulse);
+       // other.attachedRigidbody.AddForceAtPosition(mouseScript.getDst().normalized * forceMagnitude, other.transform.position, ForceMode.Impulse);
         lineRenderer = other.transform.gameObject.GetComponent<LineRenderer>();
         if (lineRenderer)
         {

@@ -24053,7 +24053,7 @@ GameObject:
   - component: {fileID: 5535244762657935588}
   - component: {fileID: 341096980426950410}
   - component: {fileID: 5505767541825478815}
-  - component: {fileID: 5535244761132020498}
+  - component: {fileID: 2158836643226690110}
   m_Layer: 9
   m_Name: Player_CC
   m_TagString: Player
@@ -24116,7 +24116,7 @@ MonoBehaviour:
   increaseRateGrounded: 2
   initialFallenSpeed: 0.25
   slopeLimitGrounded: 45
---- !u!114 &5535244761132020498
+--- !u!114 &2158836643226690110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24125,7 +24125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5535244761132020503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403100246ad84ca409b188d5a9b2b9bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c255683fbeae314294130c9e36f3b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveOnTime: 0

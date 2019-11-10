@@ -18,7 +18,7 @@ public class TimeControlled : MonoBehaviour
 {
     //questa variabile è molto importante! ->> settata a true rende un oggetto soggetto alla fisica quando il tempo scorre e immobile quando il tempo si ferma
     //                                     ->> settata a false da il comportamento opposto
-    public bool ActiveOnTime=true;
+    public bool ActiveOnTime = true;
     private Rigidbody rb;
     //in order to save the velocity when switch to Kinematic we store a private Vector3
     private Vector3 velocity;
@@ -49,7 +49,7 @@ public class TimeControlled : MonoBehaviour
     //cambio da stop a play mode e viceversa per il player
     private void switchBehaviour()
     {
-        if (gameObject.GetComponent<PlayerMovement_CC>().enabled==true)
+        if (gameObject.GetComponent<PlayerMovement_CC>().enabled == true)
         {
             stopPlayer();
         }
@@ -91,22 +91,22 @@ public class TimeControlled : MonoBehaviour
 
 
 
-    
-    
+
+
     //inizializzo kinematic in base alla variabile activeontime
     private void setKinematic(bool activeOnTime)
     {
-        if (activeOnTime==true)
+        if (activeOnTime == true)
         {
-            
-                rb.isKinematic = !TimeHandler.Instance.time;
+
+            rb.isKinematic = !TimeHandler.Instance.time;
         }
         else
         {
             rb.isKinematic = TimeHandler.Instance.time;
         }
     }
-    
+
     //cambio il rigidbody
     private void switchKinematic()
     {
@@ -114,7 +114,7 @@ public class TimeControlled : MonoBehaviour
         {   //il tempo riprendere a scorrere..
             //reimposto il corpo a Dynamic e gli applico la velocità che aveva prima
             rb.isKinematic = false;
-           rb.velocity = velocity;
+            rb.velocity = velocity;
 
             //applco le forze
             gameObject.GetComponent<ForceHandler>().Apply();
@@ -130,6 +130,6 @@ public class TimeControlled : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

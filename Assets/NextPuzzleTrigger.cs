@@ -1,26 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextPuzzleTrigger : MonoBehaviour
 {
+
+    public SceneAsset nextScene;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ciao");
         if (other.gameObject.tag == "Player")
         {
-            SceneLoader.HandleSceneSwitch(SceneLoader.Scenes.Puzzle1);
+            SceneLoader.HandleSceneSwitch(SceneLoader.ScenesFromString( nextScene.name));
         }
     }
 }

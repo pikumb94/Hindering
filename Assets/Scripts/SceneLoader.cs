@@ -16,6 +16,19 @@ public static class SceneLoader
         SampleScene,
         MainMenu,
         Puzzle1,
+        Puzzle2
+    }
+    public  static Scenes ScenesFromString(String nome)
+    {
+        if (nome=="Puzzle1")
+        {
+            return Scenes.Puzzle1;
+        }
+        if (nome == "Puzzle2")
+        {
+            return Scenes.Puzzle2;
+        }
+        return Scenes.MainMenu;
     }
     // Start is called before the first frame update
     public static void HandleSceneSwitch(Scenes scene)

@@ -92,7 +92,7 @@ public class ForceHandler : MonoBehaviour
             addForceLine();
 
             lineRenderer.SetPosition(0, hitPoint);
-            lineRenderer.SetPosition(1, hitPoint + direction);
+            lineRenderer.SetPosition(1, hitPoint + PointForceToApply);
         }
 
 

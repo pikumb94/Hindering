@@ -79,11 +79,14 @@ public class ForceLineApplication : MonoBehaviour
             catchInput = true;
             //aggiungo l'oggetto alla lista degli oggetti che stanno collidendo
             collidingObjects.Add(other);
-            Debug.Log(other.name);
             //set roba visiva
-            Color c = other.gameObject.GetComponent <MeshRenderer>().material.color;
-            c.a = fadeParameterCollidingObjects;
-            other.gameObject.GetComponent<MeshRenderer>().material.color = c;
+            Component test = other.gameObject.GetComponent<MeshRenderer>();
+            if (test != null)
+            {
+                Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
+                c.a = fadeParameterCollidingObjects;
+                other.gameObject.GetComponent<MeshRenderer>().material.color = c;
+            }
         }
     }
 
@@ -94,12 +97,17 @@ public class ForceLineApplication : MonoBehaviour
             //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);
             //tolgo roba visiva
-            Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
-            c.a = 1;
-            other.gameObject.GetComponent<MeshRenderer>().material.color = c;
-            //se non ho piu oggetti in lista disabilito l'applicazione delle forze
-            if (collidingObjects.Count==0)
-                catchInput = false;
+            Component test = other.gameObject.GetComponent<MeshRenderer>();
+            if (test != null)
+            {
+                Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
+                c.a = 1;
+                other.gameObject.GetComponent<MeshRenderer>().material.color = c;
+                //se non ho piu oggetti in lista disabilito l'applicazione delle forze
+                if (collidingObjects.Count == 0)
+                    catchInput = false;
+
+            }
         }
     }
 

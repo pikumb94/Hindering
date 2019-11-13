@@ -66,14 +66,42 @@ public class TimeControlled : MonoBehaviour
         playerMovement.enabled = false;
         ForceLineApplication forceApplication = GetComponentInChildren<ForceLineApplication>();
         forceApplication.enabled = false;
+        CharacterController controller = gameObject.GetComponent<CharacterController>();
+        controller.enabled = false;
+        Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
+        if (rigid)
+        {
+            rigid.useGravity = true;
+            rigid.isKinematic = false;
+        }
+        CapsuleCollider collider = gameObject.AddComponent<CapsuleCollider>();
+        collider.height = 2;
+        collider.radius = 0.5f;
+        
     }
     //abilito movimento e forze
     private void startPlayer()
     {
+
+        Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
+        if (rigid)
+        {
+            rigid.useGravity = false;
+            rigid.isKinematic = true;
+        }
+        CapsuleCollider collider = gameObject.GetComponent<CapsuleCollider>();
+        if (collider)
+        {
+            Destroy(collider);
+        }
+        CharacterController controller = gameObject.GetComponent<CharacterController>();
+        controller.enabled = true;
         PlayerMovement_CC playerMovement = gameObject.GetComponent<PlayerMovement_CC>();
         playerMovement.enabled = true;
         ForceLineApplication forceApplication = GetComponentInChildren<ForceLineApplication>();
         forceApplication.enabled = true;
+    
+
     }
     //inizializzo il comportamento in base alla variabile activeOnTime
     private void setComponents(bool activeOnTime)

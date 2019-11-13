@@ -96,6 +96,8 @@ public class ForceLineApplication : MonoBehaviour
         {
             //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);
+            if (collidingObjects.Count == 0)
+                catchInput = false;
             //tolgo roba visiva
             Component test = other.gameObject.GetComponent<MeshRenderer>();
             if (test != null)
@@ -104,8 +106,7 @@ public class ForceLineApplication : MonoBehaviour
                 c.a = 1;
                 other.gameObject.GetComponent<MeshRenderer>().material.color = c;
                 //se non ho piu oggetti in lista disabilito l'applicazione delle forze
-                if (collidingObjects.Count == 0)
-                    catchInput = false;
+                
 
             }
         }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class MagnetWoop : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 3f;
-    private Vector3 _direction;
+    private float _speed = 10f;
     private GameObject _woopDestination;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,7 @@ public class MagnetWoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        transform.position = Vector3.MoveTowards(transform.position, _woopDestination.transform.position, _speed);
+        transform.position = Vector3.MoveTowards(transform.position, _woopDestination.transform.position, _speed * Time.deltaTime);
         if (transform.position == _woopDestination.transform.position)
             gameObject.SetActive(false);
     }

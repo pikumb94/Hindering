@@ -16,7 +16,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - Magnetic
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Magnetic
+    uniqueID: 3175984079
     locked: 0

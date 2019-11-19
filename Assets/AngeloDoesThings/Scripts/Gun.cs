@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     private float _force = 200f;
     private void Awake()
     {
-        ObjectPoolingManager.Instance.CreatePool(_bullet, 75, 200);
+        ObjectPoolingManager.Instance.CreatePool(_bullet, 100, 200);
     }
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class Gun : MonoBehaviour
             GameObject go = ObjectPoolingManager.Instance.GetObject("Bullet");
             go.transform.position = transform.GetChild(0).transform.position;
             go.transform.rotation = transform.rotation;
-            go.transform.GetComponent<Rigidbody>().AddForce(transform.up * _force * Time.deltaTime, ForceMode.Impulse);
+            go.transform.GetComponent<Rigidbody>().AddForce(transform.parent.up * _force * Time.deltaTime, ForceMode.Impulse);
         }
 
         if (Input.GetKeyDown("2"))

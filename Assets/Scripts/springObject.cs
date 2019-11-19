@@ -83,6 +83,7 @@ public class SpringObject : MonoBehaviour
         }
       }
     }
+    
 
     public void Move(int numOfTraj, bool backward){
       Trajectory traj = trajectories[numOfTraj];

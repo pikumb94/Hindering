@@ -20,9 +20,9 @@ public class RotateAvatar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameManager.isInPlayMode);
-        if (!GameManager.isInPlayMode)
-        {
+       // Debug.Log(GameManager.isInPlayMode);
+       // if (!GameManager.isInPlayMode)
+        //{
 
             xInput = Input.GetAxis("Horizontal");
             if (Mathf.Abs(transform.rotation.eulerAngles.y) <= thresholdFacing)
@@ -47,7 +47,7 @@ public class RotateAvatar : MonoBehaviour
                 transform.rotation *= Quaternion.AngleAxis(xInput * angle, -Vector3.up);
             }
 
-        }
+       // }
 
     }
 }

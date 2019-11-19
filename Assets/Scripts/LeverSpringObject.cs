@@ -11,7 +11,7 @@ public class LeverSpringObject : MonoBehaviour
     public float angleOn = 45f;
     public float angleOff = 135f;
     float angle = 135f;
-    float angleSpeed = 100f;
+    float angleSpeed = 200f;
 
     void Start()
     {

@@ -1059,7 +1059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2558236073900822178}
-  - component: {fileID: 2009612075547103939}
+  - component: {fileID: 2138534161703047417}
   m_Layer: 0
   m_Name: Lever_Pivot
   m_TagString: Untagged
@@ -1075,14 +1075,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5680081465108289917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5185802, y: 0.95825577, z: 1.0285912}
+  m_LocalPosition: {x: -0.086336136, y: 0.45825577, z: 0.70000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8284239706786900535}
   m_Father: {fileID: 9148211805005814011}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2009612075547103939
+--- !u!114 &2138534161703047417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5680081465108289917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d5e980a6502734eaab0a1aa746c6aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8982be532bb358144a60755a641759ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoSize: 0.75
@@ -59488,7 +59488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9148211805005814011}
-  - component: {fileID: 7903840662628846826}
+  - component: {fileID: 583255246218198742}
   m_Layer: 0
   m_Name: LeverSpringObject
   m_TagString: Untagged
@@ -59504,14 +59504,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8937619234556749815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.413664, y: 17.241745, z: 3.0739555}
+  m_LocalPosition: {x: -6.5, y: 17.241745, z: 2.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2558236073900822178}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7903840662628846826
+--- !u!114 &583255246218198742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59520,10 +59520,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8937619234556749815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b713a3877cfa643ad8beb8fea0341c, type: 3}
+  m_Script: {fileID: 11500000, guid: 43eed4ebbb8b4c04cb22215cd076af34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   so: {fileID: 0}
   stick: {fileID: 908849963845022560}
   pivot: {fileID: 5680081465108289917}
   on: 0
+  angleOn: 45
+  angleOff: 135

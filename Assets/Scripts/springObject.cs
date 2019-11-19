@@ -97,6 +97,7 @@ public class SpringObject : MonoBehaviour
       {
         speed = -speed;
       }
+      speed = (speed != 0) ? speed : standard_speed;
       switch(traj.type)
       {
         case Types.StraightLine:  if(traj.ranges[0] != 0)
@@ -110,7 +111,7 @@ public class SpringObject : MonoBehaviour
                                     transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
                                   }else
                                   {
-                                    arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime : arcLength + Time.deltaTime;
+                                    arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime * (-speed) : arcLength + Time.deltaTime * speed;
                                   }
                                   break;
         case Types.Parabola:      arcLength = Mathf.Abs(transform.position[0] - (backward ? traj.FinalPos()[0] : traj.InitialPos()[0])) /  Mathf.Abs(traj.ranges[0]);
@@ -145,7 +146,7 @@ public class SpringObject : MonoBehaviour
                                   }
                                   break;*/
         case Types.Still:
-        default:                  arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime : arcLength + Time.deltaTime;
+        default:                  arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime * (-speed) : arcLength + Time.deltaTime * speed;
                                   break;
       }
       arcLength = (backward) ? numOfTraj + 1 - arcLength : arcLength + numOfTraj;

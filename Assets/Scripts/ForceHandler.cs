@@ -125,8 +125,8 @@ public class ForceHandler : MonoBehaviour
         lineRenderer.useWorldSpace = lParams.useWorldSpace;
         lineRenderer.startWidth = lParams.startWidth;
         lineRenderer.endWidth = lParams.endWidth;
-        lineRenderer.startColor = lParams.startColor;
-        lineRenderer.endColor = lParams.endColor;
+        lineRenderer.colorGradient = lParams.colorGradient;
+        lineRenderer.numCapVertices = lParams.numCapVertices;
     }
 
     // Update is called once per frame

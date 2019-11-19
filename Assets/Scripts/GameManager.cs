@@ -12,7 +12,6 @@ public class GameManager : Singleton<GameManager>
     [Header("Sets handling")]
     public CubeSet cubeSet;
 
-
     //private List<TimeObject> objectsList = new List<TimeObject>();
 
 

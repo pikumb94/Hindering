@@ -10,6 +10,6 @@ public class LineParameters : ScriptableObject
     public float increaseFactor;
     public float startWidth;
     public float endWidth;
-    public Color startColor;
-    public Color endColor;
+    public Gradient colorGradient;
+    public int numCapVertices;
 }

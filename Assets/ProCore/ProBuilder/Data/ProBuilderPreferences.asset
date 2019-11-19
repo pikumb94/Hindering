@@ -16,6 +16,8 @@ MonoBehaviour:
   - pbIconGUI
   - pbShowTrigger
   - pbShowCollider
+  - pb_SmoothingGroupEditor::m_ShowPreview
+  - pbEnableBackfaceSelection
   m_Int_keys:
   - pbDefaultEditLevel
   - pbDefaultSelectionMode

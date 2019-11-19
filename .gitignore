@@ -60,3 +60,5 @@ crashlytics-build.properties
 Library/
 
 obj/Debug/
+
+Assets/ProCore/ProBuilder/Data/ProBuilderPreferences.asset

@@ -2,60 +2,80 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class springObject : MonoBehaviour
+public class SpringObject : MonoBehaviour
 {
 
-    public float speed = 0.1f;
-    public float speed2 = 0.1f;
+    public float standard_speed = 0.1f;
+    public float basic_speed = 0.1f;
     public float arcLength = 0;
 
-    public enum Types {StraightLine, Parabola, Circle, Still};
-    public struct Trajectory {
-       public Vector2 ranges;
-       public Types type;
-    };
+    public enum Types {StraightLine, Parabola, Semicircle, Circle, Still};
     public Trajectory[] trajectories = new Trajectory[10];
 
-    Vector3[] initialPos;
-    //Quaternion[] inizialRot = new Quaterion[3];
-    bool movement = false;
-    float endValue;
+    bool forward = false;
+    bool backward = false;
+    int endValue;
+    float speed;
+    float xspeed;
 
     // Start is called before the first frame update
     void Start()
     {
-      initialPos = new Vector3[trajectories.Length];
-      initialPos[0] = transform.position;
-      //inizialRot[0] = transform.rotation;
 
-      trajectories[0].ranges = new Vector2(5f,10f);
-      trajectories[0].type = Types.Circle;
-      trajectories[1].ranges = new Vector2(-5f,5f);
-      trajectories[1].type = Types.StraightLine;
-      trajectories[2].ranges = new Vector2(5f,-5f);
-      trajectories[2].type = Types.Parabola;
-      trajectories[3].ranges = new Vector2(5f,5f);
-      trajectories[3].type = Types.Circle;
+      trajectories[0].SetInitialPos(transform.position);
       for(int i=1; i < trajectories.Length;  i++)
       {
-        initialPos[i] = initialPos[i-1] + new Vector3(
-          (trajectories[i-1].type == Types.Circle)? 0 : trajectories[i-1].ranges[0],
-          (trajectories[i-1].type == Types.Parabola || trajectories[i-1].type == Types.Circle)? 0 : trajectories[i-1].ranges[1],
-          0);
+        trajectories[i].SetInitialPos(trajectories[i-1].InitialPos() + new Vector3(
+          (trajectories[i-1].type == Types.Circle || trajectories[i-1].type == Types.Still) ? 0 : trajectories[i-1].ranges[0],
+          (trajectories[i-1].type == Types.Parabola || trajectories[i-1].type == Types.Circle
+            || trajectories[i-1].type == Types.Semicircle  || trajectories[i-1].type == Types.Still)? 0 : trajectories[i-1].ranges[1],
+          0));
       }
+      for(int i=0; i < trajectories.Length;  i++)
+      {
+        trajectories[i].SetFinalPos(trajectories[i].InitialPos() + new Vector3(
+          (trajectories[i].type == Types.Circle || trajectories[i].type == Types.Still) ? 0 : trajectories[i].ranges[0],
+          (trajectories[i].type == Types.Parabola || trajectories[i].type == Types.Circle
+            || trajectories[i].type == Types.Semicircle  || trajectories[i].type == Types.Still)? 0 : trajectories[i].ranges[1],
+          0));
+        if(trajectories[i].speed == 0)
+        {
+          trajectories[i].speed = standard_speed;
+        }
+        trajectories[i].SetCenter(trajectories[i].InitialPos()[0] + trajectories[i].ranges[0] / 2f);
+
+        if(trajectories[i].type == Types.Parabola)
+        {
+          trajectories[i].SetParameterA(trajectories[i].ranges[1] /
+              ((Mathf.Pow(trajectories[i].InitialPos()[0] + trajectories[i].ranges[0], 2f) - Mathf.Pow(trajectories[i].InitialPos()[0], 2f)) / trajectories[i].ranges[0] * (trajectories[i].InitialPos()[0] - trajectories[i].Center())
+               + trajectories[i].Center() * trajectories[i].Center() - Mathf.Pow(trajectories[i].InitialPos()[0], 2f)));
+        }
+        if(trajectories[i].type == Types.Circle || trajectories[i].type == Types.Semicircle )
+        {
+          trajectories[i].SetRay((trajectories[i].ranges[1] >= 0) ? Mathf.Abs(trajectories[i].ranges[0] / 2f) : - Mathf.Abs(trajectories[i].ranges[0] / 2f));
+        }
+      }
+
       endValue = trajectories.Length;
     }
 
     // Update is called once per frame
     void Update()
     {
+
       if (Input.GetKeyDown("f"))
       {
-          movement = true;
+          forward = true;
+          backward = false;
       }
-      if(movement)
+      if (Input.GetKeyDown("b"))
       {
-        for(int i=0; i < trajectories.Length;  i++)
+          backward = true;
+          forward = false;
+      }
+      if(forward)
+      {
+        for(int i = 0; i < endValue;  i++)
         {
           if(arcLength < i+1)
           {
@@ -64,51 +84,124 @@ public class springObject : MonoBehaviour
           }
         }
       }
+      if(backward)
+      {
+        for(int i = endValue - 1; i >= 0;  i--)
+        {
+          if(arcLength > i)
+          {
+            Moveback(i);
+            break;
+          }
+        }
+      }
     }
 
     public void Move(int numOfTraj){
       Trajectory traj = trajectories[numOfTraj];
+      speed = (traj.ranges[0] >= 0) ? traj.speed : -traj.speed;
       switch(traj.type)
       {
-        case Types.StraightLine: transform.Translate(Vector3.right * Time.deltaTime * speed  * traj.ranges[0], Space.World);
-                                transform.Translate(Vector3.up * Time.deltaTime * speed * traj.ranges[1], Space.World);
+        case Types.StraightLine: transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
                                 if(traj.ranges[0] != 0)
                                 {
-                                  arcLength = Mathf.Abs(transform.position[0] - initialPos[numOfTraj][0]) /  Mathf.Abs(traj.ranges[0]) + numOfTraj;
+                                  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]);
+                                  transform.Translate(Vector3.up * Time.deltaTime * speed * traj.ranges[1] / traj.ranges[0], Space.World);
                                 }else
                                 {
-                                  arcLength = Mathf.Abs(transform.position[1] - initialPos[numOfTraj][1]) / Mathf.Abs(traj.ranges[1]) + numOfTraj;
+                                  arcLength = Mathf.Abs(transform.position[1] - traj.InitialPos()[1]) / Mathf.Abs(traj.ranges[1]);
+                                  transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
                                 }
                                 break;
-        case Types.Parabola:    transform.Translate(Vector3.right * Time.deltaTime * speed  * traj.ranges[0], Space.World);
-                                arcLength = Mathf.Abs(transform.position[0] - initialPos[numOfTraj][0]) /  Mathf.Abs(traj.ranges[0]) + numOfTraj;
-                                if(arcLength - numOfTraj < 0.5f)
+        case Types.Parabola:    arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]);
+                                xspeed = Mathf.Abs(traj.ranges[0]) / 2f * -Mathf.Sqrt(Mathf.Abs(arcLength - 0.5f)) + Mathf.Abs(traj.ranges[0]) / 2f + basic_speed;
+                                transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                transform.Translate(Vector3.down * Time.deltaTime *
+                                    (speed * xspeed * (2f * traj.ParameterA() * transform.position[0] - 2f * traj.ParameterA() * traj.Center())), Space.World);
+                                break;
+      /*  case Types.Semicircle:  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]);
+                                xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;
+                                transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                transform.Translate(Vector3.up * Time.deltaTime *
+                                    ((traj.Center() * speed * xspeed - transform.position[0] * speed * xspeed) / Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(transform.position[0] - traj.Center(), 2f))),
+                                     Space.World);
+                                break;
+        case Types.Circle:      if(arcLength < numOfTraj + 0.5f)
                                 {
-                                  transform.Translate(Vector3.up * Time.deltaTime * (speed * traj.ranges[1] * Mathf.Pow((1 - arcLength + numOfTraj), 2) + speed2 * (1 - arcLength + numOfTraj)), Space.World);
-                                }else{
-                                  transform.Translate(Vector3.down * Time.deltaTime * (speed * traj.ranges[1] * Mathf.Pow((arcLength - numOfTraj), 2) + speed2 * (arcLength - numOfTraj)), Space.World);
+                                  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]) / 2f;
+                                  xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;
+                                  transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                  transform.Translate(Vector3.up * Time.deltaTime *
+                                      ((traj.Center() * speed * xspeed - transform.position[0] * speed * xspeed) / Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(transform.position[0] - traj.Center(), 2f))),
+                                       Space.World);
+                                }else
+                                {
+                                  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0] - traj.ranges[0]) /  Mathf.Abs(traj.ranges[0]) / 2f + 0.5f;
+                                  xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;
+                                  transform.Translate(Vector3.left * Time.deltaTime * speed * xspeed, Space.World);
+                                  transform.Translate(Vector3.up * Time.deltaTime *
+                                      ((traj.Center() * speed * xspeed - transform.position[0] * speed * xspeed) / Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(transform.position[0] - traj.Center(), 2f))),
+                                       Space.World);
                                 }
+                                break;*/
+        case Types.Still:
+        default:                arcLength += Time.deltaTime;
                                 break;
-        case Types.Circle:      float ray = Mathf.Max(Mathf.Abs(traj.ranges[0]), Mathf.Abs(traj.ranges[1]));
-                                if(arcLength - numOfTraj < 0.25f){
-                                  transform.Translate(Vector3.right * Time.deltaTime * speed  * traj.ranges[0], Space.World);
-                                  arcLength = Mathf.Abs(transform.position[0] - initialPos[numOfTraj][0]) /  Mathf.Abs(traj.ranges[0]) / 2f + numOfTraj;
-                                  transform.Translate(Vector3.down * Time.deltaTime * speed * Mathf.Sqrt(ray *ray -  Mathf.Pow((arcLength - numOfTraj), 2)), Space.World);
-                                }else if(arcLength - numOfTraj < 0.5f){
-                                  transform.Translate(Vector3.right * Time.deltaTime * speed  * traj.ranges[0], Space.World);
-                                  arcLength = Mathf.Abs(transform.position[0] - initialPos[numOfTraj][0]) /  Mathf.Abs(traj.ranges[0]) / 2f + numOfTraj;
-                                  transform.Translate(Vector3.up * Time.deltaTime * speed * Mathf.Sqrt(ray *ray -  Mathf.Pow((arcLength - numOfTraj), 2)), Space.World);
-                                }else if(arcLength - numOfTraj < 0.75f){
-                                  transform.Translate(Vector3.left * Time.deltaTime * speed  * traj.ranges[0], Space.World);
-                                  arcLength = Mathf.Abs(ray - transform.position[0] + initialPos[numOfTraj][0]) /  Mathf.Abs(traj.ranges[0]) / 2f + 0.5f + numOfTraj;
-                                  transform.Translate(Vector3.up * Time.deltaTime * speed * Mathf.Sqrt(ray *ray -  Mathf.Pow((arcLength - numOfTraj), 2)), Space.World);
-                                }else{
-                                  transform.Translate(Vector3.left * Time.deltaTime * speed  * traj.ranges[0], Space.World);
-                                  arcLength = Mathf.Abs(ray - transform.position[0] + initialPos[numOfTraj][0]) /  Mathf.Abs(traj.ranges[0])  / 2f + 0.5f + numOfTraj;
-                                  transform.Translate(Vector3.down * Time.deltaTime * speed * Mathf.Sqrt(ray *ray -  Mathf.Pow((arcLength - numOfTraj), 2)), Space.World);
-                                }
-                                break;
-        default: break;
       }
+      arcLength += numOfTraj;
+    }
+
+    public void Moveback(int numOfTraj){
+      Trajectory traj = trajectories[numOfTraj];
+      speed = (traj.ranges[0] >= 0) ? -traj.speed : traj.speed;
+      switch(traj.type)
+      {
+        case Types.StraightLine: transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
+                                if(traj.ranges[0] != 0)
+                                {
+                                  arcLength = Mathf.Abs(transform.position[0] - traj.FinalPos()[0]) /  Mathf.Abs(traj.ranges[0]);
+                                  transform.Translate(Vector3.up * Time.deltaTime * speed * traj.ranges[1] / traj.ranges[0], Space.World);
+                                }else
+                                {
+                                  arcLength = Mathf.Abs(transform.position[1] - traj.FinalPos()[1]) / Mathf.Abs(traj.ranges[1]);
+                                  transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
+                                }
+                                break;
+        case Types.Parabola:    arcLength = Mathf.Abs(transform.position[0] - traj.FinalPos()[0]) /  Mathf.Abs(traj.ranges[0]);
+                                xspeed = Mathf.Abs(traj.ranges[0]) / 2f * -Mathf.Sqrt(Mathf.Abs(arcLength - 0.5f)) + Mathf.Abs(traj.ranges[0]) / 2f + basic_speed;
+                                transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                transform.Translate(Vector3.down * Time.deltaTime *
+                                    (speed * xspeed * (2f * traj.ParameterA() * transform.position[0] - 2f * traj.ParameterA() * traj.Center())), Space.World);
+                                break;
+      /*  case Types.Semicircle:  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]);
+                                xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;
+                                transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                transform.Translate(Vector3.up * Time.deltaTime *
+                                    ((traj.Center() * speed * xspeed - transform.position[0] * speed * xspeed) / Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(transform.position[0] - traj.Center(), 2f))),
+                                     Space.World);
+                                break;
+        case Types.Circle:      if(arcLength < numOfTraj + 0.5f)
+                                {
+                                  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]) / 2f;
+                                  xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;
+                                  transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                  transform.Translate(Vector3.up * Time.deltaTime *
+                                      ((traj.Center() * speed * xspeed - transform.position[0] * speed * xspeed) / Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(transform.position[0] - traj.Center(), 2f))),
+                                       Space.World);
+                                }else
+                                {
+                                  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0] - traj.ranges[0]) /  Mathf.Abs(traj.ranges[0]) / 2f + 0.5f;
+                                  xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;
+                                  transform.Translate(Vector3.left * Time.deltaTime * speed * xspeed, Space.World);
+                                  transform.Translate(Vector3.up * Time.deltaTime *
+                                      ((traj.Center() * speed * xspeed - transform.position[0] * speed * xspeed) / Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(transform.position[0] - traj.Center(), 2f))),
+                                       Space.World);
+                                }
+                                break;*/
+        case Types.Still:
+        default:                arcLength -= Time.deltaTime;
+                                break;
+      }
+      arcLength += numOfTraj;
     }
 }

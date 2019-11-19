@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4500130088659882645
+--- !u!1 &5002551963916567011
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6697230179578408889}
-  - component: {fileID: 5438262289324556157}
+  - component: {fileID: 2180802866622406070}
+  - component: {fileID: 4536897617166918524}
   m_Layer: 0
   m_Name: Trajectory
   m_TagString: Untagged
@@ -17,32 +17,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6697230179578408889
+--- !u!4 &2180802866622406070
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4500130088659882645}
+  m_GameObject: {fileID: 5002551963916567011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3000002, y: 19.2, z: 0}
+  m_LocalPosition: {x: -1.4000001, y: 19.203133, z: 2.713207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5438262289324556157
+--- !u!114 &4536897617166918524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4500130088659882645}
+  m_GameObject: {fileID: 5002551963916567011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca99fcd19fe6059458ecd72978cedc8a, type: 3}
+  m_Script: {fileID: 11500000, guid: f21abe81ae5af884dbff4da3e0e328f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ranges: {x: 2, y: 4}
-  type: 1
+  ranges: {x: 2, y: 0}
+  type: 0
   speed: 0

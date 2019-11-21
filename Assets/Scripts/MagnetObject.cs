@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magnet : MonoBehaviour
+public class MagnetObject : MonoBehaviour
 {
   public float charge;
   public float maxForce;

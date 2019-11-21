@@ -1928,10 +1928,10 @@ GameObject:
   - component: {fileID: 7681446999045446186}
   - component: {fileID: 7681446999045446181}
   - component: {fileID: 7681446999045446180}
-  - component: {fileID: 7681446999045446183}
   - component: {fileID: 7681446999045446187}
+  - component: {fileID: 6654225907351905394}
   m_Layer: 0
-  m_Name: Magnet
+  m_Name: MagnetObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1980,22 +1980,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.91946864, y: 0.7850282, z: 0.5093161}
   m_Center: {x: 1.7021686, y: 0.009453893, z: -0.17416722}
---- !u!114 &7681446999045446183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7681446999045446182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca5537f67322574087f8c3623257073, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charge: 10
-  maxForce: 0
-  PointZeroRot: {x: 0, y: 0, z: 0}
-  pivot: {fileID: 2012237947513646372}
 --- !u!54 &7681446999045446187
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2012,3 +1996,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6654225907351905394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681446999045446182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f02b686640acc14b9088e4b9cca5589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charge: 500
+  maxForce: 200
+  PointZeroRot: {x: 1, y: 0, z: 0}
+  pivot: {fileID: 2012237947513646372}
+  stdMoment: 100

@@ -20,7 +20,10 @@ public class PlayerMovement_RB : MonoBehaviour
 
     public float forceJumpMagnitude = 1f;
     public ForceMode forceType;
-    
+    public float heightStair=0f;
+    public float magnStairRaycast = .6f;
+
+
 
     private void Start()
     {
@@ -67,17 +70,23 @@ public class PlayerMovement_RB : MonoBehaviour
 
         
 
-        Vector3 horizontalMove = Vector3.right * Mathf.Sign(rb.velocity.x);
+        Vector3 horizontalMove = new Vector3(Mathf.Sign(rb.velocity.x),0,0);
         RaycastHit hit;
+        RaycastHit hitStair;
+        // The raycast fix the intial step and slope problem
         
-        // Check if the body's current velocity will result in a collision
-        Debug.DrawLine(transform.position, transform.position+ horizontalMove * .1f, Color.red);
-        if (rb.SweepTest(horizontalMove, out hit, 0.05f))
+        Debug.DrawLine(transform.position + Vector3.up * heightStair, transform.position+ horizontalMove * magnStairRaycast + Vector3.up* heightStair, Color.red);
+        if(Physics.Raycast(transform.position + Vector3.up * heightStair, horizontalMove, out hitStair, magnStairRaycast, layerMask))
         {
-            Debug.Log("PLAYER COLLIDES!");
-            // If so, stop the movement
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            Debug.Log("RAYCASTHITS");
+            if (rb.SweepTest(horizontalMove, out hit, 0.05f))
+            {
+                Debug.Log("PLAYER COLLIDES!");
+                // If so, stop the movement
+                rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            }
         }
+        
        
     }
 

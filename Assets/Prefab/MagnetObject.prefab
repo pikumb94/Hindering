@@ -1930,6 +1930,8 @@ GameObject:
   - component: {fileID: 7681446999045446180}
   - component: {fileID: 7681446999045446187}
   - component: {fileID: 6654225907351905394}
+  - component: {fileID: 2358191482019507163}
+  - component: {fileID: 6270150941563306144}
   m_Layer: 0
   m_Name: MagnetObject
   m_TagString: Untagged
@@ -1974,7 +1976,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7681446999045446182}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 73c23f71e770244419a0ea6f10ddd66c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2013,3 +2015,29 @@ MonoBehaviour:
   PointZeroRot: {x: 1, y: 0, z: 0}
   pivot: {fileID: 2012237947513646372}
   stdMoment: 100
+--- !u!114 &2358191482019507163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681446999045446182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c255683fbeae314294130c9e36f3b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveOnTime: 1
+--- !u!114 &6270150941563306144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681446999045446182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfff9e30d83ef8c4689d5152d293933e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lParams: {fileID: 11400000, guid: fadbec9823934a34e9905ed81f528374, type: 2}

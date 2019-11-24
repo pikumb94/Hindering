@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 8938647847666410661}
   - component: {fileID: 8938647847666410662}
   - component: {fileID: 8938647847666410663}
+  - component: {fileID: 5790649353209056601}
+  - component: {fileID: -4896576800634451972}
   m_Layer: 0
-  m_Name: Metal
+  m_Name: BoxMetal
   m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,3 +111,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5790649353209056601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938647847666410656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfff9e30d83ef8c4689d5152d293933e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lParams: {fileID: 11400000, guid: 6dbd25c0a18c9d24ca192f5eb536b200, type: 2}
+--- !u!114 &-4896576800634451972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938647847666410656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ee6b55dd8dd2e41aca9e494d15dd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeSet: {fileID: 11400000, guid: ac1187138e2780146a572d0de0fd434c, type: 2}

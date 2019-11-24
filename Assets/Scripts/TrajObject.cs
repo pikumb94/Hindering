@@ -152,7 +152,7 @@ public class TrajObject : TimeBehaviour
       arcLength = (backward) ? numOfTraj + 1 - arcLength : arcLength + numOfTraj;
     }
 
-    public override void swapTime()
+    protected override void swapTime()
     {
       if(time)
       {

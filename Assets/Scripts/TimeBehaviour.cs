@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TimeBehaviour : MonoBehaviour
 {
-    protected bool ActiveOnTime = true;
     protected Rigidbody rb;
     protected ForceHandler fh;
     //in order to save the velocity when switch to Kinematic we store a private Vector3
@@ -29,7 +28,7 @@ public class TimeBehaviour : MonoBehaviour
 
 
     //cambio il rigidbody
-    public void switchKinematic()
+    protected void switchKinematic()
     {
         if (rb.isKinematic == true)
         {   //il tempo riprendere a scorrere..
@@ -51,7 +50,7 @@ public class TimeBehaviour : MonoBehaviour
             rb.isKinematic = true;
         }
     }
-    public virtual void swapTime()
+    protected virtual void swapTime()
     {
         switchKinematic();
     }

@@ -44,7 +44,7 @@ public class LeverTrajObject : TimeBehaviour
       }
     }
 
-    public override void swapTime()
+    protected override void swapTime()
     {
       if(time)
       {

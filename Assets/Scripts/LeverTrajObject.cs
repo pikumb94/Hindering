@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeverSpringObject : MonoBehaviour
+public class LeverTrajObject : TimeBehaviour
 {
-    public SpringObject so;
+    public TrajObject so;
     public GameObject stick;
     public GameObject pivot;
     public bool on = false;
+    public bool time = true;
     public float angleOn = 45f;
     public float angleOff = 135f;
     float angle = 135f;
@@ -16,7 +17,7 @@ public class LeverSpringObject : MonoBehaviour
 
     void Start()
     {
-
+      base.Start();
     }
 
     void Update()
@@ -24,24 +25,33 @@ public class LeverSpringObject : MonoBehaviour
       if (Input.GetKeyDown("f"))
       {
           on = true;
-          so.forward = on;
-          so.backward = !( on );
+          so.backward = !(on);
       }
       if (Input.GetKeyDown("b"))
       {
           on = false;
-          so.forward = on;
           so.backward = !(on);
       }
-      if(on && angle > 45f)
+      if(time && on && angle > angleOn)
       {
         stick.transform.RotateAround(pivot.transform.position, Vector3.left, Time.deltaTime * angleSpeed);
         angle -= Time.deltaTime * angleSpeed;
       }
-      if(!(on) && angle < 135f)
+      if(time && !(on) && angle < angleOff)
       {
         stick.transform.RotateAround(pivot.transform.position, Vector3.right, Time.deltaTime * angleSpeed);
         angle += Time.deltaTime * angleSpeed;
+      }
+    }
+
+    protected override void swapTime()
+    {
+      if(time)
+      {
+        time = false;
+      }else
+      {
+        time = true;
       }
     }
 }

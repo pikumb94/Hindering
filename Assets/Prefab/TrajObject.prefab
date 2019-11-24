@@ -723,7 +723,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
 --- !u!1 &5726070238231796611
@@ -741,9 +741,9 @@ GameObject:
   - component: {fileID: 5726070238231796639}
   - component: {fileID: 5726070238231796608}
   - component: {fileID: 5726070238231796609}
-  - component: {fileID: 2180796661189590544}
+  - component: {fileID: 4732277326231239929}
   m_Layer: 0
-  m_Name: SpringObject
+  m_Name: TrajObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3192,7 +3192,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2180796661189590544
+--- !u!114 &4732277326231239929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3201,19 +3201,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5726070238231796611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 144a1910012910342b7c169febc20977, type: 3}
+  m_Script: {fileID: 11500000, guid: 237f7c8ce0d4e7e498f7c43889210ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   standard_speed: 0.1
-  basic_speed: 0.1
   arcLength: 0
   trajectories:
   - {fileID: 5124690903628701088}
   - {fileID: 2979102644471387632}
   - {fileID: 6067637174347486149}
   - {fileID: 8320327149093364507}
-  forward: 0
-  backward: 0
+  backward: 1
+  time: 1
 --- !u!1001 &1702829370481587852
 PrefabInstance:
   m_ObjectHideFlags: 0

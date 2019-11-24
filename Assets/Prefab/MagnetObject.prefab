@@ -1309,7 +1309,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
 --- !u!1 &7681446998731100487
@@ -1914,7 +1914,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
 --- !u!1 &7681446999045446182
@@ -1930,7 +1930,6 @@ GameObject:
   - component: {fileID: 7681446999045446180}
   - component: {fileID: 7681446999045446187}
   - component: {fileID: 6654225907351905394}
-  - component: {fileID: 2358191482019507163}
   - component: {fileID: 6270150941563306144}
   m_Layer: 0
   m_Name: MagnetObject
@@ -2015,19 +2014,6 @@ MonoBehaviour:
   PointZeroRot: {x: 1, y: 0, z: 0}
   pivot: {fileID: 2012237947513646372}
   stdMoment: 100
---- !u!114 &2358191482019507163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7681446999045446182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c255683fbeae314294130c9e36f3b47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActiveOnTime: 1
 --- !u!114 &6270150941563306144
 MonoBehaviour:
   m_ObjectHideFlags: 0

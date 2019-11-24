@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpringObject : MonoBehaviour
+public class TrajObject : TimeBehaviour
 {
 
     public float standard_speed = 0.1f;
-    public float basic_speed = 0.1f;
     public float arcLength = 0;
 
     public enum Types {StraightLine, Parabola, Semicircle, Circle, Still};
     public Trajectory[] trajectories = new Trajectory[10];
 
-    public bool forward = false;
-    public bool backward = false;
+    public bool backward = true;
+    public bool time = true;
     int endValue;
     float speed;
     float xspeed;
 
     void Start()
     {
-
+      base.Start();
       trajectories[0].SetInitialPos(transform.position);
       for(int i=1; i < trajectories.Length;  i++)
       {
@@ -60,7 +59,18 @@ public class SpringObject : MonoBehaviour
 
     void Update()
     {
-      if(forward)
+
+      if(time && backward)
+      {
+        for(int i = endValue - 1; i >= 0;  i--)
+        {
+          if(arcLength > i)
+          {
+            Move(i, true);
+            break;
+          }
+        }
+      }else if(time)
       {
         for(int i = 0; i < endValue;  i++)
         {
@@ -71,19 +81,8 @@ public class SpringObject : MonoBehaviour
           }
         }
       }
-      if(backward)
-      {
-        for(int i = endValue - 1; i >= 0;  i--)
-        {
-          if(arcLength > i)
-          {
-            Move(i, true);
-            break;
-          }
-        }
-      }
     }
-    
+
 
     public void Move(int numOfTraj, bool backward){
       Trajectory traj = trajectories[numOfTraj];
@@ -116,7 +115,7 @@ public class SpringObject : MonoBehaviour
                                   }
                                   break;
         case Types.Parabola:      arcLength = Mathf.Abs(transform.position[0] - (backward ? traj.FinalPos()[0] : traj.InitialPos()[0])) /  Mathf.Abs(traj.ranges[0]);
-                                  xspeed = Mathf.Abs(traj.ranges[0]) / 2f * -Mathf.Sqrt(Mathf.Abs(arcLength - 0.5f)) + Mathf.Abs(traj.ranges[0]) / 2f + basic_speed;
+                                  xspeed = Mathf.Abs(traj.ranges[0]) / 2f * -Mathf.Sqrt(Mathf.Abs(arcLength - 0.5f)) + Mathf.Abs(traj.ranges[0]) / 2f;
                                   transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
                                   transform.Translate(Vector3.down * Time.deltaTime *
                                       (speed * xspeed * (2f * traj.ParameterA() * transform.position[0] - 2f * traj.ParameterA() * traj.Center())), Space.World);
@@ -151,5 +150,16 @@ public class SpringObject : MonoBehaviour
                                   break;
       }
       arcLength = (backward) ? numOfTraj + 1 - arcLength : arcLength + numOfTraj;
+    }
+
+    protected override void swapTime()
+    {
+      if(time)
+      {
+        time = false;
+      }else
+      {
+        time = true;
+      }
     }
   }

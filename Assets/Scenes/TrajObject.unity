@@ -195,7 +195,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-29518
+  m_Name: pb_Mesh-5054
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1305,6 +1305,25 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1606176689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 908849963845022560, guid: ee319006ec18b9c4e862025c272d6984,
+    type: 3}
+  m_PrefabInstance: {fileID: 1695240876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1606176699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606176689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfff9e30d83ef8c4689d5152d293933e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lParams: {fileID: 0}
 --- !u!1001 &1695240876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1662,7 +1681,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-29486
+  m_Name: pb_Mesh-5022
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

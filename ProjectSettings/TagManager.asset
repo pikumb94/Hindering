@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Metal
+=======
+  - Bullet
+>>>>>>> Stashed changes
   - ArmPivot
   layers:
   - Default
@@ -17,7 +21,11 @@ TagManager:
   - 
   - 
   - 
+<<<<<<< Updated upstream
   - 
+=======
+  - Magnetic
+>>>>>>> Stashed changes
   - 
   - 
   - 

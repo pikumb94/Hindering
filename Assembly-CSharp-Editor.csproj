@@ -161,8 +161,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
@@ -175,12 +181,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -85,7 +85,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -887982601649841707, guid: 89a7e6a8328c7be4da5b980838601f73,
+    m_Motion: {fileID: 7372704032807337456, guid: 6b11c132a8359f543a5d38ebb9c1dff0,
       type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
@@ -115,6 +115,6 @@ BlendTree:
   m_BlendParameterY: Blend
   m_MinThreshold: 0
   m_MaxThreshold: 1
-  m_UseAutomaticThresholds: 0
+  m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 0

@@ -4,7 +4,7 @@ ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: -887982601649841707
+      74: 7372704032807337456
     second: Idleingv2
   externalObjects: {}
   materials:
@@ -17,7 +17,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: <Root Transform>
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 

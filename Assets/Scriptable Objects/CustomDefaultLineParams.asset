@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bc29eff514ef2349ab3d0ea716b4a2e, type: 3}
-  m_Name: CustomLineParams
+  m_Name: CustomDefaultLineParams
   m_EditorClassIdentifier: 
   useWorldSpace: 1
   material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
@@ -18,6 +18,6 @@ MonoBehaviour:
   startWidth: 0.5
   endWidth: 0.1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  endMinColor: {r: 0, g: 0.9505663, b: 1, a: 0.78431374}
-  endMaxColor: {r: 1, g: 0.4638403, b: 0, a: 0.78431374}
+  endMinColor: {r: 0, g: 0, b: 1, a: 0.78431374}
+  endMaxColor: {r: 1, g: 0, b: 0, a: 0.78431374}
   numCapVertices: 10

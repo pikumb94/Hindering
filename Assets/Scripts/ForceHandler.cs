@@ -23,6 +23,8 @@ public class ForceHandler : MonoBehaviour
 
     private LineRenderer lineRenderer;
     public LineParameters lParams;//definisce lo stile della lineRenderer
+    public ForceMode fm = ForceMode.Impulse;
+    public float maxLineLength = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +39,17 @@ public class ForceHandler : MonoBehaviour
     }
     //aggiunge una forza in direzione direction e di forza "magnitude" alle altre gia aplpicate in precedenza con il metodo +=
     //nb: ma la somma tra vettori!
-    public void addBaricentricForce(Vector3 direction, float magnitude)
+    public void addBaricentricForce(Vector3 direction, float magnitude, float maxMagnitude)
     { //se il tempo e fermo
+        
         if (rb.isKinematic)
         {
             //applico la forza
-            BaricentricforceToApply += direction * magnitude;
+            
+            if (BaricentricforceToApply.magnitude < maxMagnitude)
+                BaricentricforceToApply += direction * magnitude;
+            else
+                BaricentricforceToApply = (direction+ BaricentricforceToApply.normalized).normalized * BaricentricforceToApply.magnitude;//when the value of the vectore is maximum you can change only the direction
 
             //e controllo se c'e gia un lineRenderer da aggiornare o devo aggiungerne uno nuovo
             lineRenderer = transform.gameObject.GetComponent<LineRenderer>();
@@ -50,16 +57,17 @@ public class ForceHandler : MonoBehaviour
             {
                 //aggiorna il vettore visivo in base alle nuove forze
                 //updateForceLine(transform.position, direction);
-                updateForceLine();
+                updateForceLine(BaricentricforceToApply.magnitude / maxMagnitude);
             }
             else
             {
                 //aggiunge un nuovo vettore visivo
                 addForceLine();
-                Vector3 vettoreVisivo = direction * magnitude / 2;
+                Vector3 vettoreVisivo = direction * (magnitude/maxMagnitude)* maxLineLength;
                 lineRenderer.SetPosition(0, transform.position);
                 lineRenderer.SetPosition(1, transform.position + vettoreVisivo);
             }
+            Debug.Log("Mod:" + BaricentricforceToApply.magnitude + " Dir:" + BaricentricforceToApply.normalized);
 
         }
         else
@@ -83,7 +91,7 @@ public class ForceHandler : MonoBehaviour
         lineRenderer = gameObject.GetComponent<LineRenderer>();
         if (lineRenderer)
         {
-            updateForceLine();
+            updateForceLine(magnitude);
            // updateForceLine(hitPoint, direction);
         }
         else
@@ -97,12 +105,13 @@ public class ForceHandler : MonoBehaviour
 
 
     }
-    private void updateForceLine()
+    private void updateForceLine(float maxLenPerc)
     {
-        Vector3 vettoreVisivo = BaricentricforceToApply / 2;
+        Vector3 vettoreVisivo = BaricentricforceToApply.normalized * maxLenPerc * maxLineLength;
 
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position + vettoreVisivo);
+        lineRenderer.endColor = Color.Lerp(lParams.endMinColor, lParams.endMaxColor, maxLenPerc);
     }
     /*
     private void updateForceLine(Vector3 hitPoint, Vector3 direction)
@@ -125,7 +134,8 @@ public class ForceHandler : MonoBehaviour
         lineRenderer.useWorldSpace = lParams.useWorldSpace;
         lineRenderer.startWidth = lParams.startWidth;
         lineRenderer.endWidth = lParams.endWidth;
-        lineRenderer.colorGradient = lParams.colorGradient;
+        lineRenderer.startColor = lParams.startColor;
+        lineRenderer.endColor = lParams.endMinColor;
         lineRenderer.numCapVertices = lParams.numCapVertices;
     }
 
@@ -137,8 +147,8 @@ public class ForceHandler : MonoBehaviour
 
     public void Apply()
     {//applico prima la forza nel punto e poi quella nel baricentro
-        rb.AddForceAtPosition(PointForceToApply, PointWhereApply, ForceMode.Impulse);
-        rb.AddForceAtPosition(BaricentricforceToApply, transform.position, ForceMode.Impulse);
+        //rb.AddForceAtPosition(PointForceToApply, PointWhereApply, ForceMode.Impulse);
+        rb.AddForceAtPosition(BaricentricforceToApply, transform.position, fm);
 
         //resetto tutti i parametri e tolgo il lineRenderer
         BaricentricforceToApply = new Vector3(0, 0, 0);

@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement_RB : MonoBehaviour
+public class PlayerMovement_RB : TimeBehaviour
 {
-    private Rigidbody rb;
     Vector3 playerDirection;
     bool isFalling = false;
     bool isGrounded = true;
@@ -13,6 +12,9 @@ public class PlayerMovement_RB : MonoBehaviour
     float magnitudeXMov;
     private CapsuleCollider coll;
     LayerMask layerMask;
+    bool canPlayerMove=false;
+    
+    Vector3 horizontalMove;
 
 
 
@@ -25,8 +27,9 @@ public class PlayerMovement_RB : MonoBehaviour
 
 
 
-    private void Start()
+    private new void Start()
     {
+        base.Start();
         layerMask = 1 << gameObject.layer;
         layerMask = ~layerMask;
         rb = gameObject.GetComponent<Rigidbody>();
@@ -47,44 +50,75 @@ public class PlayerMovement_RB : MonoBehaviour
             else
                 isFalling = true;
         }
-        Debug.Log (isGrounded);
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        //Debug.Log (isGrounded);
+        if (Input.GetButtonDown("Jump") && isGrounded && canPlayerMove)
             playerJump(forceJumpMagnitude, forceType);
 
-
-
-        /*
-        float x = Input.GetAxis("Horizontal");
-        playerDirection = Vector3.right * x * Time.deltaTime;
-        //rb.MovePosition(transform.position + playerDirection);
-        rb.velocity = playerDirection * speed;
-        Debug.Log(rb.velocity);*/
+        
     }
 
     private void FixedUpdate()
     {
-        inputX = Input.GetAxis("Horizontal");
+        inputX = (canPlayerMove? Input.GetAxis("Horizontal"):0);
         magnitudeXMov = speed * inputX * Time.fixedDeltaTime;
         rb.velocity = new Vector3(magnitudeXMov, rb.velocity.y, 0);
-        //Debug.Log(rb.velocity);
-
         
 
-        Vector3 horizontalMove = new Vector3(Mathf.Sign(rb.velocity.x),0,0);
-        RaycastHit hit;
-        RaycastHit hitStair;
+        
+        /*This Raycasting is to allow the player to climb stairs and slopes while allowing a little bit of edge climbing
+         when the capsule collider is smooth enough to allow it in a fast way. If it requires too much time to climb the X input is ignored and the player falls.
+         Later I will try to do it in a more general way but this way should work avoiding also to get stuck on air and mid air objects.*/
+        horizontalMove = new Vector3(Math.Sign(rb.velocity.x),0,0);
+        
+        //RaycastHit hit;
+        RaycastHit hitLow;
+        RaycastHit hitCenter;
+        RaycastHit hitHigh;
+        RaycastHit hitMidHigh;
+        RaycastHit hitMidLow;
+        RaycastHit hitKnee;
+        
         // The raycast fix the intial step and slope problem
-        
+
         Debug.DrawLine(transform.position + Vector3.up * heightStair, transform.position+ horizontalMove * magnStairRaycast + Vector3.up* heightStair, Color.red);
-        if(Physics.Raycast(transform.position + Vector3.up * heightStair, horizontalMove, out hitStair, magnStairRaycast, layerMask))
+        Debug.DrawLine(transform.position + Vector3.up * heightStair/2f, transform.position + horizontalMove * magnStairRaycast + Vector3.up * heightStair/2f, Color.red);
+        Debug.DrawLine(transform.position - Vector3.up * heightStair*4f/5f, transform.position + horizontalMove * magnStairRaycast - Vector3.up * heightStair * 4f / 5f, Color.green);
+        Debug.DrawLine(transform.position - Vector3.up * heightStair, transform.position + horizontalMove * magnStairRaycast - Vector3.up * heightStair, Color.blue);
+        Debug.DrawLine(transform.position - Vector3.up * heightStair / 2f, transform.position + horizontalMove * magnStairRaycast - Vector3.up * heightStair / 2f, Color.red);
+
+        Debug.DrawLine(transform.position, transform.position + horizontalMove * magnStairRaycast, Color.red);
+
+        if (/*Physics.Raycast(transform.position - Vector3.up * heightStair, horizontalMove, out hitLow, magnStairRaycast, layerMask) ||
+            Physics.Raycast(transform.position - Vector3.up * heightStair * 4f / 5f, horizontalMove, out hitKnee, magnStairRaycast, layerMask) ||*/
+             Physics.Raycast(transform.position - Vector3.up * heightStair / 2f, horizontalMove, out hitMidLow, magnStairRaycast, layerMask) ||
+             Physics.Raycast(transform.position, horizontalMove, out hitCenter, magnStairRaycast, layerMask) ||//scala troppo alta! allora azzero
+             Physics.Raycast(transform.position + Vector3.up * heightStair / 2f, horizontalMove, out hitMidHigh, magnStairRaycast, layerMask) ||
+             Physics.Raycast(transform.position + Vector3.up * heightStair, horizontalMove, out hitHigh, magnStairRaycast, layerMask))
         {
-            Debug.Log("RAYCASTHITS");
-            if (rb.SweepTest(horizontalMove, out hit, 0.05f))
+                Debug.Log("PLAYER HITS RAYCAST!");
+                rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        }
+        else
+        {
+            if (Physics.Raycast(transform.position - Vector3.up * heightStair, horizontalMove, out hitLow, magnStairRaycast, layerMask) && 
+                Physics.Raycast(transform.position - Vector3.up * heightStair * 4f / 5f, horizontalMove, out hitKnee, magnStairRaycast, layerMask))
             {
-                Debug.Log("PLAYER COLLIDES!");
+                Debug.Log(hitKnee.distance + "  " + hitLow.distance);
+                if(Mathf.Abs(hitKnee.distance - hitLow.distance) <= Mathf.Epsilon)
+                {
+                    Debug.Log("Only last two and same distance");
+                    rb.velocity = new Vector3(0, rb.velocity.y, 0);
+                }
+                    
+            }
+            /*
+            if (rb.SweepTest(horizontalMove, out hit, 0.01f))
+            {
+                Debug.Log("PLAYER COLLIDES SWEEPTEST!");
                 // If so, stop the movement
                 rb.velocity = new Vector3(0, rb.velocity.y, 0);
             }
+            */
         }
         
        
@@ -93,5 +127,15 @@ public class PlayerMovement_RB : MonoBehaviour
     private void playerJump(float fJM, ForceMode type)
     {
         rb.AddForce(transform.up * fJM, type);
+    }
+
+    override protected void swapTime()
+    {
+        if (canPlayerMove)
+            canPlayerMove = false;
+        else
+            canPlayerMove = true;
+
+
     }
 }

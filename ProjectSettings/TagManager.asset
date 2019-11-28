@@ -19,9 +19,14 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - 
   - 
 <<<<<<< Updated upstream
+=======
+  - Player
+  - PostProcessing
+>>>>>>> PlayerRBCollider&PP_PikUmb
   - 
 =======
   - Magnetic

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,15 @@ public class ForceLineApplication : MonoBehaviour
 
     //magntudine della forza
     public float forceMagnitude = 10f;
-    CapsuleCollider coll;
+    public float forceMagnitudeMaxValue = 100f;
+    MeshCollider coll;
     private int playerLayer;
-    private IndicatorMouseFollow mouseScript;
+    public IndicatorMouseFollow mouseScript;
+    bool facingRight = true;
+    float inputFacingDir;
     HashSet<Collider> collidingObjects; 
     private bool catchInput;
+    public Transform facingIndicator;
    // public LineParameters lParams;
     [Range(0,1)]
     public float fadeParameterCollidingObjects;
@@ -24,9 +29,9 @@ public class ForceLineApplication : MonoBehaviour
     void Start()
     {
       
-        coll = GetComponent<CapsuleCollider>();
+        coll = GetComponent<MeshCollider>();
         playerLayer = transform.parent.gameObject.layer;
-        mouseScript = GetComponent<IndicatorMouseFollow>();
+        //mouseScript = GetComponent<IndicatorMouseFollow>();
         catchInput = false;
         collidingObjects = new HashSet<Collider>();
     }
@@ -37,6 +42,7 @@ public class ForceLineApplication : MonoBehaviour
         //se sto collidendo con uno o piu oggetti..
         if (catchInput)
         {
+            /*
             //se premo il mouse sinistro
             if (Input.GetMouseButtonDown(0))
             {
@@ -44,7 +50,7 @@ public class ForceLineApplication : MonoBehaviour
                 foreach (Collider c in collidingObjects)
                     //applico la forza nel punto in cui collide la pallina rossa
                     addPointForce(c);
-            }
+            }*/
 
             if (Input.GetMouseButtonDown(1))
             {
@@ -59,13 +65,21 @@ public class ForceLineApplication : MonoBehaviour
                     }
                     else
                     {
-                        forceHandler.addBaricentricForce(mouseScript.getDst().normalized,forceMagnitude);
+                        forceHandler.addBaricentricForce(mouseScript.getDst().normalized,forceMagnitude, forceMagnitudeMaxValue);
                     }
                 }
             
             }
         }
-        
+        inputFacingDir = Math.Sign(Input.GetAxis("Horizontal"));
+        if (inputFacingDir != 0)
+            facingRight = (inputFacingDir > 0 ? true : false);
+        Debug.Log(facingRight);
+
+        if (facingRight)
+            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
+        else
+            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, - Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
 
     }
 
@@ -73,7 +87,7 @@ public class ForceLineApplication : MonoBehaviour
     {
         //se l'oggeto con cui mi sono scontrato non e un player 
         //NB: qui forse c'era un modo piu corretto -> da sistemare alla fine nel caso
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.layer != gameObject.layer)
         {
             //abilito l'applicazione della forza nell 'update
             catchInput = true;
@@ -81,7 +95,7 @@ public class ForceLineApplication : MonoBehaviour
             collidingObjects.Add(other);
             //set roba visiva
             Component test = other.gameObject.GetComponent<MeshRenderer>();
-            if (test != null)
+            if (test != null && fadeParameterCollidingObjects!=0)
             {
                 Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
                 c.a = fadeParameterCollidingObjects;
@@ -92,7 +106,7 @@ public class ForceLineApplication : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.layer != gameObject.layer)
         {
             //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);
@@ -100,7 +114,7 @@ public class ForceLineApplication : MonoBehaviour
                 catchInput = false;
             //tolgo roba visiva
             Component test = other.gameObject.GetComponent<MeshRenderer>();
-            if (test != null)
+            if (test != null && fadeParameterCollidingObjects != 0)
             {
                 Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
                 c.a = 1;

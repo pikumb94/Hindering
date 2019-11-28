@@ -9,6 +9,7 @@ public class IndicatorMouseFollow : MonoBehaviour
     float distanceToPlane;
     Vector3 dst;
     Plane plane;
+    float snapAngleRad;
 
 
     void Start()
@@ -32,13 +33,53 @@ public class IndicatorMouseFollow : MonoBehaviour
 
         dst = mousePos - transform.position;
         //ruoto il disco con la pallina fino a allinearlo col mouse
-        transform.up = dst;
-  
+
+        //Hold shift to snap the angles
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
+            dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad),0);
+        }
+
+            transform.forward = dst;
+
+
+
 
     }
 
     public Vector3 getDst()
     {
         return dst;
+    }
+
+    float snapRadiants(float currAngleRad)
+    {
+        bool isNeg = (Mathf.Sign(currAngleRad)<0?true:false);
+        float res=Mathf.Abs(currAngleRad);
+
+        
+        switch (res)
+        {
+            case float n when (n <= Mathf.PI/8f):
+                res = 0f;
+                break;
+
+            case float n when (n > Mathf.PI / 8f && n <=3f* Mathf.PI / 8f):
+                res = Mathf.PI/4f;
+                break;
+
+            case float n when (n > 3f*Mathf.PI / 8f && n <= 5f * Mathf.PI / 8f):
+                res = Mathf.PI / 2f;
+                break;
+
+            case float n when (n > 5f * Mathf.PI / 8f && n <= 7f * Mathf.PI / 8f):
+                res = 3f*Mathf.PI / 4f;
+                break;
+            case float n when (n > 7f * Mathf.PI / 8f && n <= Mathf.PI):
+                res = Mathf.PI;
+                break;
+        }
+        return (isNeg?-1f* res:res);
     }
 }

@@ -13,6 +13,10 @@ public class NewSwitch2Magnet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("2"))
+        {
+            transform.parent.GetChild(2).gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagnetObject : MonoBehaviour
+public class MagnetObject : TimeBehaviour
 {
   public float charge;
   public float maxForce;
@@ -18,12 +18,11 @@ public class MagnetObject : MonoBehaviour
   Quaternion deviation;
   Vector3 rotAxis;
 //  Vector3 forbiddenRot;
-  Rigidbody rb;
   Rigidbody otherRb;
 
   void Start()
   {
-    rb = GetComponent<Rigidbody>();
+    base.Start();
   }
 
   void OnTriggerStay(Collider other)

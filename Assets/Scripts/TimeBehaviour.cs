@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TimeBehaviour : MonoBehaviour
 {
-    protected bool ActiveOnTime = true;
     protected Rigidbody rb;
+    protected ForceHandler fh;
     //in order to save the velocity when switch to Kinematic we store a private Vector3
     protected Vector3 velocity;
     protected void Start()
     {
         velocity = new Vector3();
-       
+
             //se sono un un oggetto
 
             //dico al sistema che quando viene chiamato "timeChange" io devo eseguire switchKinematic ecc..
@@ -20,24 +20,15 @@ public class TimeBehaviour : MonoBehaviour
             rb = GetComponent<Rigidbody>();
 
             //setto il rigidbody in base a ActiveOnTime
-            setKinematic(ActiveOnTime);
-        
+            if(!TimeHandler.Instance.time)
+            {
+              swapTime();
+            }
     }
-    public void setKinematic(bool activeOnTime)
-    {
-        if (activeOnTime == true)
-        {
 
-            rb.isKinematic = !TimeHandler.Instance.time;
-        }
-        else
-        {
-            rb.isKinematic = TimeHandler.Instance.time;
-        }
-    }
 
     //cambio il rigidbody
-    public void switchKinematic()
+    protected void switchKinematic()
     {
         if (rb.isKinematic == true)
         {   //il tempo riprendere a scorrere..
@@ -46,7 +37,11 @@ public class TimeBehaviour : MonoBehaviour
             rb.velocity = velocity;
 
             //applco le forze
-            gameObject.GetComponent<ForceHandler>().Apply();
+            fh = gameObject.GetComponent<ForceHandler>();
+            if(fh != null)
+            {
+              fh.Apply();
+            }
         }
         else
         {   //il tempo si ferma..
@@ -55,7 +50,7 @@ public class TimeBehaviour : MonoBehaviour
             rb.isKinematic = true;
         }
     }
-    public virtual void swapTime()
+    protected virtual void swapTime()
     {
         switchKinematic();
     }

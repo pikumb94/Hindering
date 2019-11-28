@@ -6,7 +6,7 @@ public class Trajectory : MonoBehaviour
 {
 
     public Vector2 ranges;
-    public SpringObject.Types type;
+    public TrajObject.Types type;
     public float speed = 0;
     Vector3 initialPos;
     Vector3 finalPos;

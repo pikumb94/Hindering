@@ -10,41 +10,56 @@ public class IndicatorMouseFollow : MonoBehaviour
     Vector3 dst;
     Plane plane;
     float snapAngleRad;
+    float prevMousMagn;
+
+    bool usingJoystick = false;
 
 
     void Start()
     {
         //metto in "plane" il piano parallelo alla telecamera e passante per il character
         //o meglio il piano formato dal vettore con direzione  -Vector3.forward (0,0,-1) e il origine transform.forward(posizione del player) 
-        plane = new Plane(-Vector3.forward, playerPosition.position+new Vector3(0, 0.5f, -0.6f));
+        plane = new Plane(-Vector3.forward, playerPosition.position + new Vector3(0, 0.5f, -0.6f));
+
     }
     // Update is called once per frame
     void Update()
     {
-        transform.position = playerPosition.position+new Vector3(0,0.5f,-0.6f);//
+        transform.position = playerPosition.position + new Vector3(0, 0.5f, -0.6f);//
         //crea un raggio con origine la posizione del mouse nella scena
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
-            if(plane.Raycast (ray, out distanceToPlane))
+
+        if (plane.Raycast(ray, out distanceToPlane))
         {
-            
-            mousePos=ray.GetPoint(distanceToPlane);
+
+            mousePos = ray.GetPoint(distanceToPlane);
         }
 
-        dst = mousePos - transform.position;
+        float rightXAxisJoy = Input.GetAxisRaw("Mouse X");
+        float rightYAxisJoy = Input.GetAxisRaw("Mouse Y");
+
+        if (Mathf.Abs(rightXAxisJoy) > 0.2f || Mathf.Abs(rightYAxisJoy) > 0.2f) { 
+            dst = new Vector3(rightXAxisJoy, -rightYAxisJoy, 0);
+            usingJoystick = true;
+        }
+        else{
+            if(!usingJoystick)
+                dst = mousePos - transform.position;
+        }
         //ruoto il disco con la pallina fino a allinearlo col mouse
 
         //Hold shift to snap the angles
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetButton("Fire3"))
         {
             snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
             dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad),0);
         }
-
             transform.forward = dst;
 
+        if (prevMousMagn != mousePos.sqrMagnitude)
+            usingJoystick = false;
 
-
+        prevMousMagn = mousePos.sqrMagnitude;
 
     }
 

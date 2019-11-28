@@ -19616,7 +19616,7 @@ MonoBehaviour:
   _magnetWoop: {fileID: 5376220054010475791, guid: 80d5477657b625546940e9765d59ad9a,
     type: 3}
   _body: {fileID: 6241924711170058640}
-  magneticForce: 30
+  magneticForce: 1000
   boxForce: 10
 --- !u!1 &5678964491283267097
 GameObject:
@@ -102674,6 +102674,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2817531722969093801}
     m_Modifications:
+    - target: {fileID: 932248616, guid: 4712e5de4b6f0d04586ad8c937bebd0b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 611892747264972122, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578591697781411464, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201444926501263524, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694373847770765950, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6380682931097993262, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
         type: 3}
       propertyPath: m_Name

@@ -46,7 +46,7 @@ public class MagnetRB : MonoBehaviour
                 //hit.collider.GetComponent<Rigidbody>().AddForce(-transform.up * boxForce * Time.deltaTime, ForceMode.Impulse);
 
                 //force moving box
-                hit.collider.GetComponent<ForceHandler>().addBaricentricForce(-transform.up, boxForce*Time.deltaTime);
+                hit.collider.GetComponent<ForceHandler>().addBaricentricForce(-transform.up, boxForce*Time.deltaTime, 100);
             }
 
         }

@@ -64,3 +64,5 @@ obj/Debug/
 Assets/ProCore/ProBuilder/Data/ProBuilderPreferences.asset
 
 Assets/Prefab/Player_CC.prefab
+
+*.asset

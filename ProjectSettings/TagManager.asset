@@ -4,11 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - Metal
-=======
-  - Bullet
->>>>>>> Stashed changes
   - ArmPivot
   layers:
   - Default
@@ -19,18 +14,9 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - 
-  - 
-<<<<<<< Updated upstream
-=======
   - Player
   - PostProcessing
->>>>>>> PlayerRBCollider&PP_PikUmb
   - 
-=======
-  - Magnetic
->>>>>>> Stashed changes
   - 
   - 
   - 

@@ -24,7 +24,7 @@ public class TimeHandler : Singleton<TimeHandler>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("t"))
+        if (Input.GetButtonDown("Fire2"))
         {
             timeSwitch();
         }

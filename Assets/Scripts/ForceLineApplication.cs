@@ -12,6 +12,7 @@ public class ForceLineApplication : MonoBehaviour
 
     //magntudine della forza
     public float forceMagnitude = 10f;
+    private bool m_isAxisInUse = false;
     public float forceMagnitudeMaxValue = 100f;
     MeshCollider coll;
     private int playerLayer;
@@ -39,6 +40,7 @@ public class ForceLineApplication : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Input.GetAxis("Fire1"));
         //se sto collidendo con uno o piu oggetti..
         if (catchInput)
         {
@@ -51,26 +53,35 @@ public class ForceLineApplication : MonoBehaviour
                     //applico la forza nel punto in cui collide la pallina rossa
                     addPointForce(c);
             }*/
-
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetAxisRaw("Fire1") != 0)
             {
-                //per ogni oggetto con cui collido
-                foreach (Collider c in collidingObjects)
+                if (m_isAxisInUse == false)
                 {
-                    //aggiungo una forza al baricentro
-                    ForceHandler forceHandler = c.GetComponent<ForceHandler>();
-                    if (forceHandler == null)
+                    //per ogni oggetto con cui collido
+                    foreach (Collider c in collidingObjects)
                     {
-                        Debug.Log("non posso applicare forze a corpi senza un ForceHandler");
+                        //aggiungo una forza al baricentro
+                        ForceHandler forceHandler = c.GetComponent<ForceHandler>();
+                        if (forceHandler == null)
+                        {
+                            Debug.Log("non posso applicare forze a corpi senza un ForceHandler");
+                        }
+                        else
+                        {
+                            forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
+                        }
                     }
-                    else
-                    {
-                        forceHandler.addBaricentricForce(mouseScript.getDst().normalized,forceMagnitude, forceMagnitudeMaxValue);
-                    }
+
+                    m_isAxisInUse = true;
                 }
-            
             }
+            if (Input.GetAxisRaw("Fire1") == 0)
+            {
+                m_isAxisInUse = false;
+            }
+
         }
+
         inputFacingDir = Math.Sign(Input.GetAxis("Horizontal"));
         if (inputFacingDir != 0)
             facingRight = (inputFacingDir > 0 ? true : false);

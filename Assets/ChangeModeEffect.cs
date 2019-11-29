@@ -10,13 +10,21 @@ public class ChangeModeEffect : MonoBehaviour
     PostProcessVolume currVol;
     Vignette m_Vignette;
     ColorGrading m_ColorGrading;
+    ChromaticAberration m_ChromaticAberration;
+    LensDistortion m_LensDistortion;
 
     float intensityValue;
     float temperatureValue;
     float fieldOV;
+    float chromaticAberration;
+    float lensDistortion;
     public float targetTemperatureVal;
     public float targetIntesityVal;
     public float targetFOV;
+    public float targetAberration;
+
+    public float targetDistorsionS2P;
+    public float targetDistorsionP2S;
 
     public float transitionTime;
     float vel;
@@ -50,6 +58,12 @@ public class ChangeModeEffect : MonoBehaviour
         m_ColorGrading = currVol.profile.GetSetting<ColorGrading>();
         temperatureValue = m_ColorGrading.temperature.value;
 
+        m_ChromaticAberration = currVol.profile.GetSetting<ChromaticAberration>();
+        chromaticAberration = m_ChromaticAberration.intensity.value;
+
+        m_LensDistortion = currVol.profile.GetSetting<LensDistortion>();
+        lensDistortion = m_LensDistortion.intensity.value;
+
         fieldOV = cMCamera.m_Lens.FieldOfView;
     }
 
@@ -74,8 +88,11 @@ public class ChangeModeEffect : MonoBehaviour
                 //temperatureValue = Mathf.SmoothDamp(temperatureValue, targetTemperatureVal, ref velT, transitionTime);
 
                 //m_Vignette.intensity.Interp(intensityValue, targetIntesityVal, percTimer);
+                m_ChromaticAberration.intensity.Interp(chromaticAberration, targetAberration,percTimer);
                 m_ColorGrading.temperature.Interp(temperatureValue, targetTemperatureVal, percTimer);
                 m_Vignette.intensity.value = Mathf.Sin(timer* 2f * Mathf.PI / (2f * transitionTime)) * targetIntesityVal;
+
+                m_LensDistortion.intensity.value = Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * targetDistorsionS2P;
                 //Debug.Log(Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * intensityValue);
                 //Debug.Log(timer +" " +transitionTime +" "+ intensityValue);
                 cMCamera.m_Lens.FieldOfView = Mathf.SmoothDamp(cMCamera.m_Lens.FieldOfView, targetFOV, ref velT, transitionTime);
@@ -89,7 +106,11 @@ public class ChangeModeEffect : MonoBehaviour
 
                 */
                 //m_Vignette.intensity.Interp(targetIntesityVal, intensityValue, percTimer);
+                m_ChromaticAberration.intensity.Interp(targetAberration , chromaticAberration, percTimer);
                 m_ColorGrading.temperature.Interp(targetTemperatureVal, temperatureValue, percTimer);
+                m_Vignette.intensity.value = Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * targetIntesityVal;
+
+                m_LensDistortion.intensity.value = Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * targetDistorsionP2S;
                 cMCamera.m_Lens.FieldOfView = Mathf.SmoothDamp(cMCamera.m_Lens.FieldOfView, fieldOV, ref velT, transitionTime);
             }
             //m_Vignette.intensity.value = intensityValue;

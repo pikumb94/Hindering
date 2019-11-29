@@ -85,7 +85,6 @@ public class ForceLineApplication : MonoBehaviour
         inputFacingDir = Math.Sign(Input.GetAxis("Horizontal"));
         if (inputFacingDir != 0)
             facingRight = (inputFacingDir > 0 ? true : false);
-        Debug.Log(facingRight);
 
         if (facingRight)
             facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);

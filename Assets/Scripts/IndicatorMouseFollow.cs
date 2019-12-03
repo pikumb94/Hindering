@@ -54,7 +54,7 @@ public class IndicatorMouseFollow : MonoBehaviour
             snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
             dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad),0);
         }
-        Debug.Log(dst + " "+ transform.forward);
+        //Debug.Log(dst + " "+ transform.forward);
 
         transform.rotation = Quaternion.LookRotation(dst, transform.up);
 

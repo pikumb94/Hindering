@@ -40,7 +40,7 @@ public class ForceLineApplication : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetAxis("Fire1"));
+        //Debug.Log(Input.GetAxis("Fire1"));
         //se sto collidendo con uno o piu oggetti..
         if (catchInput)
         {
@@ -99,15 +99,18 @@ public class ForceLineApplication : MonoBehaviour
         //NB: qui forse c'era un modo piu corretto -> da sistemare alla fine nel caso
         if (other.gameObject.layer != gameObject.layer)
         {
+            
             //abilito l'applicazione della forza nell 'update
             catchInput = true;
             //aggiungo l'oggetto alla lista degli oggetti che stanno collidendo
             collidingObjects.Add(other);
             //set roba visiva
             Component test = other.gameObject.GetComponent<MeshRenderer>();
+            Debug.Log(other.gameObject.GetComponent<MeshRenderer>().material.name);
             if (test != null && fadeParameterCollidingObjects!=0)
             {
                 Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
+                
                 c.a = fadeParameterCollidingObjects;
                 other.gameObject.GetComponent<MeshRenderer>().material.color = c;
             }

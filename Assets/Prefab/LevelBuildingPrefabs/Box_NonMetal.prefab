@@ -26058,10 +26058,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate_02
       objectReference: {fileID: 0}
-    - target: {fileID: 1751948307316588, guid: 37f16a7beb3cae449a4885b50959b6ae, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4245984269440238, guid: 37f16a7beb3cae449a4885b50959b6ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.015625
@@ -26118,14 +26114,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ae72296e77bc0fe4fb9082cb93a9a5e1, type: 2}
     - target: {fileID: 64409933218056402, guid: 37f16a7beb3cae449a4885b50959b6ae,
         type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 64409933218056402, guid: 37f16a7beb3cae449a4885b50959b6ae,
-        type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37f16a7beb3cae449a4885b50959b6ae, type: 3}
 --- !u!1 &4935281627374752066 stripped

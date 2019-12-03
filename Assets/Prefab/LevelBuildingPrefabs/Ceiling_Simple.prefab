@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3732490859772326738}
   m_Layer: 0
-  m_Name: SimpleCeiling
+  m_Name: Ceiling_Simple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6915341978129457201}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.5, y: 4.15, z: -0.71}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4467627210138964924}
@@ -103,11 +103,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7451699974785897763, guid: a9e23310839b708478915e22b2763e08,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7561387325629375866, guid: a9e23310839b708478915e22b2763e08,
         type: 3}
       propertyPath: m_Tangents.Array.data[348].z
@@ -127,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tangents.Array.data[350].z
       value: 3.0357658e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451699974785897763, guid: a9e23310839b708478915e22b2763e08,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9e23310839b708478915e22b2763e08, type: 3}

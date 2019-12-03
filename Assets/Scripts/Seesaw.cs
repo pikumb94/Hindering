@@ -13,6 +13,11 @@ public class Seesaw : TimeBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+        private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.impulse);
     }
 }

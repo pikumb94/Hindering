@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Metal
   - ArmPivot
   layers:
   - Default
@@ -15,17 +14,9 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - 
-  - 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
   - Player
   - PostProcessing
->>>>>>> PlayerRBCollider&PP_PikUmb
-=======
->>>>>>> Angelo
+  - 
   - 
   - 
   - 

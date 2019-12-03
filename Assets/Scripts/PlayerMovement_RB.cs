@@ -50,7 +50,7 @@ public class PlayerMovement_RB : TimeBehaviour
             else
                 isFalling = true;
         }
-        //Debug.Log (isGrounded);
+        Debug.Log (isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded && canPlayerMove)
             playerJump(forceJumpMagnitude, forceType);
 

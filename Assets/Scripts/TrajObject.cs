@@ -70,6 +70,10 @@ public class TrajObject : TimeBehaviour
             break;
           }
         }
+        if(arcLength < 0)
+        {
+          rb.velocity = Vector3.zero;
+        }
       }else if(time)
       {
         for(int i = 0; i < endValue;  i++)
@@ -79,6 +83,10 @@ public class TrajObject : TimeBehaviour
             Move(i, false);
             break;
           }
+        }
+        if(arcLength > endValue)
+        {
+          rb.velocity = Vector3.zero;
         }
       }
     }
@@ -101,14 +109,42 @@ public class TrajObject : TimeBehaviour
       switch(traj.type)
       {
         case Types.StraightLine:  if(traj.ranges[0] != 0)
+                                  // {
+                                  //   transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
+                                  //   arcLength = Mathf.Abs(transform.position[0] - (backward ? traj.FinalPos()[0] : traj.InitialPos()[0])) /  Mathf.Abs(traj.ranges[0]);
+                                  //   transform.Translate(Vector3.up * Time.deltaTime * speed * traj.ranges[1] / traj.ranges[0], Space.World);
+                                  // }else if(traj.ranges[1] != 0)
+                                  // {
+                                  //   arcLength = Mathf.Abs(transform.position[1] - (backward ? traj.FinalPos()[1] : traj.InitialPos()[1])) / Mathf.Abs(traj.ranges[1]);
+                                  //   transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
+                                  // }else
+                                  // {
+                                  //   arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime * (-speed) : arcLength + Time.deltaTime * speed;
+                                  // }
+                                  // break;
+
+                                  // {
+                                  //   rb.AddForce(Vector3.right * Time.deltaTime * speed, ForceMode.VelocityChange);
+                                  //   arcLength = Mathf.Abs(transform.position[0] - (backward ? traj.FinalPos()[0] : traj.InitialPos()[0])) /  Mathf.Abs(traj.ranges[0]);
+                                  //   rb.AddForce(Vector3.up * Time.deltaTime * speed * traj.ranges[1] / traj.ranges[0], ForceMode.VelocityChange);
+                                  // }else if(traj.ranges[1] != 0)
+                                  // {
+                                  //   arcLength = Mathf.Abs(transform.position[1] - (backward ? traj.FinalPos()[1] : traj.InitialPos()[1])) / Mathf.Abs(traj.ranges[1]);
+                                  //   rb.AddForce(Vector3.up * Time.deltaTime * speed, ForceMode.VelocityChange);
+                                  // }else
+                                  // {
+                                  //   arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime * (-speed) : arcLength + Time.deltaTime * speed;
+                                  // }
+                                  // break;
+
                                   {
-                                    transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
+                                    rb.velocity = Vector3.right * speed;
                                     arcLength = Mathf.Abs(transform.position[0] - (backward ? traj.FinalPos()[0] : traj.InitialPos()[0])) /  Mathf.Abs(traj.ranges[0]);
-                                    transform.Translate(Vector3.up * Time.deltaTime * speed * traj.ranges[1] / traj.ranges[0], Space.World);
+                                    rb.velocity += Vector3.up * speed * traj.ranges[1] / traj.ranges[0];
                                   }else if(traj.ranges[1] != 0)
                                   {
                                     arcLength = Mathf.Abs(transform.position[1] - (backward ? traj.FinalPos()[1] : traj.InitialPos()[1])) / Mathf.Abs(traj.ranges[1]);
-                                    transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
+                                    rb.velocity = Vector3.up * speed;
                                   }else
                                   {
                                     arcLength = (backward) ? numOfTraj + 1 - arcLength + Time.deltaTime * (-speed) : arcLength + Time.deltaTime * speed;
@@ -116,9 +152,11 @@ public class TrajObject : TimeBehaviour
                                   break;
         case Types.Parabola:      arcLength = Mathf.Abs(transform.position[0] - (backward ? traj.FinalPos()[0] : traj.InitialPos()[0])) /  Mathf.Abs(traj.ranges[0]);
                                   xspeed = Mathf.Abs(traj.ranges[0]) / 2f * -Mathf.Sqrt(Mathf.Abs(arcLength - 0.5f)) + Mathf.Abs(traj.ranges[0]) / 2f;
-                                  transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
-                                  transform.Translate(Vector3.down * Time.deltaTime *
-                                      (speed * xspeed * (2f * traj.ParameterA() * transform.position[0] - 2f * traj.ParameterA() * traj.Center())), Space.World);
+                                  // transform.Translate(Vector3.right * Time.deltaTime * speed * xspeed, Space.World);
+                                  // transform.Translate(Vector3.down * Time.deltaTime *
+                                  //     (speed * xspeed * (2f * traj.ParameterA() * transform.position[0] - 2f * traj.ParameterA() * traj.Center())), Space.World);
+                                  rb.velocity = Vector3.right * speed * xspeed;
+                                  rb.velocity += Vector3.down * (speed * xspeed * (2f * traj.ParameterA() * transform.position[0] - 2f * traj.ParameterA() * traj.Center()));
                                   break;
       /*  case Types.Semicircle:  arcLength = Mathf.Abs(transform.position[0] - traj.InitialPos()[0]) /  Mathf.Abs(traj.ranges[0]);
                                   xspeed = -Mathf.Sqrt(Mathf.Pow(traj.Ray(), 2f) - Mathf.Pow(Mathf.Abs(arcLength - 0.5f) - Mathf.Pow(traj.Ray(), 2f), 2f)) + Mathf.Abs(traj.Ray()) + basic_speed;

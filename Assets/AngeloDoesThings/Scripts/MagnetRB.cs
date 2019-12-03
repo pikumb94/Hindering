@@ -9,11 +9,10 @@ public class MagnetRB : MonoBehaviour
     [SerializeField]
     private GameObject _body;
     public float magneticForce = 30f;
-    public float boxForce = 50f;
+    public float boxForce = 10f;
 
+    
 
-
-    // Start is called before the first frame update
     void Awake()
     {
         ObjectPoolingManager.Instance.CreatePool(_magnetWoop, 150, 600);
@@ -39,9 +38,15 @@ public class MagnetRB : MonoBehaviour
 
                 //force moving player
                 _body.GetComponent<Rigidbody>().AddForce(dir * magneticForce * Time.deltaTime, ForceMode.Impulse);
-                //force moving box
-                hit.collider.GetComponent<Rigidbody>().AddForce(-transform.up * boxForce * Time.deltaTime, ForceMode.Impulse);
 
+                if (_body.GetComponent<Rigidbody>() == null) Debug.LogError("lamadonnatroia");
+                else Debug.Log("non oggi, jesoo");
+
+                //force moving box w/out start stop (to be REMOVED in final version)
+                //hit.collider.GetComponent<Rigidbody>().AddForce(-transform.up * boxForce * Time.deltaTime, ForceMode.Impulse);
+
+                //force moving box
+                hit.collider.GetComponent<ForceHandler>().addBaricentricForce(-transform.up, boxForce*Time.deltaTime, 100);
             }
 
         }
@@ -49,8 +54,8 @@ public class MagnetRB : MonoBehaviour
 
         if (Input.GetKeyDown("1"))
         {
-            transform.parent.GetChild(1).gameObject.SetActive(true);
-            gameObject.SetActive(false);
+            transform.parent.parent.GetChild(1).gameObject.SetActive(true);
+            transform.parent.gameObject.SetActive(false);
         }
     }
 

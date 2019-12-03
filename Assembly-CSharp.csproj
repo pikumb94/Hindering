@@ -68,8 +68,11 @@
     <Compile Include="Assets\AngeloDoesThings\Scripts\Magnet.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\MagnetRB.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\MagnetWoop.cs" />
+    <Compile Include="Assets\AngeloDoesThings\Scripts\NewMagnetRB.cs" />
+    <Compile Include="Assets\AngeloDoesThings\Scripts\NewSwitch2Magnet.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\Shoulder.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\Switch2Magnet.cs" />
+    <Compile Include="Assets\AngeloDoesThings\Scripts\TestForce.cs" />
     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\AuraFreeCamera.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\AutoMoveAndRotate.cs" />

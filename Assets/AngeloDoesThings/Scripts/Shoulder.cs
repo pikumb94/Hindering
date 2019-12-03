@@ -5,26 +5,35 @@ using UnityEngine;
 public class Shoulder : MonoBehaviour
 {
 
-    private Camera _camera;
+    public Transform playerPosition;
+    Vector3 mousePos;
+    float distanceToPlane;
+    Vector3 dst;
+    Plane plane;
     // Start is called before the first frame update
     void Start()
     {
-        _camera = GameObject.FindObjectOfType<Camera>();
+        //metto in "plane" il piano parallelo alla telecamera e passante per il character
+        //o meglio il piano formato dal vettore con direzione  -Vector3.forward (0,0,-1) e il origine transform.forward(posizione del player) 
+        plane = new Plane(-Vector3.forward, playerPosition.position + new Vector3(0, 0.5f, -0.6f));
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mouse_position = Input.mousePosition;
+        transform.position = playerPosition.position + new Vector3(0, 0.5f, -0.6f);//
+        //crea un raggio con origine la posizione del mouse nella scena
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        float camera2me = transform.position.z - _camera.transform.position.z;
+        if (plane.Raycast(ray, out distanceToPlane))
+        {
 
-        Vector3 mouse = _camera.ScreenToWorldPoint(new Vector3(mouse_position.x, mouse_position.y, camera2me));
+            mousePos = ray.GetPoint(distanceToPlane);
+        }
 
-        Vector3 direction = (Vector2)mouse - (Vector2)transform.position;
+        dst = mousePos - transform.position;
+        //ruoto il disco con la pallina fino a allinearlo col mouse
+        transform.up = dst;
 
-        float rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
     }
 }

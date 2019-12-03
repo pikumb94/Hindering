@@ -18,6 +18,6 @@ public class Seesaw : TimeBehaviour
 
         private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.impulse);
+        //Debug.Log(collision.impulse);
     }
 }

@@ -116,7 +116,7 @@ public class PlayerMovement_RB : TimeBehaviour
 
             playerHitsWall = playerHitsWall || Physics.Raycast(transform.position + Vector3.up * deltaP, horizontalMove, out hit, magnRaycast, layerMask);
             if ((deltaP < stairHeightFromPlayerCenter))
-                playerHitsWall = playerHitsWall || Physics.Raycast(transform.position + Vector3.up * deltaP, horizontalMove, out hit, magnRaycast, layerMask);
+                playerHitsWall = playerHitsWall || Physics.Raycast(transform.position + Vector3.up * deltaN, horizontalMove, out hit, magnRaycast, layerMask);
         }
         playerHitsWall = playerHitsWall || Physics.Raycast(transform.position + Vector3.up * coll.height / 2, horizontalMove, out hit, magnRaycast, layerMask);
         playerHitsWall = playerHitsWall || Physics.Raycast(transform.position, horizontalMove, out hit, magnRaycast, layerMask);

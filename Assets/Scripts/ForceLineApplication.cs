@@ -25,6 +25,7 @@ public class ForceLineApplication : MonoBehaviour
    // public LineParameters lParams;
     [Range(0,1)]
     public float fadeParameterCollidingObjects;
+    bool isPointerOnFacingDir = true;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,12 @@ public class ForceLineApplication : MonoBehaviour
     {
         //Debug.Log(Input.GetAxis("Fire1"));
         //se sto collidendo con uno o piu oggetti..
+        Debug.Log(mouseScript.getDst().normalized.x);
+        if ((facingRight && mouseScript.getDst().normalized.x >= -0.001f) || (!facingRight && mouseScript.getDst().normalized.x <= 0.001f))
+            isPointerOnFacingDir = true;
+        else
+            isPointerOnFacingDir = false;
+
         if (catchInput)
         {
             /*
@@ -53,7 +60,7 @@ public class ForceLineApplication : MonoBehaviour
                     //applico la forza nel punto in cui collide la pallina rossa
                     addPointForce(c);
             }*/
-            if (Input.GetAxisRaw("Fire1") != 0)
+            if (Input.GetAxisRaw("Fire1") != 0 && isPointerOnFacingDir)
             {
                 if (m_isAxisInUse == false)
                 {

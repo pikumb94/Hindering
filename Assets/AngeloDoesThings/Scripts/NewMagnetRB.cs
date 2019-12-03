@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagnetRB : MonoBehaviour
+public class NewMagnetRB : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _magnetWoop;
-    [SerializeField]
+    
+    //public GameObject _magnetWoop;
     private GameObject _body;
     public float magneticForce = 30f;
     public float boxForce = 10f;
+    public float maxBoxForce = 100f;
 
-    
 
     void Awake()
     {
-        ObjectPoolingManager.Instance.CreatePool(_magnetWoop, 150, 600);
+        _body = transform.parent.parent.gameObject;
+        //ObjectPoolingManager.Instance.CreatePool(_magnetWoop, 150, 600);
         transform.parent.gameObject.SetActive(false);
     }
 
@@ -39,14 +39,8 @@ public class MagnetRB : MonoBehaviour
                 //force moving player
                 _body.GetComponent<Rigidbody>().AddForce(dir * magneticForce * Time.deltaTime, ForceMode.Impulse);
 
-                if (_body.GetComponent<Rigidbody>() == null) Debug.LogError("lamadonnatroia");
-                else Debug.Log("non oggi, jesoo");
-
-                //force moving box w/out start stop (to be REMOVED in final version)
-                //hit.collider.GetComponent<Rigidbody>().AddForce(-transform.up * boxForce * Time.deltaTime, ForceMode.Impulse);
-
                 //force moving box
-                hit.collider.GetComponent<ForceHandler>().addBaricentricForce(-transform.up, boxForce*Time.deltaTime, 100);
+                hit.collider.GetComponent<ForceHandler>().addBaricentricForce(-transform.up, boxForce * Time.deltaTime, maxBoxForce);
             }
 
         }
@@ -54,7 +48,8 @@ public class MagnetRB : MonoBehaviour
 
         if (Input.GetKeyDown("1"))
         {
-            transform.parent.parent.GetChild(1).gameObject.SetActive(true);
+            GameObject punchMode = transform.parent.parent.GetChild(1).gameObject;
+            punchMode.SetActive(true);
             transform.parent.gameObject.SetActive(false);
         }
     }
@@ -65,4 +60,5 @@ public class MagnetRB : MonoBehaviour
         go.transform.position = hit.point;
         go.transform.rotation = transform.rotation;
     }
+
 }

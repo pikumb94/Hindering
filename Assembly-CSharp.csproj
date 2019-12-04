@@ -145,12 +145,15 @@
     <Compile Include="Assets\Scripts\Trajectory.cs" />
     <Compile Include="Assets\Scripts\TrajObject.cs" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Master.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{5955c5fe-9fb0-4588-a84d-7613b515c53f}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{608f5cd9-987a-4a47-96f7-1f3645810e6c}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Return\{dd93932d-5b0b-4ea7-a8f6-59f854d104bc}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
     <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{8e4fb62d-bc00-4a3e-be0d-aa25aa137df8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
@@ -159,6 +162,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Workspace.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Bank\{6b571eb8-5d90-4b3f-aeac-cd4a67ad90a4}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{4b379829-85b7-44dc-8aa0-ee7c2f042e1b}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EncodingSetting\{d20cf8a5-704d-4db8-b01b-7fff27fe8ce8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
@@ -173,6 +177,7 @@
     <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\POLIMIGameCollective\Scripts\Object Pooling\ReadMe.txt" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c1089ac1-6aa4-424b-9a0c-e9051385e568}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Mixer.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPresetFolder\{b006c4c5-4feb-4f16-b301-badd61f3aa2d}.xml" />

@@ -25,7 +25,7 @@ public class IndicatorMouseFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = playerPosition.position + new Vector3(0, 0.5f, -0.6f);//
+        //transform.position = playerPosition.position + new Vector3(0, 0.5f, -0.6f);//SERVE SE è FUORI IL RB
         //crea un raggio con origine la posizione del mouse nella scena
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -55,8 +55,9 @@ public class IndicatorMouseFollow : MonoBehaviour
             dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad),0);
         }
         //Debug.Log(dst + " "+ transform.forward);
-
-        transform.rotation = Quaternion.LookRotation(dst, transform.up);
+        transform.right = dst;
+        
+        //transform.rotation = Quaternion.LookRotation(dst, transform.forward);
 
         if (prevMousMagn != mousePos.sqrMagnitude)
             usingJoystick = false;

@@ -43,7 +43,6 @@ public class ForceLineApplication : MonoBehaviour
     {
         //Debug.Log(Input.GetAxis("Fire1"));
         //se sto collidendo con uno o piu oggetti..
-        Debug.Log(mouseScript.getDst().normalized.x);
         if ((facingRight && mouseScript.getDst().normalized.x >= -0.001f) || (!facingRight && mouseScript.getDst().normalized.x <= 0.001f))
             isPointerOnFacingDir = true;
         else

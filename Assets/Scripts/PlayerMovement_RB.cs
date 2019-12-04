@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement_RB : TimeBehaviour
 {
+    private Animator _animator;
     Vector3 playerDirection;
     bool isFalling = false;
     bool isGrounded = true;
@@ -34,14 +35,21 @@ public class PlayerMovement_RB : TimeBehaviour
         layerMask = ~layerMask;
         rb = gameObject.GetComponent<Rigidbody>();
         coll = gameObject.GetComponent<CapsuleCollider>();
+        GameObject go = transform.GetChild(0).gameObject;
+        _animator= go.GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
-        if (Physics.CheckSphere(transform.position + -Vector3.up * coll.height/2, (3f/4f)*coll.radius, layerMask))
+        if (Physics.CheckSphere(transform.position + -Vector3.up * coll.height / 2, (3f / 4f) * coll.radius, layerMask))
+        {
             isGrounded = true;
+            _animator.SetBool("isGrounded", true);
+        }
         else
-            isGrounded = false;
+        { isGrounded = false;
+            _animator.SetBool("isGrounded", false);
+        }
 
         if (!isGrounded) //is jumping
         {

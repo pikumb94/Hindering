@@ -6,30 +6,29 @@ using UnityEngine;
 
 /*Questo componente serve a salvare le forze applicate , mostrarle tramite LineRenderer e applicarle al cambio di tempo.
  * funziona insieme a TimeHandler
- * 
+ *
  */
 public class ForceHandler : MonoBehaviour
 {
     //vettore forza che indica LA RISULTANTE tra tutte le forze applicate al baricentro
-    private Vector3 BaricentricforceToApply;
+    protected Vector3 BaricentricforceToApply;
 
     //WARNING
     // l'applicazione delle forze in un punto specifico funziona solo in parte
-    private Vector3 PointForceToApply;
-    private Vector3 PointWhereApply;
+    protected Vector3 PointForceToApply;
+    protected Vector3 PointWhereApply;
 
-    private Rigidbody rb;
+    protected Rigidbody rb;
 
 
-    private LineRenderer lineRenderer;
+    protected LineRenderer lineRenderer;
     public LineParameters lParams;//definisce lo stile della lineRenderer
     public ForceMode fm = ForceMode.Impulse;
     public float maxLineLength = 5f;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-
         //inizializzo tutti i valori
         rb = GetComponent<Rigidbody>();
         BaricentricforceToApply = new Vector3();
@@ -39,13 +38,12 @@ public class ForceHandler : MonoBehaviour
     }
     //aggiunge una forza in direzione direction e di forza "magnitude" alle altre gia aplpicate in precedenza con il metodo +=
     //nb: ma la somma tra vettori!
-    public void addBaricentricForce(Vector3 direction, float magnitude, float maxMagnitude)
+    public virtual void addBaricentricForce(Vector3 direction, float magnitude, float maxMagnitude)
     { //se il tempo e fermo
-        
         if (rb.isKinematic)
         {
             //applico la forza
-            
+
             if (BaricentricforceToApply.magnitude < maxMagnitude)
                 BaricentricforceToApply += direction * magnitude;
             else
@@ -78,7 +76,7 @@ public class ForceHandler : MonoBehaviour
 
     }
     //funzione che aggiunge una forza in un punto (da completare)
-    public void addPointForce(Vector3 direction, Vector3 hitPoint, float magnitude)
+    public virtual void addPointForce(Vector3 direction, Vector3 hitPoint, float magnitude)
     {
 
         //aggiorno la forza
@@ -105,7 +103,7 @@ public class ForceHandler : MonoBehaviour
 
 
     }
-    private void updateForceLine(float maxLenPerc)
+    public virtual void updateForceLine(float maxLenPerc)
     {
         Vector3 vettoreVisivo = BaricentricforceToApply.normalized * maxLenPerc * maxLineLength;
 
@@ -126,7 +124,7 @@ public class ForceHandler : MonoBehaviour
     }*/
 
     //aggiunge un lineRenderer a cui bisogna poi solo settare l'inizio e la fine
-    public void addForceLine()
+    public virtual void addForceLine()
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
 
@@ -145,7 +143,7 @@ public class ForceHandler : MonoBehaviour
 
     }
 
-    public void Apply()
+    public virtual void Apply()
     {//applico prima la forza nel punto e poi quella nel baricentro
         //rb.AddForceAtPosition(PointForceToApply, PointWhereApply, ForceMode.Impulse);
         rb.AddForceAtPosition(BaricentricforceToApply, transform.position, fm);

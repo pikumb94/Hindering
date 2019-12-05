@@ -6,12 +6,12 @@ public class HellsGate : MonoBehaviour
 {
     [SerializeField]
     private Respawner respawner;
-    private List<GameObject> _boxList;
+    private List<GameObject> _itemsToRespawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        _boxList = respawner.boxList;
+        _itemsToRespawn = respawner.itemsToRespawn;
     }
 
     // Update is called once per frame
@@ -22,9 +22,9 @@ public class HellsGate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {        
-       for(int i = 0; i<_boxList.Count; i++)
+       for(int i = 0; i<_itemsToRespawn.Count; i++)
         {
-            if(other.name == _boxList[i].name)
+            if(other.name == _itemsToRespawn[i].name)
             {
                 other.transform.position = respawner.GetSpawnPoints()[i];
                 other.transform.rotation = respawner.GetSpawnAngles()[i];

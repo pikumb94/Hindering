@@ -7213,6 +7213,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5267989080382369467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1426632522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8324363292240169408, guid: e5bf77cac7a6cab42a5188a00d6b2d9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5267989080382369467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1438229089
 Mesh:
   m_ObjectHideFlags: 0
@@ -9070,12 +9076,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876176269539040845, guid: 7ce27225969deb146837b7ef46344076,
         type: 3}
+      propertyPath: itemsToRespawn.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876176269539040845, guid: 7ce27225969deb146837b7ef46344076,
+        type: 3}
       propertyPath: boxList.Array.data[0]
       value: 
       objectReference: {fileID: 870687594}
     - target: {fileID: 6876176269539040845, guid: 7ce27225969deb146837b7ef46344076,
         type: 3}
       propertyPath: boxList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1964059396}
+    - target: {fileID: 6876176269539040845, guid: 7ce27225969deb146837b7ef46344076,
+        type: 3}
+      propertyPath: itemsToRespawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 1426632522}
+    - target: {fileID: 6876176269539040845, guid: 7ce27225969deb146837b7ef46344076,
+        type: 3}
+      propertyPath: itemsToRespawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 870687594}
+    - target: {fileID: 6876176269539040845, guid: 7ce27225969deb146837b7ef46344076,
+        type: 3}
+      propertyPath: itemsToRespawn.Array.data[2]
       value: 
       objectReference: {fileID: 1964059396}
     m_RemovedComponents: []

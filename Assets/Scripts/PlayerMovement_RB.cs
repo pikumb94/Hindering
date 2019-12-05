@@ -14,6 +14,7 @@ public class PlayerMovement_RB : TimeBehaviour
     LayerMask layerMask;
     bool canPlayerMove=false;
     float stairHeightFromPlayerCenter;
+    float prevXinput=0;
     
     Vector3 horizontalMove;
     int numRays;
@@ -49,7 +50,7 @@ public class PlayerMovement_RB : TimeBehaviour
             hitCollVisibility.enabled = (hitCollVisibility.enabled ? false : true);
 
 
-        if (Physics.CheckSphere(transform.position + -Vector3.up * coll.height/2, (3f/4f)*coll.radius, layerMask))
+        if (Physics.CheckSphere(transform.position -Vector3.up *(3f/4f)* coll.height/2f, .3f, layerMask))
             isGrounded = true;
         else
             isGrounded = false;
@@ -61,10 +62,11 @@ public class PlayerMovement_RB : TimeBehaviour
             else
                 isFalling = true;
         }
-        //Debug.Log (isGrounded);
+        Debug.Log (isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded && canPlayerMove)
             playerJump(forceJumpMagnitude, forceType);
 
+        Debug.Log(rb.velocity.y);
         
     }
 
@@ -75,8 +77,9 @@ public class PlayerMovement_RB : TimeBehaviour
         if(canPlayerMove)
             rb.velocity = new Vector3(magnitudeXMov, rb.velocity.y, 0);
         
+        if(Mathf.Sign(inputX)!=Mathf.Sign(prevXinput) && isGrounded)//added to prevent jumping when going rapidly the opposite direction when you're on a slope
+            rb.velocity = new Vector3(rb.velocity.x, 0, 0);
 
-        
         /*This Raycasting is to allow the player to climb stairs and slopes while allowing a little bit of edge climbing
          when the capsule collider is smooth enough to allow it in a fast way. If it requires too much time to climb the X input is ignored and the player falls.
          Later I will try to do it in a more general way but this way should work avoiding also to get stuck on air and mid air objects.*/
@@ -165,12 +168,13 @@ public class PlayerMovement_RB : TimeBehaviour
             }
             */
         }
-
+        prevXinput = inputX;
         playerHitsWall = false;
     }
 
     private void playerJump(float fJM, ForceMode type)
     {
+        rb.velocity = new Vector3(rb.velocity.x,0,0);
         rb.AddForce(transform.up * fJM, type);
     }
 

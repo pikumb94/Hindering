@@ -66,12 +66,14 @@ public class TrajObject : TimeBehaviour
         {
           if(arcLength > i)
           {
+            rb.isKinematic = false;
             Move(i, true);
             break;
           }
         }
         if(arcLength < 0)
         {
+          rb.isKinematic = true;
           rb.velocity = Vector3.zero;
         }
       }else if(time)
@@ -80,12 +82,14 @@ public class TrajObject : TimeBehaviour
         {
           if(arcLength < i+1)
           {
+            rb.isKinematic = false;
             Move(i, false);
             break;
           }
         }
         if(arcLength > endValue)
         {
+          rb.isKinematic = true;
           rb.velocity = Vector3.zero;
         }
       }
@@ -192,11 +196,15 @@ public class TrajObject : TimeBehaviour
 
     protected override void swapTime()
     {
+
       if(time)
       {
+        velocity = rb.velocity;
+        rb.isKinematic = true;
         time = false;
       }else
       {
+        rb.velocity = velocity;
         time = true;
       }
     }

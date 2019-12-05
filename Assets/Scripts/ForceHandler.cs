@@ -67,7 +67,7 @@ public class ForceHandler : MonoBehaviour
                 lineRenderer.SetPosition(0, transform.position);
                 lineRenderer.SetPosition(1, transform.position + vettoreVisivo);
             }
-            Debug.Log("Mod:" + BaricentricforceToApply.magnitude + " Dir:" + BaricentricforceToApply.normalized);
+            //Debug.Log("Mod:" + BaricentricforceToApply.magnitude + " Dir:" + BaricentricforceToApply.normalized);
 
         }
         else
@@ -149,7 +149,7 @@ public class ForceHandler : MonoBehaviour
     {//applico prima la forza nel punto e poi quella nel baricentro
         //rb.AddForceAtPosition(PointForceToApply, PointWhereApply, ForceMode.Impulse);
         rb.AddForceAtPosition(BaricentricforceToApply, transform.position, fm);
-        Debug.Log(transform.name +" "+ BaricentricforceToApply.x+" "+ BaricentricforceToApply.y + " " + BaricentricforceToApply.z + " " + transform.position.x + " " + transform.position.y + " " + transform.position.z);
+        //Debug.Log(transform.name +" "+ BaricentricforceToApply.x+" "+ BaricentricforceToApply.y + " " + BaricentricforceToApply.z + " " + transform.position.x + " " + transform.position.y + " " + transform.position.z);
         //resetto tutti i parametri e tolgo il lineRenderer
         BaricentricforceToApply = new Vector3(0, 0, 0);
         PointForceToApply = new Vector3(0, 0, 0);

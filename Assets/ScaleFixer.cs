@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seesaw : TimeBehaviour
+public class ScaleFixer : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-      base.Start();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-        private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log(collision.impulse);
+        transform.localScale = Vector3.one;
     }
 }

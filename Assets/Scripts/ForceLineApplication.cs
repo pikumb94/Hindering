@@ -19,7 +19,7 @@ public class ForceLineApplication : MonoBehaviour
     public IndicatorMouseFollow mouseScript;
     bool facingRight = true;
     float inputFacingDir;
-    HashSet<Collider> collidingObjects; 
+    HashSet<Collider> collidingObjects;
     private bool catchInput;
     public Transform facingIndicator;
    // public LineParameters lParams;
@@ -30,7 +30,7 @@ public class ForceLineApplication : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+
         coll = GetComponent<MeshCollider>();
         playerLayer = transform.parent.gameObject.layer;
         //mouseScript = GetComponent<IndicatorMouseFollow>();
@@ -101,22 +101,22 @@ public class ForceLineApplication : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //se l'oggeto con cui mi sono scontrato non e un player 
+        //se l'oggeto con cui mi sono scontrato non e un player
         //NB: qui forse c'era un modo piu corretto -> da sistemare alla fine nel caso
         if (other.gameObject.layer != gameObject.layer)
         {
-            
+
             //abilito l'applicazione della forza nell 'update
             catchInput = true;
             //aggiungo l'oggetto alla lista degli oggetti che stanno collidendo
             collidingObjects.Add(other);
             //set roba visiva
             Component test = other.gameObject.GetComponent<MeshRenderer>();
-            Debug.Log(other.gameObject.GetComponent<MeshRenderer>().material.name);
+            Debug.Log(other.gameObject.name);
             if (test != null && fadeParameterCollidingObjects!=0)
             {
                 Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
-                
+
                 c.a = fadeParameterCollidingObjects;
                 other.gameObject.GetComponent<MeshRenderer>().material.color = c;
             }
@@ -139,7 +139,7 @@ public class ForceLineApplication : MonoBehaviour
                 c.a = 1;
                 other.gameObject.GetComponent<MeshRenderer>().material.color = c;
                 //se non ho piu oggetti in lista disabilito l'applicazione delle forze
-                
+
 
             }
         }
@@ -166,9 +166,9 @@ public class ForceLineApplication : MonoBehaviour
                 forceHandler.addPointForce(mouseScript.getDst().normalized,hit.point, forceMagnitude);
             }
 
-        
-          
+
+
         }
     }
- 
+
 }

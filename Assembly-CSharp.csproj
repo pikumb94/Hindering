@@ -62,14 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AngeloDoesThings\Scripts\Bullet.cs" />
-    <Compile Include="Assets\AngeloDoesThings\Scripts\Gun.cs" />
+    <Compile Include="Assets\AngeloDoesThings\Scripts\HellsGate.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\IronBox.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\Magnet.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\MagnetRB.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\MagnetWoop.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\NewMagnetRB.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\NewSwitch2Magnet.cs" />
+    <Compile Include="Assets\AngeloDoesThings\Scripts\Respawner.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\Shoulder.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\Switch2Magnet.cs" />
     <Compile Include="Assets\AngeloDoesThings\Scripts\TestForce.cs" />

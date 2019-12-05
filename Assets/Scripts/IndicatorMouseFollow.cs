@@ -55,9 +55,10 @@ public class IndicatorMouseFollow : MonoBehaviour
             dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad),0);
         }
         //Debug.Log(dst + " "+ transform.forward);
+
         transform.right = dst;
-        
         //transform.rotation = Quaternion.LookRotation(dst, transform.forward);
+        transform.eulerAngles = new Vector3(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 
         if (prevMousMagn != mousePos.sqrMagnitude)
             usingJoystick = false;

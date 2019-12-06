@@ -26,6 +26,7 @@ public class ForceLineApplication : MonoBehaviour
     [Range(0,1)]
     public float fadeParameterCollidingObjects;
     bool isPointerOnFacingDir = true;
+    Material[] materials;
 
     // Start is called before the first frame update
     void Start()
@@ -111,14 +112,17 @@ public class ForceLineApplication : MonoBehaviour
             //aggiungo l'oggetto alla lista degli oggetti che stanno collidendo
             collidingObjects.Add(other);
             //set roba visiva
-            Component test = other.gameObject.GetComponent<MeshRenderer>();
-            Debug.Log(other.gameObject.name);
-            if (test != null && fadeParameterCollidingObjects!=0)
+            MeshRenderer test = other.gameObject.GetComponent<MeshRenderer>();
+            //Debug.Log(other.gameObject.name);
+            if (test != null && fadeParameterCollidingObjects != 0)
             {
-                Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
-
-                c.a = fadeParameterCollidingObjects;
-                other.gameObject.GetComponent<MeshRenderer>().material.color = c;
+                for(int i =0;i< test.materials.Length; i++)
+                {
+                    Color c = other.gameObject.GetComponent<MeshRenderer>().materials[i].color;
+                    c.a = fadeParameterCollidingObjects;
+                    other.gameObject.GetComponent<MeshRenderer>().materials[i].color = c;
+                }
+                
             }
         }
     }
@@ -132,14 +136,16 @@ public class ForceLineApplication : MonoBehaviour
             if (collidingObjects.Count == 0)
                 catchInput = false;
             //tolgo roba visiva
-            Component test = other.gameObject.GetComponent<MeshRenderer>();
+            MeshRenderer test = other.gameObject.GetComponent<MeshRenderer>();
+            //Debug.Log(other.gameObject.name);
             if (test != null && fadeParameterCollidingObjects != 0)
             {
-                Color c = other.gameObject.GetComponent<MeshRenderer>().material.color;
-                c.a = 1;
-                other.gameObject.GetComponent<MeshRenderer>().material.color = c;
-                //se non ho piu oggetti in lista disabilito l'applicazione delle forze
-
+                for (int i = 0; i < test.materials.Length; i++)
+                {
+                    Color c = other.gameObject.GetComponent<MeshRenderer>().materials[i].color;
+                    c.a = 1;
+                    other.gameObject.GetComponent<MeshRenderer>().materials[i].color = c;
+                }
 
             }
         }

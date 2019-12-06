@@ -137,6 +137,7 @@
     <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement_CC.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement_RB.cs" />
+    <Compile Include="Assets\Scripts\RotatePlayerModel.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Seesaw.cs" />
     <Compile Include="Assets\Scripts\StandardShaderUtils.cs" />

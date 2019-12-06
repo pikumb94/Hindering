@@ -21,7 +21,8 @@ public class HellsGate : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {        
+    {
+        Debug.Log("collided with " + other.name);
        for(int i = 0; i<_itemsToRespawn.Count; i++)
         {
             if(other.name == _itemsToRespawn[i].name)

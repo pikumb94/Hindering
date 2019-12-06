@@ -17,6 +17,7 @@ public class Respawner : MonoBehaviour
             _spawnPoints.Add(itemsToRespawn[i].transform.position);
             _spawnAngles.Add(itemsToRespawn[i].transform.rotation);
         }
+        
        
     }
     

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Samples.meta
-guid: 4ce2ce607ec0d814a903877589fb82cb
-=======
-guid: ce8ab2ba9f0d8e347b77d984ac2c4398
->>>>>>> AudioManager_PikUmb:Assets/Editor Default Resources.meta
+guid: b630e02a878a8ef48b592c6095d0c679
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

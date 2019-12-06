@@ -188,10 +188,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8523446046958280303, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 7339664258766744750, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
         type: 3}
       propertyPath: heightStair
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339664258766744750, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+        type: 3}
+      propertyPath: magnStairRaycast
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6584784678970022977, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
         type: 3}

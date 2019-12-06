@@ -167,6 +167,7 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Group\{d9d061b4-b9cd-4991-b0b6-814d727d45ed}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{f6c50f6b-bac1-4ce4-b5e6-2aace649a512}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{8f90cd12-266c-4a00-85f7-05ac936cc846}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{1088c5c1-b7c9-4829-92bc-3a30c07f11e7}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Tags.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{e254af6a-b63a-4224-b633-87be9aecd3a4}.xml" />
@@ -203,6 +204,7 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Asset\{af553242-fe35-408e-b6b2-50bfb336f969}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EventFolder\{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c8c26f2c-04bb-4d71-8fb0-e244ffc9bfea}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{5b431cf5-006c-4f06-a627-6e189da2545e}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Snapshot\{87e9ef94-70ca-401e-b81c-2e49d93e0ab0}.xml" />

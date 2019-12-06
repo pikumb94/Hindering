@@ -142,6 +142,7 @@
     <Compile Include="Assets\Scripts\Seesaw.cs" />
     <Compile Include="Assets\Scripts\textTimeControlled.cs" />
     <Compile Include="Assets\Scripts\TimeBehaviour.cs" />
+    <Compile Include="Assets\Scripts\TimeChangeSound.cs" />
     <Compile Include="Assets\Scripts\timeControlled.cs" />
     <Compile Include="Assets\Scripts\TimeControlledTest.cs" />
     <Compile Include="Assets\Scripts\TimeHandler.cs" />
@@ -162,7 +163,10 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{71e68cea-e427-47b1-bd26-ae123db84a72}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{3f19d0e8-6a44-4982-b4c4-de710caefd60}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Snapshot\{d6487a6d-895a-40e3-aa80-9fce9b33d06b}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Group\{d9d061b4-b9cd-4991-b0b6-814d727d45ed}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{f6c50f6b-bac1-4ce4-b5e6-2aace649a512}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{1088c5c1-b7c9-4829-92bc-3a30c07f11e7}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Tags.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{e254af6a-b63a-4224-b633-87be9aecd3a4}.xml" />
@@ -186,9 +190,11 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{17519483-90bf-4973-9631-e7adfef792f4}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{92569708-691e-4598-b692-9d48111d487a}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\POLIMIGameCollective\Scripts\Object Pooling\ReadMe.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c1089ac1-6aa4-424b-9a0c-e9051385e568}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Group\{bf3989c2-d5cd-40f4-bb63-63947393fa9f}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Mixer.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPresetFolder\{b006c4c5-4feb-4f16-b301-badd61f3aa2d}.xml" />
@@ -199,6 +205,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\EventFolder\{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{5b431cf5-006c-4f06-a627-6e189da2545e}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Snapshot\{87e9ef94-70ca-401e-b81c-2e49d93e0ab0}.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

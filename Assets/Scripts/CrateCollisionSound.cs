@@ -8,17 +8,11 @@ public class CrateCollisionSound : MonoBehaviour
     public string crateCollisionClipSoft = "";
     [FMODUnity.EventRef]
     public string crateCollisionClipHard = "";
-
-    public string nameLayerToAvoid; 
-    
-    private float velToVol = .2F;
-    private float velocityClipSplit = 10F;
-    private float minimumThresshold = 1F;
-
-    private void Start()
-    {
         
-    }
+    private float velToVol = .2F;
+    private float velocityClipSplit = 8F;
+    private float minimumThresshold = .5F;
+
 
     void OnCollisionEnter(Collision coll)
     {

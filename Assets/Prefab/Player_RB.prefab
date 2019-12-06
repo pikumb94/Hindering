@@ -95731,25 +95731,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7339664259688746847}
     m_Modifications:
-    - target: {fileID: 7886441371971383258, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
-        type: 3}
-      propertyPath: m_Name
-      value: Shoulder
-      objectReference: {fileID: 0}
     - target: {fileID: 3070721353624536714, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.250212
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3070721353624536714, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3911597
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3070721353624536714, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3070721353624536714, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
         type: 3}
@@ -95806,11 +95801,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.525
       objectReference: {fileID: 0}
+    - target: {fileID: 5136098898099758064, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136098898099758064, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.91207635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136098898099758064, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136098898099758064, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886441371971383258, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
+        type: 3}
+      propertyPath: m_Name
+      value: Shoulder
+      objectReference: {fileID: 0}
     - target: {fileID: 2144486291622466625, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
         type: 3}
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 7339664259688746847}
+    - target: {fileID: 3626639795783536906, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7885244783111549751, guid: 3029a9ef83620f1459e92a73c9c2fcb4,
         type: 3}
       propertyPath: magneticForce
@@ -95831,11 +95856,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7339664259688746847}
     m_Modifications:
-    - target: {fileID: 3248444103664424269, guid: 864f6c17487c8654e80e6ad70e272afe,
-        type: 3}
-      propertyPath: m_Name
-      value: ArmPivot
-      objectReference: {fileID: 0}
     - target: {fileID: 3248444103664424263, guid: 864f6c17487c8654e80e6ad70e272afe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95891,6 +95911,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 3248444103664424269, guid: 864f6c17487c8654e80e6ad70e272afe,
+        type: 3}
+      propertyPath: m_Name
+      value: ArmPivot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248444103664424262, guid: 864f6c17487c8654e80e6ad70e272afe,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915778281305663462, guid: 864f6c17487c8654e80e6ad70e272afe,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3131655292430709707, guid: 864f6c17487c8654e80e6ad70e272afe,
         type: 3}
       propertyPath: forceMagnitude
@@ -95910,6 +95945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeParameterCollidingObjects
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695733704359967796, guid: 864f6c17487c8654e80e6ad70e272afe,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864f6c17487c8654e80e6ad70e272afe, type: 3}

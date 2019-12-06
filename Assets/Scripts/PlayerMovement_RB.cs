@@ -36,6 +36,7 @@ public class PlayerMovement_RB : TimeBehaviour
     {
         base.Start();
         layerMask = 1 << gameObject.layer;
+        //layerMask = 1 << LayerMask.NameToLayer("IsTrigger");
         layerMask = ~layerMask;
         rb = gameObject.GetComponent<Rigidbody>();
         coll = gameObject.GetComponent<CapsuleCollider>();
@@ -66,7 +67,7 @@ public class PlayerMovement_RB : TimeBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded && canPlayerMove)
             playerJump(forceJumpMagnitude, forceType);
 
-        Debug.Log(rb.velocity.y);
+        //Debug.Log(rb.velocity.y);
         
     }
 

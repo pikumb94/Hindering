@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class NextPuzzleTrigger : MonoBehaviour
 {
 
-    public SceneAsset nextScene;
+    //public SceneAsset nextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,14 @@ public class NextPuzzleTrigger : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player")
         {
-            SceneLoader.HandleSceneSwitch(SceneLoader.ScenesFromString( nextScene.name));
+            Debug.Log(SceneManager.GetActiveScene().buildIndex);
+
+            //SceneLoader.HandleSceneSwitch(SceneLoader.ScenesFromString( nextScene.name));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }

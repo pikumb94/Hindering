@@ -16,10 +16,9 @@ TagManager:
   - 
   - Player
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Magnetic
+  - IsTransparent
+  - IsTrigger
   - 
   - 
   - 

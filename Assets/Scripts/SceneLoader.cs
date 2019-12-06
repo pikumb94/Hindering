@@ -13,21 +13,26 @@ public static class SceneLoader
         intro,
         tutorial,
         loading,
-        SampleScene,
         MainMenu,
-        Puzzle1,
-        Puzzle2
+        Level1,
+        Level2,
+        Level3,
+        Level4,
+        Level5,
+        Level6,
+        Level7,
+        Level8,
     }
     public  static Scenes ScenesFromString(String nome)
     {
-        if (nome=="Puzzle1")
+      /*  if (nome=="Puzzle1")
         {
             return Scenes.Puzzle1;
         }
         if (nome == "Puzzle2")
         {
             return Scenes.Puzzle2;
-        }
+        }*/
         return Scenes.MainMenu;
     }
     // Start is called before the first frame update

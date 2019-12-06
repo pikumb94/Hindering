@@ -71,18 +71,20 @@ public class ChangeModeEffect : MonoBehaviour
     {
 
         if (Input.GetButtonDown("Fire2")) {
+            /*
             if (fromStartToPause == true) { 
                 fromStartToPause = false;
             } else {
                 fromStartToPause = true;
-            }
+            }*/
+
             percTimer = 0f;
             timer = 0f;
         }
 
         if (percTimer < 1)
         {
-            if (fromStartToPause)
+            if (!TimeHandler.Instance.time)
             {
                 //intensityValue = Mathf.SmoothDamp(intensityValue, targetIntesityVal, ref vel, transitionTime);
                 //temperatureValue = Mathf.SmoothDamp(temperatureValue, targetTemperatureVal, ref velT, transitionTime);

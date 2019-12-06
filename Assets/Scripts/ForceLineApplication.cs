@@ -104,7 +104,7 @@ public class ForceLineApplication : MonoBehaviour
     {
         //se l'oggeto con cui mi sono scontrato non e un player
         //NB: qui forse c'era un modo piu corretto -> da sistemare alla fine nel caso
-        if (other.gameObject.layer != gameObject.layer)
+        if (other.gameObject.layer != gameObject.layer && other.gameObject.layer != LayerMask.NameToLayer("IsTransparent"))
         {
 
             //abilito l'applicazione della forza nell 'update
@@ -129,7 +129,7 @@ public class ForceLineApplication : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != gameObject.layer)
+        if (other.gameObject.layer != gameObject.layer && other.gameObject.layer != LayerMask.NameToLayer("IsTransparent"))
         {
             //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);

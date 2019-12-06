@@ -3429,6 +3429,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 710661593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &705305612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5399520565896681108, guid: d936729162dea234ca62e2222fd9f97c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469257342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &705305613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705305612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/LightBuzz
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &743536009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6266,6 +6295,11 @@ PrefabInstance:
       propertyPath: m_RenderingPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1057445045408052882, guid: 3a4451e0c48c18d488363661f1607cb4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
 --- !u!1001 &930554457
@@ -6738,7 +6772,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 854283011}
+      objectReference: {fileID: 645569468}
     - target: {fileID: 4512275509853904341, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
       propertyPath: m_Mesh
@@ -7041,6 +7075,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1027446998}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1042910503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8092181229455346463, guid: 50320004d78686c48accc1854b02ebbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 987560767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042910505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042910503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!43 &1045328925
 Mesh:
   m_ObjectHideFlags: 0
@@ -10349,6 +10402,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30dcf1c04f2c3ca498ac8f9f5685d2f8, type: 3}
+--- !u!1 &1653982879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057445045408052883, guid: 3a4451e0c48c18d488363661f1607cb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 924776668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1653982880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653982879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/AmbientNoise
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1664785557
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.6f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +52,9 @@
     <UnityVersion>2019.2.6f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\MoveSinCos.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\SinRotationOffset.cs" />
     <Compile Include="Assets\ChangeModeEffect.cs" />
+    <Compile Include="Assets\ForceHandlerSeesaw.cs" />
     <Compile Include="Assets\NextPuzzleTrigger.cs" />
     <Compile Include="Assets\PlaverMovement_CC_V2.cs" />
     <Compile Include="Assets\POLIMIGameCollective\Scripts\BackgroundScroll.cs" />
@@ -156,6 +158,7 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{8e4fb62d-bc00-4a3e-be0d-aa25aa137df8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{697aec7d-8841-40a1-ae3f-f9cd1db6d3b0}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Tags.xml" />
@@ -174,6 +177,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Platform\{62842c75-d3eb-4505-ab2d-46bb879c8ac1}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\BankFolder\{8b753512-3549-49ff-92c1-e110c026eaaa}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\SnapshotGroup\{8a120dca-1a89-4b1b-9f0b-345cb8ed4596}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{17519483-90bf-4973-9631-e7adfef792f4}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
@@ -182,67 +186,69 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Mixer.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPresetFolder\{b006c4c5-4feb-4f16-b301-badd61f3aa2d}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{1c814117-fd6d-4bcc-b9e5-59366b8880d8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Asset\{af553242-fe35-408e-b6b2-50bfb336f969}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EventFolder\{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{5b431cf5-006c-4f06-a627-6e189da2545e}.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -422,19 +428,19 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/Lorenzo/Desktop/repositoryProva/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/User/Desktop/Hindering/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ArmPivot
+  - Metal
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,7 @@ TagManager:
   - 
   - Player
   - PostProcessing
-  - 
-  - 
+  - Magnetic
   - 
   - 
   - 

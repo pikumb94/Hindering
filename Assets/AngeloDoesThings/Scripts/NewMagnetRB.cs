@@ -10,6 +10,7 @@ public class NewMagnetRB : MonoBehaviour
     public float magneticForce = 30f;
     public float boxForce = 10f;
     public float maxBoxForce = 100f;
+    public float raycastDistance = Mathf.Infinity;
 
 
     void Awake()
@@ -28,7 +29,7 @@ public class NewMagnetRB : MonoBehaviour
             int mask = (1 << 10);
 
 
-            if (Physics.Raycast((Vector2)transform.GetChild(0).transform.position, transform.up, out hit, Mathf.Infinity, mask))
+            if (Physics.Raycast((Vector2)transform.GetChild(0).transform.position, transform.up, out hit, raycastDistance, mask))
             {
                 Debug.DrawLine(hit.point, transform.GetChild(0).transform.position, Color.cyan);
 

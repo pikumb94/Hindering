@@ -10319,7 +10319,7 @@ PrefabInstance:
     - target: {fileID: 1057445046225105024, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.00082826614
       objectReference: {fileID: 0}
     - target: {fileID: 1057445046225105024, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -10772,46 +10772,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 854283011}
-    - target: {fileID: 1278824729072492339, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 880011099}
-    - target: {fileID: 5441422301563417155, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 351759797}
-    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: fadeParameterCollidingObjects
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: forceMagnitude
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: forceMagnitudeMaxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3070721353868499180, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510934702973951953, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1185573501137851992, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8363448335248846600, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
       propertyPath: m_Mass
@@ -10836,6 +10796,46 @@ PrefabInstance:
         type: 3}
       propertyPath: magnRaycast
       value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: fadeParameterCollidingObjects
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: forceMagnitude
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: forceMagnitudeMaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278824729072492339, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 880011099}
+    - target: {fileID: 5441422301563417155, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 351759797}
+    - target: {fileID: 3070721353868499180, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510934702973951953, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185573501137851992, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7925426817745062905, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}

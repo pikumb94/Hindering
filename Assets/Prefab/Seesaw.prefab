@@ -807,8 +807,8 @@ GameObject:
   - component: {fileID: 5187998197434179882}
   - component: {fileID: 7036447062379123767}
   - component: {fileID: 3276227264701148387}
-  - component: {fileID: 3380301306050472727}
   - component: {fileID: 7076458184768437381}
+  - component: {fileID: 3898574987726690652}
   m_Layer: 0
   m_Name: Seesaw_arm
   m_TagString: Untagged
@@ -876,22 +876,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3380301306050472727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304301688757598038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bc3a314175e3d4197880a72626f542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lParams: {fileID: 11400000, guid: aef92b50d3bcf79409a5e0e9d2a2d53a, type: 2}
-  fm: 1
-  maxLineLength: 5
-  rbParent: {fileID: 1322972795851119471}
 --- !u!64 &7076458184768437381
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -906,6 +890,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 1aa29049a9d08454bb8cec887568db2b, type: 3}
+--- !u!114 &3898574987726690652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304301688757598038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357d9aee8be76464f870b5e8e54c1c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lParams: {fileID: 11400000, guid: aef92b50d3bcf79409a5e0e9d2a2d53a, type: 2}
+  fm: 1
+  maxLineLength: 5
+  rbParent: {fileID: 1322972795851119471}
 --- !u!1 &4440713264670372765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,8 +1280,8 @@ GameObject:
   - component: {fileID: 3485474382164056929}
   - component: {fileID: 6363057351720038919}
   - component: {fileID: 652928033178009349}
-  - component: {fileID: 1254550837270540982}
   - component: {fileID: 288983814288059053}
+  - component: {fileID: 3664949593225483965}
   m_Layer: 0
   m_Name: Seesaw_arm2
   m_TagString: Untagged
@@ -1349,22 +1349,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4469289658139421414}
   m_Mesh: {fileID: -2432090755550338912, guid: 1aa29049a9d08454bb8cec887568db2b, type: 3}
---- !u!114 &1254550837270540982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4469289658139421414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bc3a314175e3d4197880a72626f542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lParams: {fileID: 11400000, guid: aef92b50d3bcf79409a5e0e9d2a2d53a, type: 2}
-  fm: 1
-  maxLineLength: 5
-  rbParent: {fileID: 1322972795851119471}
 --- !u!64 &288983814288059053
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1379,6 +1363,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 1aa29049a9d08454bb8cec887568db2b, type: 3}
+--- !u!114 &3664949593225483965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469289658139421414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357d9aee8be76464f870b5e8e54c1c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lParams: {fileID: 11400000, guid: aef92b50d3bcf79409a5e0e9d2a2d53a, type: 2}
+  fm: 1
+  maxLineLength: 5
+  rbParent: {fileID: 1322972795851119471}
 --- !u!1 &7325540619647988813
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,9 @@ public class ForceLineApplication : MonoBehaviour
     bool isPointerOnFacingDir = true;
     Material[] materials;
 
+    [FMODUnity.EventRef]
+    public string punchSound = "";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +52,7 @@ public class ForceLineApplication : MonoBehaviour
         else
             isPointerOnFacingDir = false;
 
-        if (catchInput)
+        if (catchInput && !TimeHandler.Instance.time)
         {
             /*
             //se premo il mouse sinistro
@@ -78,6 +81,9 @@ public class ForceLineApplication : MonoBehaviour
                           if(!c.isTrigger)
                           {
                             forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
+                           
+                                FMODUnity.RuntimeManager.PlayOneShot(punchSound); 
+                             
                           }
                         }
                     }

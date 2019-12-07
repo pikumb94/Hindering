@@ -8,21 +8,28 @@ public class CrateCollisionSound : MonoBehaviour
     public string crateCollisionClipSoft = "";
     [FMODUnity.EventRef]
     public string crateCollisionClipHard = "";
-
-    public AudioSource source;
-    
+        
     private float velToVol = .2F;
-    private float velocityClipSplit = 10F;
-
+    private float velocityClipSplit = 8F;
+    private float minimumThresshold = .5F;
 
 
     void OnCollisionEnter(Collision coll)
     {
-        float hitVol = coll.relativeVelocity.magnitude * velToVol;
-        if (coll.relativeVelocity.magnitude < velocityClipSplit)
-            FMODUnity.RuntimeManager.PlayOneShot(crateCollisionClipSoft, transform.position);
-        else
-            FMODUnity.RuntimeManager.PlayOneShot(crateCollisionClipHard, transform.position);
+
+        float impactVelocity = coll.relativeVelocity.magnitude;
+        float hitVol = impactVelocity * velToVol;
+
+        //if(coll.gameObject.layer != LayerMask.NameToLayer(nameLayerToAvoid) && coll.rigidbody.isKinematic) {
+        if(impactVelocity > minimumThresshold) {
+            if (coll.relativeVelocity.magnitude < velocityClipSplit)
+                FMODUnity.RuntimeManager.PlayOneShot(crateCollisionClipSoft, transform.position);
+            else
+                FMODUnity.RuntimeManager.PlayOneShot(crateCollisionClipHard, transform.position);
+        }
+            
+        
+        
     }
 
 }

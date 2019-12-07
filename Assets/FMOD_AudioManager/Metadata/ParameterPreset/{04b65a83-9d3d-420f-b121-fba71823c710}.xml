@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{04b65a83-9d3d-420f-b121-fba71823c710}">
+		<property name="name">
+			<value>SnapshotIntensity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b006c4c5-4feb-4f16-b301-badd61f3aa2d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{496fe4fe-6359-4025-8045-5d192b7dfaf6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{496fe4fe-6359-4025-8045-5d192b7dfaf6}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

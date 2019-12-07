@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.6f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +51,9 @@
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2019.2.6f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.6f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -128,6 +129,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gizmo.cs" />
     <Compile Include="Assets\Scripts\IndicatorMouseFollow.cs" />
+    <Compile Include="Assets\Scripts\InputSound2D.cs" />
     <Compile Include="Assets\Scripts\LeverStick.cs" />
     <Compile Include="Assets\Scripts\LeverTrajObject.cs" />
     <Compile Include="Assets\Scripts\LineParameters.cs" />
@@ -158,18 +160,34 @@
     <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{8e4fb62d-bc00-4a3e-be0d-aa25aa137df8}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{78612090-fa68-4db2-943e-bff905193056}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{697aec7d-8841-40a1-ae3f-f9cd1db6d3b0}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{71e68cea-e427-47b1-bd26-ae123db84a72}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{3f19d0e8-6a44-4982-b4c4-de710caefd60}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{34064b83-ca33-41c4-9726-78e6632f6a3e}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Snapshot\{a74b90d0-ed60-44ab-be6e-462df4c85f13}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Snapshot\{d6487a6d-895a-40e3-aa80-9fce9b33d06b}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Return\{c2169630-1079-4295-a26a-eb6744561dbc}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Group\{d9d061b4-b9cd-4991-b0b6-814d727d45ed}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{f6c50f6b-bac1-4ce4-b5e6-2aace649a512}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{8f90cd12-266c-4a00-85f7-05ac936cc846}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{1088c5c1-b7c9-4829-92bc-3a30c07f11e7}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Tags.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{e254af6a-b63a-4224-b633-87be9aecd3a4}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Workspace.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Bank\{6b571eb8-5d90-4b3f-aeac-cd4a67ad90a4}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{4b379829-85b7-44dc-8aa0-ee7c2f042e1b}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{69ebf6c1-40f6-414c-a59d-3f571592a3af}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EncodingSetting\{d20cf8a5-704d-4db8-b01b-7fff27fe8ce8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{222205d9-c39c-4c98-b7e6-93cb8b2a8704}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPreset\{e13f993a-535a-4920-a8a5-5877a4893c4b}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
@@ -177,20 +195,27 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Platform\{62842c75-d3eb-4505-ab2d-46bb879c8ac1}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\BankFolder\{8b753512-3549-49ff-92c1-e110c026eaaa}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\SnapshotGroup\{8a120dca-1a89-4b1b-9f0b-345cb8ed4596}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{17519483-90bf-4973-9631-e7adfef792f4}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{92569708-691e-4598-b692-9d48111d487a}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\POLIMIGameCollective\Scripts\Object Pooling\ReadMe.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c1089ac1-6aa4-424b-9a0c-e9051385e568}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Group\{bf3989c2-d5cd-40f4-bb63-63947393fa9f}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Mixer.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPreset\{04b65a83-9d3d-420f-b121-fba71823c710}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPresetFolder\{b006c4c5-4feb-4f16-b301-badd61f3aa2d}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{1c814117-fd6d-4bcc-b9e5-59366b8880d8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
     <None Include="Assets\UnlitAlphaWithFade.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Asset\{af553242-fe35-408e-b6b2-50bfb336f969}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EventFolder\{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c8c26f2c-04bb-4d71-8fb0-e244ffc9bfea}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{5b431cf5-006c-4f06-a627-6e189da2545e}.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/RedFury/Hindering/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

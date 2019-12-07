@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{3f19d0e8-6a44-4982-b4c4-de710caefd60}">
+		<property name="assetPath">
+			<value>MetalBox1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.64800000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{af553242-fe35-408e-b6b2-50bfb336f969}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{d9d061b4-b9cd-4991-b0b6-814d727d45ed}">
+		<property name="name">
+			<value>Collisions</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{48cd7b57-75a8-4ec8-83cd-a6e79668c5ad}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{046e1645-7fb9-4e94-9b38-0a597b258acc}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{cef7fdc3-f2bb-4471-af78-53313e4c76c1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{48cd7b57-75a8-4ec8-83cd-a6e79668c5ad}">
+		<relationship name="effects">
+			<destination>{224c600e-39c8-4285-938c-c459d278d671}</destination>
+			<destination>{fff15d2f-1463-4fe6-8eee-2228eaf524e5}</destination>
+			<destination>{2df7186c-1065-46a9-a90e-51e8683ef0fa}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{046e1645-7fb9-4e94-9b38-0a597b258acc}" />
+	<object class="MixerSend" id="{224c600e-39c8-4285-938c-c459d278d671}">
+		<property name="inputFormat">
+			<value>2</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{c2169630-1079-4295-a26a-eb6744561dbc}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{fff15d2f-1463-4fe6-8eee-2228eaf524e5}" />
+	<object class="MixerSend" id="{2df7186c-1065-46a9-a90e-51e8683ef0fa}">
+		<property name="level">
+			<value>0</value>
+		</property>
+		<property name="inputFormat">
+			<value>2</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{dd93932d-5b0b-4ea7-a8f6-59f854d104bc}</destination>
+		</relationship>
+	</object>
+</objects>

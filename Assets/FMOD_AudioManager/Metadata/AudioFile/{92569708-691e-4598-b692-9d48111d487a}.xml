@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{92569708-691e-4598-b692-9d48111d487a}">
+		<property name="assetPath">
+			<value>TimePlayGrains.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.80979591836734699</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{af553242-fe35-408e-b6b2-50bfb336f969}</destination>
+		</relationship>
+	</object>
+</objects>

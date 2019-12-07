@@ -41,12 +41,12 @@ public class InputSound2D : MonoBehaviour
             if (TimeHandler.Instance.time)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(stopToPlaySound);
-                stoppedSnapshot.setParameterByName("SnapshotIntensity", (float)100f);
+                stoppedSnapshot.setParameterByName("SnapshotIntensity", (float)0f);
             }
             else
             {
                 FMODUnity.RuntimeManager.PlayOneShot(playToStopSound);
-                stoppedSnapshot.setParameterByName("SnapshotIntensity", (float)0f);
+                stoppedSnapshot.setParameterByName("SnapshotIntensity", (float)100f);
 
             }
 

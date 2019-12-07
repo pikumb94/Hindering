@@ -75,7 +75,10 @@ public class ForceLineApplication : MonoBehaviour
                         }
                         else
                         {
+                          if(!c.isTrigger)
+                          {
                             forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
+                          }
                         }
                     }
 

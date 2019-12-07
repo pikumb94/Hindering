@@ -45,7 +45,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 40
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!114 &83234270367258367
 MonoBehaviour:
@@ -26081,7 +26081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4245984269440238, guid: 37f16a7beb3cae449a4885b50959b6ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01562497
+      value: -0.015624971
       objectReference: {fileID: 0}
     - target: {fileID: 4245984269440238, guid: 37f16a7beb3cae449a4885b50959b6ae, type: 3}
       propertyPath: m_LocalRotation.x
@@ -26120,6 +26120,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 23027924693539390, guid: 37f16a7beb3cae449a4885b50959b6ae,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23027924693539390, guid: 37f16a7beb3cae449a4885b50959b6ae,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f64a029004dcae348808f8fdb617f6e2, type: 2}
     - target: {fileID: 23027924693539390, guid: 37f16a7beb3cae449a4885b50959b6ae,
         type: 3}
       propertyPath: m_Materials.Array.data[1]

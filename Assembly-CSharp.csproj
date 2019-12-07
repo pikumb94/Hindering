@@ -137,6 +137,7 @@
     <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement_CC.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement_RB.cs" />
+    <Compile Include="Assets\Scripts\RotatePlayerModel.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Seesaw.cs" />
     <Compile Include="Assets\Scripts\StandardShaderUtils.cs" />
@@ -185,6 +186,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Mixer.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPresetFolder\{b006c4c5-4feb-4f16-b301-badd61f3aa2d}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
+    <None Include="Assets\UnlitAlphaWithFade.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Asset\{af553242-fe35-408e-b6b2-50bfb336f969}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EventFolder\{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}.xml" />

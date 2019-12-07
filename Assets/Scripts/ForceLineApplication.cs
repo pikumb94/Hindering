@@ -121,6 +121,7 @@ public class ForceLineApplication : MonoBehaviour
             {
                 for(int i =0;i< test.materials.Length; i++)
                 {
+                    StandardShaderUtils.ChangeRenderMode(test.materials[i],StandardShaderUtils.BlendMode.Fade);
                     Color c = other.gameObject.GetComponent<MeshRenderer>().materials[i].color;
                     c.a = fadeParameterCollidingObjects;
                     other.gameObject.GetComponent<MeshRenderer>().materials[i].color = c;
@@ -145,6 +146,7 @@ public class ForceLineApplication : MonoBehaviour
             {
                 for (int i = 0; i < test.materials.Length; i++)
                 {
+                    StandardShaderUtils.ChangeRenderMode(test.materials[i], StandardShaderUtils.BlendMode.Opaque);
                     Color c = other.gameObject.GetComponent<MeshRenderer>().materials[i].color;
                     c.a = 1;
                     other.gameObject.GetComponent<MeshRenderer>().materials[i].color = c;

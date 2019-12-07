@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class SceneLoader 
+public static class SceneLoader
 {
     private static Action targetScene;
     public enum Scenes
     {
         //examples
-        intro,
-        tutorial,
-        loading,
+        //Intro,
+        Loading,
         MainMenu,
+        Levels,
+        Commands,
         Level1,
         Level2,
         Level3,
@@ -22,8 +23,12 @@ public static class SceneLoader
         Level6,
         Level7,
         Level8,
+        Level9,
+        Level10,
+        Level11,
+        Level12,
     }
-    public  static Scenes ScenesFromString(String nome)
+    public static Scenes ScenesFromString(String nome)
     {
       /*  if (nome=="Puzzle1")
         {
@@ -46,13 +51,17 @@ public static class SceneLoader
         //poi viene chiamata la scena 'loading' che mostra la schermata di caricamento
         //NB: appena la scena 'loading' caricata la funzione 'targetScene' viene chiamata e si passa alla scena target
         //questo per far eseguire almeno un frame nella scena di caricamento e mostrarla a scermo MENTRE la scena target viene caricata in background
-        SceneManager.LoadScene(Scenes.loading.ToString());
+        SceneManager.LoadScene(Scenes.Loading.ToString());
     }
 
     internal static void LoadMainMenu()
     {
-                SceneManager.LoadScene(Scenes.MainMenu.ToString());
+        SceneManager.LoadScene(Scenes.MainMenu.ToString());
+    }
 
+    public static void DirectSceneSwitch(Scenes scene)
+    {
+      SceneManager.LoadScene(scene.ToString());
     }
 
     public static void LoadTargetSceneWithCallback()

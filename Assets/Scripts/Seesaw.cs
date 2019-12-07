@@ -28,8 +28,8 @@ public class Seesaw : TimeBehaviour
           rb.velocity = velocity;
 
           //applco le forze
-          arm1.GetComponent<ForceHandlerSeesaw>().Apply();
-          arm2.GetComponent<ForceHandlerSeesaw>().Apply();
+          arm1.GetComponent<ForceHandlerChild>().Apply();
+          arm2.GetComponent<ForceHandlerChild>().Apply();
       }
       else
       {   //il tempo si ferma..

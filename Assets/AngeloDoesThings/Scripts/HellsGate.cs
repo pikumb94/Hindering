@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HellsGate : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class HellsGate : MonoBehaviour
         {
             if (respawnsPlayer)
             {
-                Respawn(other);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //Respawn(other);
             }
         }
 

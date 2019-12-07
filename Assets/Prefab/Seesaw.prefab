@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6454199442502998786}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1745448168097380695}
   - component: {fileID: 1322972795851119471}
   - component: {fileID: 5206544101525262936}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_Pivot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607349148476456313}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 1942836582744915782}
   - component: {fileID: 5229519895391410103}
   - component: {fileID: 7200833004733202955}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_platform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 1942836584475747036}
   - component: {fileID: 1942836584475747011}
   - component: {fileID: 1942836584475747033}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 3276227264701148387}
   - component: {fileID: 7076458184768437381}
   - component: {fileID: 3898574987726690652}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 7115106968212169239}
   - component: {fileID: 6790275208042383193}
   - component: {fileID: 8523324109346139031}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_platform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 652928033178009349}
   - component: {fileID: 288983814288059053}
   - component: {fileID: 3664949593225483965}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_arm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1320,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1391,7 +1391,7 @@ GameObject:
   - component: {fileID: 9060107837650098613}
   - component: {fileID: 392815043836619789}
   - component: {fileID: 2507186628064716275}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seesaw_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -286,17 +286,17 @@ PrefabInstance:
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.242
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.79999995
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: -0.205
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
@@ -338,15 +338,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7681446998551189149, guid: 8796b084c3155544cae250d03f3f0ca2,
+    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7681446998551189145, guid: 8796b084c3155544cae250d03f3f0ca2,
+    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7681446998731100489, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
@@ -358,15 +358,15 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
+    - target: {fileID: 7681446998551189149, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
-      propertyPath: m_Mass
-      value: 10
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
+    - target: {fileID: 7681446998551189145, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446183, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}

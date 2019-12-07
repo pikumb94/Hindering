@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 
@@ -27,6 +27,11 @@ public class TimeHandler : Singleton<TimeHandler>
         if (Input.GetButtonDown("Fire2"))
         {
             timeSwitch();
+        }
+
+        if (Input.GetButtonDown("RestartScene"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

@@ -11,7 +11,7 @@ public class CrateCollisionSound : MonoBehaviour
         
     private float velToVol = .2F;
     private float velocityClipSplit = 8F;
-    private float minimumThresshold = .5F;
+    private float minimumThresshold = .2F;
 
 
     void OnCollisionEnter(Collision coll)

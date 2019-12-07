@@ -25,6 +25,9 @@ public class ForceLineApplication : MonoBehaviour
    // public LineParameters lParams;
     [Range(0,1)]
     public float fadeParameterCollidingObjects;
+    public GameObject pointerGameObject;
+    [Range(0, 1)]
+    public float fadePointer=.5f;
     bool isPointerOnFacingDir = true;
     Material[] materials;
 
@@ -51,51 +54,76 @@ public class ForceLineApplication : MonoBehaviour
             isPointerOnFacingDir = true;
         else
             isPointerOnFacingDir = false;
+        if (!TimeHandler.Instance.time) {
 
-        if (catchInput && !TimeHandler.Instance.time)
-        {
-            /*
-            //se premo il mouse sinistro
-            if (Input.GetMouseButtonDown(0))
+            pointerGameObject.SetActive(true);
+
+            if (isPointerOnFacingDir)
             {
-                //per ogni oggetto con cui sto collidendo
-                foreach (Collider c in collidingObjects)
-                    //applico la forza nel punto in cui collide la pallina rossa
-                    addPointForce(c);
-            }*/
-            if (Input.GetAxisRaw("Fire1") != 0 && isPointerOnFacingDir)
+                pointerGameObject.GetComponent<TrailRenderer>().enabled = true;
+                Color c = pointerGameObject.GetComponent<SpriteRenderer>().material.color;
+                c.a = 1;
+                pointerGameObject.GetComponent<SpriteRenderer>().material.color = c;
+                
+            }
+            else
             {
-                if (m_isAxisInUse == false)
+                pointerGameObject.GetComponent<TrailRenderer>().enabled = false;
+                Color c = pointerGameObject.GetComponent<SpriteRenderer>().material.color;
+                c.a = fadePointer;
+                pointerGameObject.GetComponent<SpriteRenderer>().material.color = c;
+                
+            }
+
+            if (catchInput)
+            {
+                /*
+                //se premo il mouse sinistro
+                if (Input.GetMouseButtonDown(0))
                 {
-                    //per ogni oggetto con cui collido
+                    //per ogni oggetto con cui sto collidendo
                     foreach (Collider c in collidingObjects)
+                        //applico la forza nel punto in cui collide la pallina rossa
+                        addPointForce(c);
+                }*/
+                if (Input.GetAxisRaw("Fire1") != 0 && isPointerOnFacingDir)
+                {
+                    if (m_isAxisInUse == false)
                     {
-                        //aggiungo una forza al baricentro
-                        ForceHandler forceHandler = c.GetComponent<ForceHandler>();
-                        if (forceHandler == null)
+                        //per ogni oggetto con cui collido
+                        foreach (Collider c in collidingObjects)
                         {
-                            Debug.Log("non posso applicare forze a corpi senza un ForceHandler");
+                            //aggiungo una forza al baricentro
+                            ForceHandler forceHandler = c.GetComponent<ForceHandler>();
+                            if (forceHandler == null)
+                            {
+                                Debug.Log("non posso applicare forze a corpi senza un ForceHandler");
+                            }
+                            else
+                            {
+                                if (!c.isTrigger)
+                                {
+                                    forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
+
+                                    FMODUnity.RuntimeManager.PlayOneShot(punchSound);
+
+                                }
+                            }
                         }
-                        else
-                        {
-                          if(!c.isTrigger)
-                          {
-                            forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
-                           
-                                FMODUnity.RuntimeManager.PlayOneShot(punchSound); 
-                             
-                          }
-                        }
+
+                        m_isAxisInUse = true;
                     }
-
-                    m_isAxisInUse = true;
                 }
-            }
-            if (Input.GetAxisRaw("Fire1") == 0)
-            {
-                m_isAxisInUse = false;
-            }
+                if (Input.GetAxisRaw("Fire1") == 0)
+                {
+                    m_isAxisInUse = false;
+                }
 
+            }
+        }
+        else
+        {
+            pointerGameObject.SetActive(false);
         }
 
         inputFacingDir = Math.Sign(Input.GetAxis("Horizontal"));
@@ -113,7 +141,7 @@ public class ForceLineApplication : MonoBehaviour
     {
         //se l'oggeto con cui mi sono scontrato non e un player
         //NB: qui forse c'era un modo piu corretto -> da sistemare alla fine nel caso
-        if (other.gameObject.layer != gameObject.layer && other.gameObject.layer != LayerMask.NameToLayer("IsTransparent"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("IsInteractive")/*other.gameObject.layer != gameObject.layer && other.gameObject.layer != LayerMask.NameToLayer("IsTransparent")*/)
         {
 
             //abilito l'applicazione della forza nell 'update
@@ -139,7 +167,7 @@ public class ForceLineApplication : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != gameObject.layer && other.gameObject.layer != LayerMask.NameToLayer("IsTransparent"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("IsInteractive")/*other.gameObject.layer != gameObject.layer && other.gameObject.layer != LayerMask.NameToLayer("IsTransparent")*/)
         {
             //rimuovo l'oggetto dalla lista dei colliding
             collidingObjects.Remove(other);

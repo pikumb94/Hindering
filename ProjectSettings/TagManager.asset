@@ -19,7 +19,8 @@ TagManager:
   - PostProcessing
   - Magnetic
   - IsTransparent
-  - IsTrigger
+  - IsInteractive
+  - 
   - 
   - 
   - 

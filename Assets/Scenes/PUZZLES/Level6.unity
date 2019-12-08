@@ -1841,41 +1841,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 253564904}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &275182027
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &280895930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,18 +1848,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 132232092}
     m_Modifications:
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_Name
-      value: Gen_FloorCeiling_02_snaps002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -1938,6 +1891,18 @@ PrefabInstance:
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_Name
+      value: Gen_FloorCeiling_02_snaps002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
@@ -2676,41 +2641,6 @@ PrefabInstance:
       objectReference: {fileID: 1235493427}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 563dc73a7d2098d40b83947ed1e5cec9, type: 3}
---- !u!84 &465641412
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &488433300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2919,6 +2849,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f0c8a3c4801c314a9080fc9250d5f7b, type: 3}
+--- !u!84 &503028554
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &556601088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3336580303021694835, guid: 563dc73a7d2098d40b83947ed1e5cec9,
@@ -3010,6 +2975,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 558033615}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &564216672
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!43 &578000297
 Mesh:
   m_ObjectHideFlags: 0
@@ -4335,16 +4335,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 132232092}
     m_Modifications:
-    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall_DoorFrame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 8827279243471519689, guid: bf819ccd8c02bb140bcdd147e3ab2083,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4399,6 +4389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
+        type: 3}
+      propertyPath: m_Name
+      value: Wall_DoorFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3478035820184209919, guid: bf819ccd8c02bb140bcdd147e3ab2083,
         type: 3}
@@ -6320,7 +6320,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0814075
+      value: 0.72886705
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -8075,6 +8075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407070252588806632, guid: 2535c6381df64744499f1bc8239807cd,
+        type: 3}
+      propertyPath: nextScene
+      value: Level7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2535c6381df64744499f1bc8239807cd, type: 3}
@@ -10037,18 +10042,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 132232092}
     m_Modifications:
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_Name
-      value: Gen_FloorCeiling_02_snaps002 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.5
@@ -10092,6 +10085,18 @@ PrefabInstance:
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_Name
+      value: Gen_FloorCeiling_02_snaps002 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
@@ -10724,16 +10729,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 132232092}
     m_Modifications:
-    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
-        type: 3}
-      propertyPath: m_Name
-      value: Wall_DoorFrame (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 8827279243471519689, guid: bf819ccd8c02bb140bcdd147e3ab2083,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10788,6 +10783,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
+        type: 3}
+      propertyPath: m_Name
+      value: Wall_DoorFrame (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014528369100856868, guid: bf819ccd8c02bb140bcdd147e3ab2083,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3478035820184209919, guid: bf819ccd8c02bb140bcdd147e3ab2083,
         type: 3}
@@ -14972,18 +14977,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 132232092}
     m_Modifications:
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_Name
-      value: Gen_FloorCeiling_02_snaps002 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -15027,6 +15020,18 @@ PrefabInstance:
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_Name
+      value: Gen_FloorCeiling_02_snaps002 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
@@ -15226,18 +15231,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 132232092}
     m_Modifications:
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_Name
-      value: Gen_FloorCeiling_02_snaps002 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.5
@@ -15281,6 +15274,18 @@ PrefabInstance:
     - target: {fileID: 4350644910863500, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_Name
+      value: Gen_FloorCeiling_02_snaps002 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509278760438596, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f73ba48af97f64fb68b254be9aaab5, type: 3}

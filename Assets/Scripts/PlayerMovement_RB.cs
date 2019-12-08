@@ -41,28 +41,23 @@ public class PlayerMovement_RB : TimeBehaviour
         layerMask = ~layerMask;
         rb = gameObject.GetComponent<Rigidbody>();
         coll = gameObject.GetComponent<CapsuleCollider>();
-<<<<<<< HEAD
         stairHeightFromPlayerCenter = Mathf.Abs(coll.height/2 - heightStair);
         numRays = (int) ((coll.height) /raycastInterspace);
         Debug.Log(numRays);
-=======
         GameObject go = transform.GetChild(0).gameObject;
         _animator= go.GetComponent<Animator>();
->>>>>>> Animations(Lore)
     }
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.H))
             hitCollVisibility.enabled = (hitCollVisibility.enabled ? false : true);
 
 
-        if (Physics.CheckSphere(transform.position -Vector3.up *(3f/4f)* coll.height/2f- Vector3.up * 0.01f, coll.radius, layerMask))
-=======
+      //  if (Physics.CheckSphere(transform.position -Vector3.up *(3f/4f)* coll.height/2f- Vector3.up * 0.01f, coll.radius, layerMask))
+
         if (Physics.CheckSphere(transform.position + -Vector3.up * coll.height / 2, (3f / 4f) * coll.radius, layerMask))
         {
->>>>>>> Animations(Lore)
             isGrounded = true;
             _animator.SetBool("isGrounded", true);
         }
@@ -90,11 +85,6 @@ public class PlayerMovement_RB : TimeBehaviour
         }
 
 
-<<<<<<< HEAD
-        //Debug.Log(rb.velocity.y);
-        
-=======
->>>>>>> Animations(Lore)
     }
 
     private void FixedUpdate()

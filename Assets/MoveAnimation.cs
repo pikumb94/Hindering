@@ -16,6 +16,13 @@ public class MoveAnimation : MonoBehaviour
         float vel = Input.GetAxis("Horizontal");
        vel= Mathf.Abs(vel);
         _animator.SetFloat("speed",vel);
-        
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+
+            _animator.SetBool("punch",true);
+        }else        {
+            _animator.SetBool("punch", false);
+        }
+
     }
 }

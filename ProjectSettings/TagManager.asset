@@ -4,6 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+=======
+  - Metal
+>>>>>>> Animations(Lore)
   - ArmPivot
   - Metal
   layers:
@@ -15,11 +19,19 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Player
   - PostProcessing
   - Magnetic
   - IsTransparent
   - IsInteractive
+=======
+  - 
+  - 
+  - 
+  - 
+  - 
+>>>>>>> Animations(Lore)
   - 
   - 
   - 

@@ -9,7 +9,7 @@ public class ForceLineApplication : MonoBehaviour
 {
     //non ho capito
     public float hitRadius = 1f;
-
+    public GameObject model;
     //magntudine della forza
     public float forceMagnitude = 10f;
     private bool m_isAxisInUse = false;
@@ -130,11 +130,18 @@ public class ForceLineApplication : MonoBehaviour
         if (inputFacingDir != 0)
             facingRight = (inputFacingDir > 0 ? true : false);
 
-        if (facingRight)
-            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
-        else
-            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, - Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
 
+        if (facingRight)
+        {
+            model.transform.eulerAngles = new Vector3(0, 90, 0);
+            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
+        }
+        else
+        {
+            model.transform.eulerAngles = new Vector3(0, -90, 0);
+
+            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, -Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

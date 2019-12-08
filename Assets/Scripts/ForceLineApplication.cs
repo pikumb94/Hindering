@@ -7,6 +7,7 @@ using UnityEngine;
 //rinominerei questo script "ForceApplication" o una cosa simile
 public class ForceLineApplication : MonoBehaviour
 {
+    public Animator _animator;
     //non ho capito
     public float hitRadius = 1f;
     public GameObject model;

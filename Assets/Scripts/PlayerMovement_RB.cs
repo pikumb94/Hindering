@@ -206,4 +206,10 @@ public class PlayerMovement_RB : TimeBehaviour
 
 
     }
+
+
+    void playSound(string path)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
+    }
 }

@@ -161,6 +161,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{608f5cd9-987a-4a47-96f7-1f3645810e6c}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{6e443c84-1080-4e0d-85d6-67bf5443ce53}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Return\{dd93932d-5b0b-4ea7-a8f6-59f854d104bc}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
     <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
@@ -184,7 +185,9 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Group\{d9d061b4-b9cd-4991-b0b6-814d727d45ed}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{f6c50f6b-bac1-4ce4-b5e6-2aace649a512}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{8f90cd12-266c-4a00-85f7-05ac936cc846}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{5d73fca6-0873-4b90-a11c-c287aa06d70a}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{1088c5c1-b7c9-4829-92bc-3a30c07f11e7}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{61042b42-42e5-4f56-bed9-1a4e872d8d68}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Tags.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{e254af6a-b63a-4224-b633-87be9aecd3a4}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
@@ -199,6 +202,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{222205d9-c39c-4c98-b7e6-93cb8b2a8704}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{683329c1-dcda-4b1e-a9f5-5267f8e704bc}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPreset\{e13f993a-535a-4920-a8a5-5877a4893c4b}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{e021e20d-8df7-4677-b75c-181a4f686879}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{9d18056f-bdd1-45e4-8420-438bc9a267ce}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
@@ -207,6 +211,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\Platform\{62842c75-d3eb-4505-ab2d-46bb879c8ac1}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\BankFolder\{8b753512-3549-49ff-92c1-e110c026eaaa}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\SnapshotGroup\{8a120dca-1a89-4b1b-9f0b-345cb8ed4596}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{4cc0ed87-ae18-409f-b8e0-838b313dd540}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{17519483-90bf-4973-9631-e7adfef792f4}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{2def5086-406a-4445-b489-844b3d01f978}.xml" />
@@ -222,6 +227,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{dfd32a5e-9512-4aa9-b19f-6b6e41b66a3d}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\ParameterPresetFolder\{b006c4c5-4feb-4f16-b301-badd61f3aa2d}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{1c814117-fd6d-4bcc-b9e5-59366b8880d8}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{55b52c1f-869b-4ca2-b3c5-24f66b38f1b3}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
     <None Include="Assets\UnlitAlphaWithFade.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />

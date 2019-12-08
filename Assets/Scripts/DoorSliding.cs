@@ -14,6 +14,12 @@ public class DoorSliding : TimeBehaviour
     public bool time = true;
     float zPos;
 
+    [FMODUnity.EventRef]
+    public string doorOpeningSound =  "";
+    [FMODUnity.EventRef]
+    public string doorClosingSound = "";
+
+
     void Start()
     {
       base.Start();
@@ -24,22 +30,27 @@ public class DoorSliding : TimeBehaviour
     {
       if(time && backward)
       {
-          if(door.transform.position.z > zPos + maxMove)
+        FMODUnity.RuntimeManager.PlayOneShot(doorOpeningSound);
+          if (door.transform.position.z > zPos + maxMove)
           {
             rbDoor.velocity = Vector3.zero;
+            
+
           }else
           {
             rbDoor.velocity = new Vector3(0, 0, standard_speed);
           }
       }else if(time)
       {
-        if(door.transform.position.z < zPos)
-        {
-          rbDoor.velocity = Vector3.zero;
-        }else
-        {
-          rbDoor.velocity = new Vector3(0, 0, -standard_speed);
-        }
+        FMODUnity.RuntimeManager.PlayOneShot(doorClosingSound);
+          if (door.transform.position.z < zPos)
+          {
+            rbDoor.velocity = Vector3.zero;
+
+          }else
+          {
+            rbDoor.velocity = new Vector3(0, 0, -standard_speed);
+          }
 
       }
     }

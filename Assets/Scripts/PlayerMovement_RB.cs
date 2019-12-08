@@ -58,10 +58,7 @@ public class PlayerMovement_RB : TimeBehaviour
             hitCollVisibility.enabled = (hitCollVisibility.enabled ? false : true);
 
 
-        if (Physics.CheckSphere(transform.position -Vector3.up *(3f/4f)* coll.height/2f- Vector3.up * 0.01f, coll.radius, layerMask))
-      //  if (Physics.CheckSphere(transform.position -Vector3.up *(3f/4f)* coll.height/2f- Vector3.up * 0.01f, coll.radius, layerMask))
-
-        if (Physics.CheckSphere(transform.position + -Vector3.up * coll.height / 2, (3f / 4f) * coll.radius, layerMask))
+        if (Physics.CheckSphere(transform.position - Vector3.up * (3f / 4f) * coll.height / 2f - Vector3.up * 0.01f, coll.radius, layerMask))
         {
             isGrounded = true;
             _animator.SetBool("isGrounded", true);

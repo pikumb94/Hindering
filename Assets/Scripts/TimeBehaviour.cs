@@ -10,7 +10,7 @@ public class TimeBehaviour : MonoBehaviour
     protected Vector3 velocity;
     protected void Start()
     {
-        velocity = new Vector3();
+            velocity = new Vector3();
 
             //se sono un un oggetto
 

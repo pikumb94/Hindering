@@ -8,7 +8,7 @@ public class DoorSliding : TimeBehaviour
     public float standard_speed = 1f;
     public float maxMove = 2f;
     public GameObject door;
-    Rigidbody rbDoor;
+    public Rigidbody rbDoor;
 
     public bool backward = true;
     public bool time = true;
@@ -18,12 +18,10 @@ public class DoorSliding : TimeBehaviour
     {
       base.Start();
       zPos = door.transform.position.z;
-      rbDoor = door.GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-      Debug.Log(backward);
       if(time && backward)
       {
           if(door.transform.position.z > zPos + maxMove)

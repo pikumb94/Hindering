@@ -16,7 +16,7 @@ public class PlayerMovement_RB : TimeBehaviour
     bool canPlayerMove=false;
     float stairHeightFromPlayerCenter;
     float prevXinput=0;
-    
+
     Vector3 horizontalMove;
     int numRays;
     bool playerHitsWall=false;
@@ -78,7 +78,6 @@ public class PlayerMovement_RB : TimeBehaviour
             else
                 isFalling = true;
         }
-        Debug.Log (isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded && canPlayerMove)
         {
             _animator.SetBool("jump", true);
@@ -104,7 +103,7 @@ public class PlayerMovement_RB : TimeBehaviour
         magnitudeXMov = speed * inputX * Time.fixedDeltaTime;
         if(canPlayerMove)
             rb.velocity = new Vector3(magnitudeXMov, rb.velocity.y, 0);
-        
+
         if(Mathf.Sign(inputX)!=Mathf.Sign(prevXinput) && isGrounded)//added to prevent jumping when going rapidly the opposite direction when you're on a slope
             rb.velocity = new Vector3(rb.velocity.x, 0, 0);
 
@@ -114,7 +113,7 @@ public class PlayerMovement_RB : TimeBehaviour
         horizontalMove = new Vector3(Math.Sign(rb.velocity.x),0,0);
 
 
-            
+
 
 
         RaycastHit hit;
@@ -124,16 +123,16 @@ public class PlayerMovement_RB : TimeBehaviour
         RaycastHit hitMidHigh;
         RaycastHit hitMidLow;
         RaycastHit hitKnee;
-        
+
         // The raycast fix the intial step and slope problem
         for(int i = 0; i < numRays/2; i++)
         {
             float deltaP = raycastInterspace * (i+1);
             float deltaN = -raycastInterspace * (i+1);
-            
 
 
-                
+
+
                 Debug.DrawLine(transform.position  + Vector3.up * deltaP, transform.position  + Vector3.up * deltaP + horizontalMove * magnRaycast, Color.yellow);
                 if ((deltaP < stairHeightFromPlayerCenter))
                     Debug.DrawLine(transform.position  + Vector3.up * deltaN, transform.position  + Vector3.up * deltaN + horizontalMove * magnRaycast, Color.yellow);
@@ -176,7 +175,7 @@ public class PlayerMovement_RB : TimeBehaviour
         }
         else
         {
-            if (Physics.Raycast(transform.position - Vector3.up * stairHeightFromPlayerCenter, horizontalMove, out hitKnee, magnStairRaycast, layerMask) && 
+            if (Physics.Raycast(transform.position - Vector3.up * stairHeightFromPlayerCenter, horizontalMove, out hitKnee, magnStairRaycast, layerMask) &&
                 Physics.Raycast(transform.position - Vector3.up * coll.height / 2, horizontalMove, out hitLow, magnRaycast, layerMask))
             {
                 //Debug.Log(hitKnee.distance + "  " + hitLow.distance);
@@ -185,7 +184,7 @@ public class PlayerMovement_RB : TimeBehaviour
                     Debug.Log("Only last two and same distance");
                     rb.velocity = new Vector3(0, rb.velocity.y, 0);
                 }
-                    
+
             }
             /*
             if (rb.SweepTest(horizontalMove, out hit, 0.01f))

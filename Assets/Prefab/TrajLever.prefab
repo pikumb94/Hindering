@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 8038650835592857844}
   - component: {fileID: 4692277015730940051}
   - component: {fileID: 7929340187230692410}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,8 +1110,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -60
-    max: 30
+    min: -70
+    max: 20
     bounciness: 0
     bounceMinVelocity: 0
     contactDistance: 0

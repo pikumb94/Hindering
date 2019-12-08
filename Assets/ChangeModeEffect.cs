@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using Cinemachine;
 
+using UnityEngine.SceneManagement;
+
 public class ChangeModeEffect : MonoBehaviour
 {
     PostProcessVolume m_Vol;
@@ -13,11 +15,18 @@ public class ChangeModeEffect : MonoBehaviour
     ChromaticAberration m_ChromaticAberration;
     LensDistortion m_LensDistortion;
 
+    AutoExposure m_AutoExposure;
+    Grain m_Grain;
+
     float intensityValue;
     float temperatureValue;
     float fieldOV;
     float chromaticAberration;
     float lensDistortion;
+
+    float autoExposure;
+    float grain;
+
     public float targetTemperatureVal;
     public float targetIntesityVal;
     public float targetFOV;
@@ -33,6 +42,8 @@ public class ChangeModeEffect : MonoBehaviour
     float timer;
     float percTimer;
     public CinemachineVirtualCamera cMCamera;
+
+    bool oneShot = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +76,13 @@ public class ChangeModeEffect : MonoBehaviour
         lensDistortion = m_LensDistortion.intensity.value;
 
         fieldOV = cMCamera.m_Lens.FieldOfView;
+
+
+        m_AutoExposure = currVol.profile.GetSetting<AutoExposure>();
+        autoExposure = m_AutoExposure.minLuminance.value;
+
+        m_Grain = currVol.profile.GetSetting<Grain>();
+        grain = m_Grain.intensity.value;
     }
 
     void Update()
@@ -120,9 +138,36 @@ public class ChangeModeEffect : MonoBehaviour
             percTimer = timer / transitionTime;
             timer += Time.deltaTime;
         }
-        
+
+
+
+        if (Input.GetButtonDown("RestartScene"))
+        {
             
-        //Debug.Log(timer);
+            if (!oneShot) { 
+                StartCoroutine("restartPP");
+                oneShot = true;
+            }
+        }
+
+    }
+
+    IEnumerator restartPP()
+    {
+        float totalAnimTime =1.5f;
+        float percAnim=0f;
+
+        for (float ft = 0f; ft <= totalAnimTime; ft = ft+ .01f)
+        {
+            percAnim = ft / totalAnimTime;
+            m_Grain.intensity.Interp(grain, 1f, percAnim);
+            /*m_AutoExposure.minLuminance.Interp(autoExposure, 50f, percAnim);
+            m_AutoExposure.maxLuminance.Interp(autoExposure, 50f, percAnim);*/
+            m_LensDistortion.intensity.value = Mathf.Lerp(lensDistortion,-100f,percAnim);
+            m_AutoExposure.keyValue.Interp(1f, -.4f, percAnim);
+            yield return new WaitForSeconds(.01f);
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

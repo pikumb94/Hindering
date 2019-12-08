@@ -1129,11 +1129,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1799640115}
-    - target: {fileID: 7616061910220084752, guid: 758e1eb87d4015447b6c241300cf8385,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7661970534717965622, guid: 758e1eb87d4015447b6c241300cf8385,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1193,6 +1188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ceiling_Transparent_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616061910220084752, guid: 758e1eb87d4015447b6c241300cf8385,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758e1eb87d4015447b6c241300cf8385, type: 3}
@@ -1937,7 +1937,7 @@ Transform:
   - {fileID: 1326037921}
   - {fileID: 1857686060}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &598673895 stripped
 Transform:
@@ -2126,7 +2126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809255288549338, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.953095
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4809255288549338, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2435,11 +2435,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1186869089}
-    - target: {fileID: 7616061910220084752, guid: 758e1eb87d4015447b6c241300cf8385,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7661970534717965622, guid: 758e1eb87d4015447b6c241300cf8385,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2499,6 +2494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ceiling_Transparent_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616061910220084752, guid: 758e1eb87d4015447b6c241300cf8385,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758e1eb87d4015447b6c241300cf8385, type: 3}
@@ -2883,7 +2883,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9972687
+      value: 3.5874908
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -2918,7 +2918,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -3279,7 +3279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189708718966864, guid: 4f6977220c151404d9b6645f08a4a362, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.953095
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4189708718966864, guid: 4f6977220c151404d9b6645f08a4a362, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3961,7 +3961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809255288549338, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.953095
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4809255288549338, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4700,13 +4700,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37e77a47218919148afc5a8cd332b7c0, type: 3}
---- !u!84 &1208222289
+--- !u!84 &1203031451
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -4849,6 +4849,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
+--- !u!84 &1244088899
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1269040910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6115,7 +6150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809255288549338, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.953095
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4809255288549338, guid: 6acf036e14cf86b4dbc2f4bbc89f7bf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6212,41 +6247,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37e77a47218919148afc5a8cd332b7c0, type: 3}
---- !u!84 &1766349464
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &1767614048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7306,7 +7306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189708718966864, guid: 4f6977220c151404d9b6645f08a4a362, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.953095
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4189708718966864, guid: 4f6977220c151404d9b6645f08a4a362, type: 3}
       propertyPath: m_LocalPosition.z

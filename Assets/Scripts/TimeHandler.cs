@@ -28,10 +28,20 @@ public class TimeHandler : Singleton<TimeHandler>
         {
             timeSwitch();
         }
-
+/*
         if (Input.GetButtonDown("RestartScene"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }*/
+
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.KeypadMinus))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }
 

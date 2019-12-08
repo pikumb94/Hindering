@@ -60,9 +60,17 @@ public class PlayerMovement_RB : TimeBehaviour
         }
         //Debug.Log (isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded && canPlayerMove)
-            playerJump(forceJumpMagnitude, forceType);
+        {
+            _animator.SetBool("jump", true);
 
-        
+            playerJump(forceJumpMagnitude, forceType);
+        }
+        else
+        {
+            _animator.SetBool("jump", false);
+        }
+
+
     }
 
     private void FixedUpdate()

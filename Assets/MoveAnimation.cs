@@ -6,6 +6,13 @@ public class MoveAnimation : MonoBehaviour
 {private Animator  _animator ;
     bool m_isAxisInUse;
     // Start is called before the first frame update
+
+    [FMODUnity.EventRef]
+    public string footstepEvent = "";
+    [FMODUnity.EventRef]
+    public string landingEvent = "";
+
+
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -34,4 +41,17 @@ public class MoveAnimation : MonoBehaviour
             m_isAxisInUse = false;
         }*/
     }
+
+    public void playFootstep()
+    {
+        //FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>.position());
+        //Debug.Log("FOOTSTEP SOUND!");
+        FMODUnity.RuntimeManager.PlayOneShot(footstepEvent);
+    }
+
+    public void playLanding()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(landingEvent);
+    }
+
 }

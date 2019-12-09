@@ -28,11 +28,6 @@ public class TimeHandler : Singleton<TimeHandler>
         {
             timeSwitch();
         }
-/*
-        if (Input.GetButtonDown("RestartScene"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }*/
 
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {

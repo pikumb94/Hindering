@@ -24,7 +24,6 @@ public class ChangeModeEffect : MonoBehaviour
     float chromaticAberration;
     float lensDistortion;
 
-    float autoExposure;
     float grain;
 
     public float targetTemperatureVal;
@@ -76,10 +75,6 @@ public class ChangeModeEffect : MonoBehaviour
         lensDistortion = m_LensDistortion.intensity.value;
 
         fieldOV = cMCamera.m_Lens.FieldOfView;
-
-
-        m_AutoExposure = currVol.profile.GetSetting<AutoExposure>();
-        autoExposure = m_AutoExposure.minLuminance.value;
 
         m_Grain = currVol.profile.GetSetting<Grain>();
         grain = m_Grain.intensity.value;
@@ -154,17 +149,15 @@ public class ChangeModeEffect : MonoBehaviour
 
     IEnumerator restartPP()
     {
-        float totalAnimTime =1.5f;
+        float totalAnimTime =.5f;
         float percAnim=0f;
 
         for (float ft = 0f; ft <= totalAnimTime; ft = ft+ .01f)
         {
             percAnim = ft / totalAnimTime;
             m_Grain.intensity.Interp(grain, 1f, percAnim);
-            /*m_AutoExposure.minLuminance.Interp(autoExposure, 50f, percAnim);
-            m_AutoExposure.maxLuminance.Interp(autoExposure, 50f, percAnim);*/
             m_LensDistortion.intensity.value = Mathf.Lerp(lensDistortion,-100f,percAnim);
-            m_AutoExposure.keyValue.Interp(1f, -.4f, percAnim);
+            m_ColorGrading.postExposure.Interp(0f, -5f, percAnim);
             yield return new WaitForSeconds(.01f);
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

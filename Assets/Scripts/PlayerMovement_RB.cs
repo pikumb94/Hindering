@@ -94,10 +94,10 @@ public class PlayerMovement_RB : TimeBehaviour
     {
         inputX = Input.GetAxis("Horizontal");
         magnitudeXMov = speed * inputX * Time.fixedDeltaTime;
-       
+
         if (canPlayerMove)
             rb.velocity = new Vector3(magnitudeXMov, rb.velocity.y, 0);
-       
+
         if (Mathf.Sign(inputX)!=Mathf.Sign(prevXinput) && isGrounded)//added to prevent jumping when going rapidly the opposite direction when you're on a slope
             rb.velocity = new Vector3(rb.velocity.x, 0, 0);
 
@@ -216,7 +216,7 @@ public class PlayerMovement_RB : TimeBehaviour
         }
         else
         {
-            
+
             canPlayerMove = true;
             if (_animator != null)
             {
@@ -228,8 +228,8 @@ public class PlayerMovement_RB : TimeBehaviour
     }
 
 
-    void playSound(string path)
-    {
-        FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
+    void playSound(string path)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
     }
 }

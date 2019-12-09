@@ -86,10 +86,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PlayToStop
+  m_Name: event:/Punch
   m_EditorClassIdentifier: 
-  Path: event:/PlayToStop
-  guid: 12cd908f6c26004a85f705ac936cc846
+  Path: event:/Punch
+  guid: 834b063433cac441972678e6632f6a3e
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 0
@@ -208,14 +208,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/AmbientNoise
+  m_Name: event:/LightBuzz
   m_EditorClassIdentifier: 
-  Path: event:/AmbientNoise
-  guid: fec55559b09f8845a84d7613b515c53f
+  Path: event:/LightBuzz
+  guid: c19a08c1a46a4b429a0ce9051385e568
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
@@ -284,10 +284,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/StopToPlay
+  m_Name: event:/CrateCollisionHard
   m_EditorClassIdentifier: 
-  Path: event:/StopToPlay
-  guid: 2c6fc2c8bb04714d8fb0e244ffc9bfea
+  Path: event:/CrateCollisionHard
+  guid: 83945117bf9073499631e7adfef792f4
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 0
@@ -540,14 +540,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MetalBoxCollisionHard
+  m_Name: event:/PlayToStop
   m_EditorClassIdentifier: 
-  Path: event:/MetalBoxCollisionHard
-  guid: d90522229cc3984cb7e693cb8b2a8704
+  Path: event:/PlayToStop
+  guid: 12cd908f6c26004a85f705ac936cc846
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -615,15 +615,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Punch
+  m_Name: event:/AmbientNoise
   m_EditorClassIdentifier: 
-  Path: event:/Punch
-  guid: 834b063433cac441972678e6632f6a3e
+  Path: event:/AmbientNoise
+  guid: fec55559b09f8845a84d7613b515c53f
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
@@ -658,10 +658,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/StoppedTime/SnapshotIntensity
   m_EditorClassIdentifier: 
-  Name: SnapshotIntensity
-  Min: 0
-  Max: 2
-  Default: 0
+  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637114007002488172
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1400
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -760,10 +763,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MetalBoxCollisionSoft
+  m_Name: event:/StopToPlay
   m_EditorClassIdentifier: 
-  Path: event:/MetalBoxCollisionSoft
-  guid: 6aaf54e23ab62442b63387be9aecd3a4
+  Path: event:/StopToPlay
+  guid: 2c6fc2c8bb04714d8fb0e244ffc9bfea
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 0
@@ -955,7 +958,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &4339050240597198111
+--- !u!114 &2216335972833102306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -965,15 +968,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LightBuzz
+  m_Name: event:/MetalBoxCollisionHard
   m_EditorClassIdentifier: 
-  Path: event:/LightBuzz
-  guid: c19a08c1a46a4b429a0ce9051385e568
+  Path: event:/MetalBoxCollisionHard
+  guid: d90522229cc3984cb7e693cb8b2a8704
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0.29999998
   MaxDistance: 7.6
@@ -1063,8 +1066,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CrateCollisionSoft
   m_EditorClassIdentifier: 
   Path: Assets/FMOD_AudioManager/Build/Desktop/Master.strings.bank
   SubDir: 
@@ -1170,10 +1173,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/CrateCollisionSoft
+  m_Name: event:/MetalBoxCollisionSoft
   m_EditorClassIdentifier: 
-  Path: event:/CrateCollisionSoft
-  guid: 1741811c6dfdcc4bb9e559366b8880d8
+  Path: event:/MetalBoxCollisionSoft
+  guid: 6aaf54e23ab62442b63387be9aecd3a4
   Banks:
   - {fileID: -1218063470004189874}
   IsStream: 0

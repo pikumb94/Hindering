@@ -13,8 +13,6 @@ public static class SceneLoader
         //Intro,
         Loading,
         MainMenu,
-        Levels,
-        Commands,
         Level1,
         Level2,
         Level3,

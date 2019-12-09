@@ -14,7 +14,10 @@ using UnityEngine.SceneManagement;
  */
 public class TimeHandler : Singleton<TimeHandler>
 {
+    public GameObject pauseMenu;
+    [HideInInspector]
     public bool time = true;
+    
 
     void Start()
     {
@@ -38,6 +41,19 @@ public class TimeHandler : Singleton<TimeHandler>
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
+
+        if (Input.GetButtonDown("Start"))
+        {
+            if (pauseMenu.activeSelf)
+            {
+                pauseMenu.SetActive(false);
+            }
+            else
+            {
+                pauseMenu.SetActive(true);
+            }
+
+        }
     }
 
 
@@ -58,9 +74,10 @@ public class TimeHandler : Singleton<TimeHandler>
         //dico a tutti gli oggetti iscritti all 'evento che il Tempo è cambiato
         GameEvents.current.TimeChange();
 
+    }
 
-
-
-
+    private void OnLevelWasLoaded(int level)
+    {
+        time = true;
     }
 }

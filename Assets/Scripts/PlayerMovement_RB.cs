@@ -191,7 +191,7 @@ public class PlayerMovement_RB : TimeBehaviour
         }
         prevXinput = inputX;
         playerHitsWall = false;
-        Debug.Log(rb.velocity.x);
+        //Debug.Log(rb.velocity.x);
 
         float animatorSpeed = rb.velocity.x / 3;
         animatorSpeed = Mathf.Abs(animatorSpeed);

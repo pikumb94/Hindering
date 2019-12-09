@@ -36,17 +36,17 @@ public class ButtonDoor : TimeBehaviour
       if(transform.position.y > pivotHeight - height && transform.position.y < pivotHeight)
       {
         on = !beforeState;
-        target.backward = on;
+        target.backward = !(on);
       }else if (transform.position.y == pivotHeight - height)
       {
         on = true;
         beforeState = on;
-        target.backward = on;
+        target.backward = !(on);
       }else if (transform.position.y == pivotHeight)
       {
         on = false;
         beforeState = on;
-        target.backward = on;
+        target.backward = !(on);
       }else
       {
         Debug.Log("Error with button position");

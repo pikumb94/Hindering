@@ -1,33 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7701055811329670040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/CrateCollisionHard
-  m_EditorClassIdentifier: 
-  Path: event:/CrateCollisionHard
-  guid: 83945117bf9073499631e7adfef792f4
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 583
---- !u!114 &-7585500133711115128
+--- !u!114 &-8554166032688771906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,151 +17,7 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
---- !u!114 &-7309864499602066201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PlayToStop
-  m_EditorClassIdentifier: 
-  Path: event:/PlayToStop
-  guid: 12cd908f6c26004a85f705ac936cc846
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 888
---- !u!114 &-7281193826796094368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637114026020902320
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-7011704472647633887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/AmbientNoise
-  m_EditorClassIdentifier: 
-  Path: event:/AmbientNoise
-  guid: fec55559b09f8845a84d7613b515c53f
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 64008
---- !u!114 &-6231310513398751752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/StopToPlay
-  m_EditorClassIdentifier: 
-  Path: event:/StopToPlay
-  guid: 2c6fc2c8bb04714d8fb0e244ffc9bfea
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 809
---- !u!114 &-6101428829468955674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637113295549332373
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2789678686708265935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MetalBoxCollisionHard
-  m_EditorClassIdentifier: 
-  Path: event:/MetalBoxCollisionHard
-  guid: d90522229cc3984cb7e693cb8b2a8704
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 648
---- !u!114 &-1306254111350709908
+--- !u!114 &-7330049134813118722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,11 +32,7 @@ MonoBehaviour:
   Path: event:/Punch
   guid: 834b063433cac441972678e6632f6a3e
   Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
+  - {fileID: 3937098542495762031}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -215,140 +40,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 218
---- !u!114 &-905501160125791035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/StoppedTime/SnapshotIntensity
-  m_EditorClassIdentifier: 
-  Name: SnapshotIntensity
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 5637197153361897870}
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  EditorEvents:
-  - {fileID: -7309864499602066201}
-  - {fileID: 7381945512790213613}
-  - {fileID: -6231310513398751752}
-  - {fileID: 1372223360516386205}
-  - {fileID: 5045255860460617644}
-  - {fileID: -1306254111350709908}
-  - {fileID: -7701055811329670040}
-  - {fileID: 4339050240597198111}
-  - {fileID: 4206995959363704939}
-  - {fileID: -2789678686708265935}
-  - {fileID: -7011704472647633887}
-  EditorParameters: []
-  MasterBanks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-  StringsBanks:
-  - {fileID: 5637197153361897870}
-  stringsBankWriteTime: 637114026020872399
-=======
-  - {fileID: 6107242955218361738}
-  StringsBanks:
-  - {fileID: 5637197153361897870}
-  stringsBankWriteTime: 637114007002488172
->>>>>>> master
-  cacheVersion: 3
---- !u!114 &1372223360516386205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MetalBoxCollisionSoft
-  m_EditorClassIdentifier: 
-  Path: event:/MetalBoxCollisionSoft
-  guid: 6aaf54e23ab62442b63387be9aecd3a4
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 307
---- !u!114 &3098162292585532104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/StoppedTime/SnapshotIntensity
-  m_EditorClassIdentifier: 
-  Name: SnapshotIntensity
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &4206995959363704939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/NormalTime
-  m_EditorClassIdentifier: 
-  Path: snapshot:/NormalTime
-  guid: d0904ba760edab44be6e462df4c85f13
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &4339050240597198111
+--- !u!114 &-6937779009890242782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,11 +55,7 @@ MonoBehaviour:
   Path: event:/LightBuzz
   guid: c19a08c1a46a4b429a0ce9051385e568
   Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
+  - {fileID: 3937098542495762031}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -375,7 +63,199 @@ MonoBehaviour:
   MinDistance: 0.29999998
   MaxDistance: 7.6
   Length: 6000
---- !u!114 &5045255860460617644
+--- !u!114 &-5141607844635186007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CrateCollisionHard
+  m_EditorClassIdentifier: 
+  Path: event:/CrateCollisionHard
+  guid: 83945117bf9073499631e7adfef792f4
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 583
+--- !u!114 &-2633777270211249260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayToStop
+  m_EditorClassIdentifier: 
+  Path: event:/PlayToStop
+  guid: 12cd908f6c26004a85f705ac936cc846
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 888
+--- !u!114 &-2343008406001846245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AmbientNoise
+  m_EditorClassIdentifier: 
+  Path: event:/AmbientNoise
+  guid: fec55559b09f8845a84d7613b515c53f
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 64008
+--- !u!114 &-1330961769606634118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637114007002488172
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1400
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -1330961769606634118}
+  - {fileID: 3937098542495762031}
+  EditorEvents:
+  - {fileID: -2633777270211249260}
+  - {fileID: 3538452825942885671}
+  - {fileID: 230274415354331519}
+  - {fileID: 6777537374172733577}
+  - {fileID: 2676812720611190518}
+  - {fileID: -7330049134813118722}
+  - {fileID: -5141607844635186007}
+  - {fileID: -6937779009890242782}
+  - {fileID: 1746779478847714752}
+  - {fileID: 2216335972833102306}
+  - {fileID: -2343008406001846245}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3937098542495762031}
+  StringsBanks:
+  - {fileID: -1330961769606634118}
+  stringsBankWriteTime: 637114007002488172
+  cacheVersion: 3
+--- !u!114 &230274415354331519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/StopToPlay
+  m_EditorClassIdentifier: 
+  Path: event:/StopToPlay
+  guid: 2c6fc2c8bb04714d8fb0e244ffc9bfea
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 809
+--- !u!114 &1746779478847714752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/NormalTime
+  m_EditorClassIdentifier: 
+  Path: snapshot:/NormalTime
+  guid: d0904ba760edab44be6e462df4c85f13
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2216335972833102306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MetalBoxCollisionHard
+  m_EditorClassIdentifier: 
+  Path: event:/MetalBoxCollisionHard
+  guid: d90522229cc3984cb7e693cb8b2a8704
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 648
+--- !u!114 &2676812720611190518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,24 +270,16 @@ MonoBehaviour:
   Path: snapshot:/StoppedTime
   guid: 6d7a48d65a89e340aa809fce9b33d06b
   Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
+  - {fileID: 3937098542495762031}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-<<<<<<< HEAD
-  - {fileID: -905501160125791035}
-=======
-  - {fileID: -7585500133711115128}
->>>>>>> master
+  - {fileID: -8554166032688771906}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &5637197153361897870
+--- !u!114 &3538452825942885671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,22 +288,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CrateCollisionSoft
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.strings.bank
-  SubDir: 
-<<<<<<< HEAD
-  lastModified: 637114026020872399
-=======
-  lastModified: 637114007002488172
->>>>>>> master
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1400
-  Exists: 1
---- !u!114 &6107242955218361738
+  Path: event:/CrateCollisionSoft
+  guid: 1741811c6dfdcc4bb9e559366b8880d8
+  Banks:
+  - {fileID: 3937098542495762031}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 30
+  Length: 500
+--- !u!114 &3937098542495762031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,7 +320,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &7381945512790213613
+--- !u!114 &6777537374172733577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,20 +330,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/CrateCollisionSoft
+  m_Name: event:/MetalBoxCollisionSoft
   m_EditorClassIdentifier: 
-  Path: event:/CrateCollisionSoft
-  guid: 1741811c6dfdcc4bb9e559366b8880d8
+  Path: event:/MetalBoxCollisionSoft
+  guid: 6aaf54e23ab62442b63387be9aecd3a4
   Banks:
-<<<<<<< HEAD
-  - {fileID: -7281193826796094368}
-=======
-  - {fileID: 6107242955218361738}
->>>>>>> master
+  - {fileID: 3937098542495762031}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 30
-  Length: 500
+  MaxDistance: 20
+  Length: 307

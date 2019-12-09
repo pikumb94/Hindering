@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 
  La convenzione è che time uguale a true implica Play mode mentre time uguale a false implica stop Mode
  */
-public class TimeHandler : Singleton<TimeHandler>
+public class TimeHandler : MonoBehaviour
 {
     public GameObject pauseMenu;
     
@@ -22,11 +22,33 @@ public class TimeHandler : Singleton<TimeHandler>
     public bool isMenuActive = false;
 
 
-    void Start()
-    {
+    private static TimeHandler instance = null;
 
+    // Game Instance Singleton
+    public static TimeHandler Instance
+    {
+        get
+        {
+            return instance;
+        }
     }
 
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+        //DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -84,7 +106,7 @@ public class TimeHandler : Singleton<TimeHandler>
 
     }
 
-    private void OnLevelWasLoaded(int level)
+    private void OnLevelWasLoaded()
     {
         time = true;
     }

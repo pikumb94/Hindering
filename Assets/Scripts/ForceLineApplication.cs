@@ -87,7 +87,7 @@ public class ForceLineApplication : MonoBehaviour
                         //applico la forza nel punto in cui collide la pallina rossa
                         addPointForce(c);
                 }*/
-                if (Input.GetAxisRaw("Fire1") != 0 && isPointerOnFacingDir)
+                if (Input.GetAxisRaw("Fire1") != 0 && isPointerOnFacingDir && !TimeHandler.Instance.isMenuActive)
                 {
                     if (m_isAxisInUse == false)
                     {
@@ -116,7 +116,7 @@ public class ForceLineApplication : MonoBehaviour
                         m_isAxisInUse = true;
                     }
                 }
-                if (Input.GetAxisRaw("Fire1") == 0)
+                if (Input.GetAxisRaw("Fire1") == 0 && !TimeHandler.Instance.isMenuActive)
                 {
                     m_isAxisInUse = false;
                 }

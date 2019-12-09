@@ -22,7 +22,7 @@ public class RotatePlayerModel : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         Vector2 inputDir = input.normalized;
 
-        if(!TimeHandler.Instance.time)
+        if(!TimeHandler.Instance.time && !TimeHandler.Instance.isMenuActive)
             Move(inputDir);
 
 

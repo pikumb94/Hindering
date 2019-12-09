@@ -15,9 +15,11 @@ using UnityEngine.SceneManagement;
 public class TimeHandler : Singleton<TimeHandler>
 {
     public GameObject pauseMenu;
+    
     [HideInInspector]
     public bool time = true;
-    
+    public bool isMenuActive = false;
+
 
     void Start()
     {
@@ -47,10 +49,14 @@ public class TimeHandler : Singleton<TimeHandler>
             if (pauseMenu.activeSelf)
             {
                 pauseMenu.SetActive(false);
+                Time.timeScale = 1f;
+                isMenuActive = false;
             }
             else
             {
                 pauseMenu.SetActive(true);
+                Time.timeScale = 0f;
+                isMenuActive = true;
             }
 
         }

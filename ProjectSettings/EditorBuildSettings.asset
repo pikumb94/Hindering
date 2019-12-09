@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PUZZLES/MainMenu.unity
     guid: c94ba4ce60927784d82fa20a1b75fec2
   - enabled: 1
-    path: Assets/Scenes/PUZZLES/Commands.unity
-    guid: f82c31b001bbabf4db8e8d233e5db28c
-  - enabled: 1
-    path: Assets/Scenes/PUZZLES/Levels.unity
-    guid: ff9e6cde7b64c59499822355ccb72c1f
-  - enabled: 1
     path: Assets/Scenes/PUZZLES/Level1.unity
     guid: d934df1a2367c57449653cb68c42a60a
   - enabled: 1

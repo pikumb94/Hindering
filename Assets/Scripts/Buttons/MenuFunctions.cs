@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuFunctions : MonoBehaviour {
-	public ButtonMenu[] buttons;
-	ButtonMenu btn;
+	public GameObject[] buttons;
+
 
 	void Start () {
-		foreach (ButtonMenu b in buttons)
+		foreach (GameObject b in buttons)
     {
-			 btn =b.GetComponent<ButtonMenu>();
-       btn.onClick.AddListener(btn.click);
+       b.GetComponent<Button>().onClick.AddListener(() => b.GetComponent<ButtonMenu>().swapInterface(b.GetComponent<ButtonMenu>().fromInterface, b.GetComponent<ButtonMenu>().toInterface));
     }
 	}
+
 }

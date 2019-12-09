@@ -4,23 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ButtonMenu : Button
+public class ButtonMenu : MonoBehaviour
 {
-    public void click()
-    {
-        switch(this.name){
-          case "StartButton": SceneLoader.HandleSceneSwitch(SceneLoader.Scenes.Level1);
-                              break;
-          case "LevelsButton": SceneLoader.DirectSceneSwitch(SceneLoader.Scenes.Levels);
-                              break;
-          case "CommandsButton": SceneLoader.DirectSceneSwitch(SceneLoader.Scenes.Commands);
-                              break;
-          case "MenuButton": SceneLoader.DirectSceneSwitch(SceneLoader.Scenes.MainMenu);
-                              break;
-          case "QuitButton":  Application.Quit();
-                              break;
-          default: SceneLoader.HandleSceneSwitch((SceneLoader.Scenes)System.Enum.Parse( typeof(SceneLoader.Scenes), this.name ));
-                    break;
-        }
-    }
+  public GameObject fromInterface;
+  public GameObject toInterface;
+
+  public void changeSceneLoad(string scene){
+    SceneLoader.HandleSceneSwitch((SceneLoader.Scenes)System.Enum.Parse( typeof(SceneLoader.Scenes), scene));
+  }
+  public void changeSceneDirect(string scene){
+    SceneLoader.DirectSceneSwitch((SceneLoader.Scenes)System.Enum.Parse( typeof(SceneLoader.Scenes), scene));
+  }
+  public void quit(){
+    Application.Quit();
+  }
+  public void swapInterface(GameObject fromInterface, GameObject toInterface){
+    fromInterface.SetActive(false);
+    toInterface.SetActive(true);
+  }
+  public void toggleInterface(GameObject fromInterface){
+    fromInterface.SetActive(false);
+  }
 }

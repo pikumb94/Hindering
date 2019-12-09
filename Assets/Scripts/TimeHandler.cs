@@ -15,7 +15,8 @@ using UnityEngine.SceneManagement;
 public class TimeHandler : MonoBehaviour
 {
     public GameObject pauseMenu;
-    
+    public GameObject commandsMenuPanel;
+
     [HideInInspector]
     public bool time = true;
     [HideInInspector]
@@ -48,6 +49,7 @@ public class TimeHandler : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
+        
     }
     // Update is called once per frame
     void Update()
@@ -70,14 +72,16 @@ public class TimeHandler : MonoBehaviour
 
         if (Input.GetButtonDown("Start"))
         {
-            if (pauseMenu.activeSelf)
+            if (pauseMenu.activeSelf || commandsMenuPanel.activeSelf)
             {
                 pauseMenu.SetActive(false);
+                commandsMenuPanel.SetActive(false);
                 Time.timeScale = 1f;
                 isMenuActive = false;
             }
             else
             {
+                
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0f;
                 isMenuActive = true;

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8357296382883870623}
   m_Layer: 0
-  m_Name: Wall_DeckWindow_02
+  m_Name: Wall_Deck_Window_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,6 +86,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23965089399209698, guid: 2e0883a680249d34b9e7fc1c0b9c8574,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 40a0b11fba24aa84db6aa533aabb3607, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e0883a680249d34b9e7fc1c0b9c8574, type: 3}
 --- !u!4 &4813675271034290562 stripped

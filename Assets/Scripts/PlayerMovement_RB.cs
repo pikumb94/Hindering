@@ -48,8 +48,7 @@ public class PlayerMovement_RB : TimeBehaviour
 
         GameObject go = transform.GetChild(0).gameObject;
         _animator= go.GetComponent<Animator>();
-        Debug.Log(_animator);
-
+        _animator.enabled=(TimeHandler.Instance.time? false:true);
     }
     // Update is called once per frame
     void Update()

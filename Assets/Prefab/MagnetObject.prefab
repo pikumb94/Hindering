@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 7681446998551189151}
   - component: {fileID: 7681446998551189150}
   - component: {fileID: 7681446998551189145}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Biases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+  - {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
       localPivot: {x: -0.7507453, y: 0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -206,7 +206,7 @@ MonoBehaviour:
       localPivot: {x: -0.5, y: 0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -235,7 +235,7 @@ MonoBehaviour:
       localPivot: {x: 0.7507453, y: 0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -264,7 +264,7 @@ MonoBehaviour:
       localPivot: {x: 0.5, y: 0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -293,7 +293,7 @@ MonoBehaviour:
       localPivot: {x: 0.7497021, y: -0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -322,7 +322,7 @@ MonoBehaviour:
       localPivot: {x: -0.7507453, y: -0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -351,7 +351,7 @@ MonoBehaviour:
       localPivot: {x: -0.7497021, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -380,7 +380,7 @@ MonoBehaviour:
       localPivot: {x: 0.5, y: 1.1488391}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -409,7 +409,7 @@ MonoBehaviour:
       localPivot: {x: -0.5, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -438,7 +438,7 @@ MonoBehaviour:
       localPivot: {x: 0.7497021, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -467,7 +467,7 @@ MonoBehaviour:
       localPivot: {x: -1.25, y: -0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -496,7 +496,7 @@ MonoBehaviour:
       localPivot: {x: -1.25, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -525,7 +525,7 @@ MonoBehaviour:
       localPivot: {x: 1.25, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -554,7 +554,7 @@ MonoBehaviour:
       localPivot: {x: 1.25, y: -0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -583,7 +583,7 @@ MonoBehaviour:
       localPivot: {x: -1.75, y: -0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -612,7 +612,7 @@ MonoBehaviour:
       localPivot: {x: -1.75, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -641,7 +641,7 @@ MonoBehaviour:
       localPivot: {x: 1.75, y: 1.1522942}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -670,7 +670,7 @@ MonoBehaviour:
       localPivot: {x: 1.75, y: -0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -699,7 +699,7 @@ MonoBehaviour:
       localPivot: {x: 0.5, y: 0.50461864}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -728,7 +728,7 @@ MonoBehaviour:
       localPivot: {x: -1.75, y: 0.50461864}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -757,7 +757,7 @@ MonoBehaviour:
       localPivot: {x: 1.75, y: 0.50461864}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -786,7 +786,7 @@ MonoBehaviour:
       localPivot: {x: -0.5, y: 0.50461864}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 028ca3a122bd0154dba8b54369cc374a, type: 2}
+    _mat: {fileID: 2100000, guid: 045c68a62a654164095e126a3b92505c, type: 2}
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
@@ -1302,7 +1302,7 @@ GameObject:
   - component: {fileID: 7681446998731100491}
   - component: {fileID: 7681446998731100490}
   - component: {fileID: 7681446998731100485}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1942,7 +1942,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.17901
+  m_Radius: 2
   m_Center: {x: 0.9, y: 0.05, z: -0.05}
 --- !u!65 &7681446999045446180
 BoxCollider:
@@ -1965,13 +1965,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7681446999045446182}
   serializedVersion: 2
-  m_Mass: 0.75
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!114 &6654225907351905394
 MonoBehaviour:
@@ -1985,8 +1985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f02b686640acc14b9088e4b9cca5589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charge: 500
-  maxForce: 200
+  charge: 100
+  maxForce: 500
   PointZeroRot: {x: 1, y: 0, z: 0}
   pivot: {fileID: 2012237947513646372}
   stdMoment: 100

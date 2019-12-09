@@ -83,13 +83,7 @@ public class ChangeModeEffect : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire2")) {
-            /*
-            if (fromStartToPause == true) { 
-                fromStartToPause = false;
-            } else {
-                fromStartToPause = true;
-            }*/
+        if (Input.GetButtonDown("Fire2") && !TimeHandler.Instance.isMenuActive) {
 
             percTimer = 0f;
             timer = 0f;
@@ -99,28 +93,16 @@ public class ChangeModeEffect : MonoBehaviour
         {
             if (!TimeHandler.Instance.time)
             {
-                //intensityValue = Mathf.SmoothDamp(intensityValue, targetIntesityVal, ref vel, transitionTime);
-                //temperatureValue = Mathf.SmoothDamp(temperatureValue, targetTemperatureVal, ref velT, transitionTime);
 
-                //m_Vignette.intensity.Interp(intensityValue, targetIntesityVal, percTimer);
                 m_ChromaticAberration.intensity.Interp(chromaticAberration, targetAberration,percTimer);
                 m_ColorGrading.temperature.Interp(temperatureValue, targetTemperatureVal, percTimer);
                 m_Vignette.intensity.value = Mathf.Sin(timer* 2f * Mathf.PI / (2f * transitionTime)) * targetIntesityVal;
-
                 m_LensDistortion.intensity.value = Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * targetDistorsionS2P;
-                //Debug.Log(Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * intensityValue);
-                //Debug.Log(timer +" " +transitionTime +" "+ intensityValue);
+
                 cMCamera.m_Lens.FieldOfView = Mathf.SmoothDamp(cMCamera.m_Lens.FieldOfView, targetFOV, ref velT, transitionTime);
             }
             else
             {
-                /*
-                intensityValue = Mathf.SmoothDamp(targetIntesityVal, 0, ref vel, transitionTime);
-                temperatureValue = Mathf.SmoothDamp(targetTemperatureVal, 0, ref velT, transitionTime);
-                cMCamera.m_Lens.FieldOfView = Mathf.SmoothDamp(cMCamera.m_Lens.FieldOfView, targetFOV, ref velT, transitionTime);
-
-                */
-                //m_Vignette.intensity.Interp(targetIntesityVal, intensityValue, percTimer);
                 m_ChromaticAberration.intensity.Interp(targetAberration , chromaticAberration, percTimer);
                 m_ColorGrading.temperature.Interp(targetTemperatureVal, temperatureValue, percTimer);
                 m_Vignette.intensity.value = Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * targetIntesityVal;
@@ -128,15 +110,14 @@ public class ChangeModeEffect : MonoBehaviour
                 m_LensDistortion.intensity.value = Mathf.Sin(timer * 2f * Mathf.PI / (2f * transitionTime)) * targetDistorsionP2S;
                 cMCamera.m_Lens.FieldOfView = Mathf.SmoothDamp(cMCamera.m_Lens.FieldOfView, fieldOV, ref velT, transitionTime);
             }
-            //m_Vignette.intensity.value = intensityValue;
-            //m_ColorGrading.temperature.value = temperatureValue;
+
             percTimer = timer / transitionTime;
             timer += Time.deltaTime;
         }
 
 
 
-        if (Input.GetButtonDown("RestartScene"))
+        if (Input.GetButtonDown("RestartScene") && !TimeHandler.Instance.isMenuActive)
         {
             
             if (!oneShot) { 
@@ -149,7 +130,7 @@ public class ChangeModeEffect : MonoBehaviour
 
     IEnumerator restartPP()
     {
-        float totalAnimTime =.5f;
+        float totalAnimTime =1f;
         float percAnim=0f;
 
         for (float ft = 0f; ft <= totalAnimTime; ft = ft+ .01f)

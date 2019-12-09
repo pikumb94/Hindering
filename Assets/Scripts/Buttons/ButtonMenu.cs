@@ -23,6 +23,14 @@ public class ButtonMenu : MonoBehaviour
     toInterface.SetActive(true);
   }
   public void toggleInterface(GameObject fromInterface){
+   
     fromInterface.SetActive(false);
   }
+
+   public void handleResume(GameObject fromInterface)
+   {
+        Time.timeScale = 1f;
+        TimeHandler.Instance.isMenuActive = false;
+        fromInterface.SetActive(false);
+    }
 }

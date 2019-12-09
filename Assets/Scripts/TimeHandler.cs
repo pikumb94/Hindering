@@ -18,6 +18,7 @@ public class TimeHandler : Singleton<TimeHandler>
     
     [HideInInspector]
     public bool time = true;
+    [HideInInspector]
     public bool isMenuActive = false;
 
 
@@ -29,8 +30,9 @@ public class TimeHandler : Singleton<TimeHandler>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && !isMenuActive)
         {
+            Debug.Log("Cambio tempo");
             timeSwitch();
         }
 

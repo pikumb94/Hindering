@@ -1721,41 +1721,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!84 &146422193
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &252638532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2364941763594883340, guid: 9447bec404112ed47956efba8fe5fa8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2364941764057731928}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &253564904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1962,7 +1933,7 @@ PrefabInstance:
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
@@ -3152,7 +3123,7 @@ PrefabInstance:
     - target: {fileID: 7765106720712441779, guid: 4f0c8a3c4801c314a9080fc9250d5f7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7765106720712441779, guid: 4f0c8a3c4801c314a9080fc9250d5f7b,
         type: 3}
@@ -3365,7 +3336,7 @@ PrefabInstance:
     - target: {fileID: 2449118159065085964, guid: 4df9db5d03a9c9b499b057b2ad216dfd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2449118159065085964, guid: 4df9db5d03a9c9b499b057b2ad216dfd,
         type: 3}
@@ -3384,48 +3355,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df9db5d03a9c9b499b057b2ad216dfd, type: 3}
---- !u!84 &521153424
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!43 &527619001
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1934
+  m_Name: pb_Mesh-5508732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3582,41 +3518,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!84 &544382740
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!4 &555949223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 20477209978338132, guid: 8a805b1ae60672d4c9b45e474b1aa73b,
@@ -5623,41 +5524,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 863822579}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &876920234
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &880112847
 GameObject:
   m_ObjectHideFlags: 0
@@ -7106,17 +6972,17 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49726868
+      value: 2.1396213
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6568284
+      value: 4.2068286
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.726538
+      value: -17.72654
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -7161,7 +7027,7 @@ PrefabInstance:
     - target: {fileID: 1057445046225105024, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0042409897
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1057445046225105024, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -7345,7 +7211,7 @@ PrefabInstance:
     - target: {fileID: 3455812998809911011, guid: 640caa95d14e8ce44bbdab34f606b47e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3455812998809911011, guid: 640caa95d14e8ce44bbdab34f606b47e,
         type: 3}
@@ -7474,7 +7340,7 @@ PrefabInstance:
     - target: {fileID: 4089774494283332784, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4089774494283332784, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
@@ -7504,7 +7370,7 @@ PrefabInstance:
     - target: {fileID: 4089774494283332784, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4089774494283332784, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
@@ -7548,6 +7414,76 @@ PrefabInstance:
       objectReference: {fileID: 527619001}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50320004d78686c48accc1854b02ebbc, type: 3}
+--- !u!84 &989602842
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+--- !u!84 &991809585
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1000970754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7887,7 +7823,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-23284
+  m_Name: pb_Mesh-5508690
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8565,7 +8501,7 @@ PrefabInstance:
     - target: {fileID: 1199546800847823827, guid: 670f01684717a3a4b9c8355a6aa2ff8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1199546800847823827, guid: 670f01684717a3a4b9c8355a6aa2ff8a,
         type: 3}
@@ -8585,8 +8521,13 @@ PrefabInstance:
     - target: {fileID: 1199546800847823824, guid: 670f01684717a3a4b9c8355a6aa2ff8a,
         type: 3}
       propertyPath: time
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1199546800847823824, guid: 670f01684717a3a4b9c8355a6aa2ff8a,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 252638532}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 670f01684717a3a4b9c8355a6aa2ff8a, type: 3}
 --- !u!43 &1086793678
@@ -8595,7 +8536,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-23326
+  m_Name: pb_Mesh-5508734
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9638,7 +9579,7 @@ PrefabInstance:
     - target: {fileID: 693084888982429279, guid: 4b1eb5749cc736c41bfb5dd0be111c6d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 693084888982429279, guid: 4b1eb5749cc736c41bfb5dd0be111c6d,
         type: 3}
@@ -10403,7 +10344,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -12347,7 +12288,7 @@ PrefabInstance:
     - target: {fileID: 5692264930470611289, guid: 30dcf1c04f2c3ca498ac8f9f5685d2f8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5692264930470611289, guid: 30dcf1c04f2c3ca498ac8f9f5685d2f8,
         type: 3}
@@ -12531,7 +12472,7 @@ PrefabInstance:
     - target: {fileID: 4286470694998724403, guid: 6823a2523292a0748bded97adc819194,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4286470694998724403, guid: 6823a2523292a0748bded97adc819194,
         type: 3}
@@ -12815,7 +12756,7 @@ PrefabInstance:
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
@@ -12899,7 +12840,7 @@ PrefabInstance:
     - target: {fileID: 8894577028378676005, guid: 5e537f73718ccca449e6bb9f3ea67904,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8894577028378676005, guid: 5e537f73718ccca449e6bb9f3ea67904,
         type: 3}
@@ -12968,7 +12909,7 @@ PrefabInstance:
     - target: {fileID: 6609014239284490636, guid: 5dc9f4c505e1bb44ab6cb913e3364363,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6609014239284490636, guid: 5dc9f4c505e1bb44ab6cb913e3364363,
         type: 3}
@@ -13060,7 +13001,7 @@ PrefabInstance:
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
@@ -13355,7 +13296,7 @@ PrefabInstance:
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6828621656722054942, guid: 32d3c276b28028b4daa211559d23005f,
         type: 3}
@@ -13439,7 +13380,7 @@ PrefabInstance:
     - target: {fileID: 2449118159065085964, guid: 4df9db5d03a9c9b499b057b2ad216dfd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2449118159065085964, guid: 4df9db5d03a9c9b499b057b2ad216dfd,
         type: 3}
@@ -14410,7 +14351,7 @@ PrefabInstance:
     - target: {fileID: 1407070252588806639, guid: 2535c6381df64744499f1bc8239807cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1407070252588806639, guid: 2535c6381df64744499f1bc8239807cd,
         type: 3}
@@ -14790,7 +14731,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1878
+  m_Name: pb_Mesh-5508676
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15367,41 +15308,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2057552569}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &2084685722
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &2099743396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16183,7 +16089,7 @@ Transform:
   m_Children:
   - {fileID: 2156389625475408106}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &2672039138945112751
 Transform:

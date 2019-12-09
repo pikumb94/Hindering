@@ -27,46 +27,52 @@ public class IndicatorMouseFollow : MonoBehaviour
     {
         //transform.position = playerPosition.position + new Vector3(0, 0.5f, -0.6f);//SERVE SE è FUORI IL RB
         //crea un raggio con origine la posizione del mouse nella scena
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (plane.Raycast(ray, out distanceToPlane))
+        if (!TimeHandler.Instance.isMenuActive)
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            mousePos = ray.GetPoint(distanceToPlane);
+            if (plane.Raycast(ray, out distanceToPlane))
+            {
+
+                mousePos = ray.GetPoint(distanceToPlane);
+            }
+
+            float rightXAxisJoy = Input.GetAxisRaw("Mouse X");
+            float rightYAxisJoy = Input.GetAxisRaw("Mouse Y");
+
+            if (Mathf.Abs(rightXAxisJoy) > 0.2f || Mathf.Abs(rightYAxisJoy) > 0.2f)
+            {
+                dst = new Vector3(rightXAxisJoy, -rightYAxisJoy, 0);
+                usingJoystick = true;
+            }
+            else
+            {
+                if (!usingJoystick)
+                    dst = mousePos - transform.position;
+            }
+            //ruoto il disco con la pallina fino a allinearlo col mouse
+
+            //Hold shift to snap the angles
+            if (Input.GetButton("Fire3"))
+            {
+                snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
+                dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad), 0);
+            }
+            /*
+            transform.right = dst;
+            //transform.rotation = Quaternion.LookRotation(dst, transform.forward);
+            //transform.eulerAngles = new Vector3(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+            */
+            float rotationZ = Mathf.Atan2(dst.y, dst.x) * Mathf.Rad2Deg;
+
+            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+
+            if (prevMousMagn != mousePos.sqrMagnitude)
+                usingJoystick = false;
+
+            prevMousMagn = mousePos.sqrMagnitude;
         }
-
-        float rightXAxisJoy = Input.GetAxisRaw("Mouse X");
-        float rightYAxisJoy = Input.GetAxisRaw("Mouse Y");
-
-        if (Mathf.Abs(rightXAxisJoy) > 0.2f || Mathf.Abs(rightYAxisJoy) > 0.2f) { 
-            dst = new Vector3(rightXAxisJoy, -rightYAxisJoy, 0);
-            usingJoystick = true;
-        }
-        else{
-            if(!usingJoystick)
-                dst = mousePos - transform.position;
-        }
-        //ruoto il disco con la pallina fino a allinearlo col mouse
-
-        //Hold shift to snap the angles
-        if (Input.GetButton("Fire3"))
-        {
-            snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
-            dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad),0);
-        }
-        /*
-        transform.right = dst;
-        //transform.rotation = Quaternion.LookRotation(dst, transform.forward);
-        //transform.eulerAngles = new Vector3(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-        */
-        float rotationZ = Mathf.Atan2(dst.y, dst.x) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
-
-        if (prevMousMagn != mousePos.sqrMagnitude)
-            usingJoystick = false;
-
-        prevMousMagn = mousePos.sqrMagnitude;
+        
 
     }
 

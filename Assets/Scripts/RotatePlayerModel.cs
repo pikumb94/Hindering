@@ -22,14 +22,15 @@ public class RotatePlayerModel : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         Vector2 inputDir = input.normalized;
 
-        Move(inputDir);
+        if(!TimeHandler.Instance.time && !TimeHandler.Instance.isMenuActive)
+            Move(inputDir);
 
 
     }
 
     void Move(Vector2 inputDir)
     {
-        if (inputDir != Vector2.zero)
+        if (inputDir != Vector2.zero )
         {
             float targetRotation = (inputDir.x > 0 ? 90 : -90);
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, GetModifiedSmoothTime(turnSmoothTime));
@@ -39,16 +40,7 @@ public class RotatePlayerModel : MonoBehaviour
 
     float GetModifiedSmoothTime(float smoothTime)
     {
-        /*if (controller.isGrounded)
-        {
-            return smoothTime;
-        }
 
-        if (airControlPercent == 0)
-        {
-            return float.MaxValue;
-        }
-        return smoothTime / airControlPercent;*/
         return smoothTime;
     }
 }

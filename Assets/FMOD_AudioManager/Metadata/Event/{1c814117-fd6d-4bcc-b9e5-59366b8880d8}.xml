@@ -93,6 +93,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{155f4ca9-b675-4efa-b199-5822fe36172f}" />
 	<object class="SingleSound" id="{3deeadfc-b974-4313-826b-54a43d66337e}">
+		<property name="start">
+			<value>0.025000000000000001</value>
+		</property>
 		<property name="length">
 			<value>0.45999999999999996</value>
 		</property>
@@ -145,7 +148,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>21</value>
+			<value>14</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{6d24293c-6416-4e7e-863b-78d99837afea}">

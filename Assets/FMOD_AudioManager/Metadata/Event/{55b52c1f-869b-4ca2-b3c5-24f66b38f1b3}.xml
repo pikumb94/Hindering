@@ -159,7 +159,7 @@
 			<value>-2.5</value>
 		</property>
 		<property name="highGain">
-			<value>-14.5</value>
+			<value>-23</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{e117c923-bdd8-4b14-be3f-3fb92247435a}" />

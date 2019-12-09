@@ -100,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{1dab77bf-d760-40a4-82e4-71247b78f847}">
+		<property name="volume">
+			<value>-10.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -129,8 +132,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{a4f80b57-d0a5-4463-9810-a3f06b0ebe32}">
 		<relationship name="effects">
-			<destination>{a9ebd2be-39e5-44d3-b95a-5cc03cc927dc}</destination>
 			<destination>{e41c980c-c3da-489a-a1f7-5440cec5b2fc}</destination>
+			<destination>{a9ebd2be-39e5-44d3-b95a-5cc03cc927dc}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3837abb3-f5ee-4191-8aa0-ae72c6bb35df}" />
@@ -141,13 +144,18 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{16666ab0-a922-4568-a03e-01031880d2b0}" />
-	<object class="MixerBusFader" id="{a9ebd2be-39e5-44d3-b95a-5cc03cc927dc}" />
 	<object class="MultibandEqEffect" id="{e41c980c-c3da-489a-a1f7-5440cec5b2fc}">
 		<property name="filterTypeA">
-			<value>0</value>
+			<value>7</value>
 		</property>
 		<property name="filterTypeC">
 			<value>9</value>
+		</property>
+		<property name="filterTypeD">
+			<value>9</value>
+		</property>
+		<property name="frequencyA">
+			<value>70.781601</value>
 		</property>
 		<property name="frequencyB">
 			<value>191.352493</value>
@@ -156,10 +164,16 @@
 			<value>155.543579</value>
 		</property>
 		<property name="frequencyD">
-			<value>3627.26147</value>
+			<value>283.661224</value>
 		</property>
 		<property name="qualityC">
 			<value>4.17241383</value>
+		</property>
+		<property name="qualityD">
+			<value>1.69999993</value>
+		</property>
+		<property name="gainA">
+			<value>-20.6896553</value>
 		</property>
 		<property name="gainB">
 			<value>-5.6896553</value>
@@ -168,8 +182,9 @@
 			<value>-13.965517</value>
 		</property>
 		<property name="gainD">
-			<value>16.5517254</value>
+			<value>-4.13793182</value>
 		</property>
 	</object>
+	<object class="MixerBusFader" id="{a9ebd2be-39e5-44d3-b95a-5cc03cc927dc}" />
 	<object class="MixerBusFader" id="{5c455350-98d2-4c32-a857-5243a8caf249}" />
 </objects>

@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000272A722B3A8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001E2FF9F1688 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,111 +18,1203 @@
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30400
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000007D384FF2AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD8A8C7F20
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD8A8C7EF0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD8A8C7FF0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD8A8C80B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000272C97C7348
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B3A74CB8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Landing', format=2, channels=1, frequency=48000, lengthbytes=2752, lengthpcm=13792, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.963837.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30400
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000007D384FF2AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD8A8C7F20
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD8A8C7EF0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD8A8C7FF0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD8A8C80B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000272C97C9E98
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B1CD0388
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='HeelFootsteps', format=2, channels=1, frequency=48000, lengthbytes=4960, lengthpcm=27863, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.211151.
 [LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000027293DF2D98 : node = 00000272FCFB6DB0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000272E731B388.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027293DF2D98
+[LOG] SystemI::createSound                     : setdata soundi = 000001E29F871DE8 : node = 000001E29F31E440
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F871DE8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
-[LOG] SystemI::createSound                     :     setdata soundi = 0000027293DF2F48 : node = 00000272FCFB68B0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30400
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000272E731B388.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E29F872B68 : node = 000001E29F31E6C0
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000272FCFB6EC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E550
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E29F871728 : node = 000001E29F31E800
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027293DF2D98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027293DF2F48
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F871DE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F872B68
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 30400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000272FCFB69C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E7D0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E29F871DE8.  Subsound index 0 / 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027293DF2F48
-[LOG] SoundI::getSubSound                      : sound 0000027293DF2D98.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000027293DF2F48.  Subsound index 0 / 1
-[LOG] SoundI::release                          : 243952__metzik__strip-light (00000272F3E1B058)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (000002729114E068)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (00000272FD5D1C78)
-[LOG] SoundI::release                          : 243952__metzik__strip-light (00000272F3E1B568)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (00000272912A4CB8)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (00000272F3E1AEA8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F872B68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F871728
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E29F872B68.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F871728
+[LOG] SoundI::getSubSound                      : sound 000001E29F871728.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2FE8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2418 : node = 000001E2BA26E440
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2BA26E550
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2928 : node = 000001E2925FF730
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D3858 : node = 000001E29CD111C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2928
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2925FF840
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2928
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D3858
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD112D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2928.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D3858
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D3858.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F871728)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B10D3348)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F872B68)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291F41778)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843438)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F871DE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291F3F078)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843288)
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 30400
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000007D384FF2AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD8A8C7F20
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD8A8C7EF0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD8A8C7FF0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD8A8C80B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000272D27271E8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B1CD4FD8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Punch', format=2, channels=2, frequency=48000, lengthbytes=2816, lengthpcm=13824, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.385529.
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] SoundI::release                          : 243952__metzik__strip-light (0000027293DF2F48)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (00000272B6E566E8)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (000002728EF41268)
-[LOG] SoundI::release                          : 243952__metzik__strip-light (0000027293DF2D98)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (00000272B6E580E8)
-[LOG] SoundI::release                          :     243952__metzik__strip-light (000002729FC0AE68)
-[LOG] SoundI::release                          : AmbientNoise (00000272911A6428)
-[LOG] SoundI::release                          :     AmbientNoise (00000272E731B3D8)
-[LOG] SoundI::release                          :     AmbientNoise (00000272FD3758D8)
-[LOG] SoundI::release                          :  (000002728EDFB378)
-[LOG] SoundI::release                          :     Landing (00000272B6E56548)
-[LOG] SoundI::release                          :  (000002729F2DBB28)
-[LOG] SoundI::release                          :     HeelFootsteps (00000272B6E57DA8)
-[LOG] SoundI::release                          :  (000002729FF09058)
-[LOG] SoundI::release                          :     Punch (00000272B6E58908)
-[LOG] SoundI::release                          :  (00000272B6EEA578)
-[LOG] SoundI::release                          :     415873__inspectorj__buzzing-electric-lamp-a (00000272E731B098)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2FF843288 : node = 000001E29CD11080
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF843288
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11190
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2FF843438 : node = 000001E29CD11440
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2FF8435E8 : node = 000001E29CD11300
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF843288
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF843438
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11550
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2FF843288.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF843438
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF8435E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF8435E8
+[LOG] SoundI::getSubSound                      : sound 000001E2FF843438.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001E2FF8435E8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B10D3D08)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B10D3688)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2907F9E78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='TimePlayGrains', format=2, channels=2, frequency=48000, lengthbytes=7872, lengthpcm=38870, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.449219.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B3A710E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodenBoxLanding', format=2, channels=2, frequency=48000, lengthbytes=10240, lengthpcm=47506, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.802040.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B3DAA038
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='ThudHigh', format=2, channels=2, frequency=48000, lengthbytes=2816, lengthpcm=73728, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B3A76158
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='TimeStopGrains', format=2, channels=2, frequency=48000, lengthbytes=8128, lengthpcm=42631, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.447723.
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2928 : node = 000001E29F31E6C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2928
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E7D0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2E38 : node = 000001E29F31E1C0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2418 : node = 000001E29F31DCC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2928
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2E38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E2D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2928.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2E38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31DDD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2E38.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACC8D8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F872B68)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF843438)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACDDF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F871728)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF843288)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F871DE8)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2FE8 : node = 000001E29CD11080
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E29F871728 : node = 000001E29CD11300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11190
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E29F872B68 : node = 000001E29CD111C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F871728
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2FE8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F871728
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F872B68
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD112D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E29F871728.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] Manager::readBank                        :     fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F872B68
+[LOG] SoundI::getSubSound                      : sound 000001E29F872B68.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29CC33118)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29CC31F38)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2FF8435E8 : node = 000001E29F94C540
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF8435E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94C650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2928 : node = 000001E29CE08640
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2418 : node = 000001E2925FF5F0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF8435E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2928
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CE08750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2FF8435E8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2928
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2925FF700
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2928.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F872B68)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843438)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F871728)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18DAF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843288)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2FE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D958)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F871DE8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2E38 : node = 000001E29F94D080
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2E38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94D190
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2FE8 : node = 000001E2925FF730
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E29F872B68 : node = 000001E2BA26E440
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2E38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2925FF840
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F872B68
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2BA26E550
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2E38.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2FE8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F872B68
+[LOG] SoundI::getSubSound                      : sound 000001E29F872B68.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACC8D8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACDDF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D3858)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E295FAD178 : node = 000001E29F31E800
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E295FAD178
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D3858 : node = 000001E29F31E440
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2418 : node = 000001E29F31E6C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E295FAD178
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D3858
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E550
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E295FAD178.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D3858
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E7D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D3858.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F872B68)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E295FABEE8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2FE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F871728)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F871DE8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2E38 : node = 000001E29F94C040
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2E38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94C150
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2FE8 : node = 000001E29F31DCC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2FF843288 : node = 000001E29F31E1C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2E38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31DDD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2E38.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF843288
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E2D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2FE8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF843288
+[LOG] SoundI::getSubSound                      : sound 000001E2FF843288.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18DAF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E295FAD178)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D958)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E29F871DE8 : node = 000001E29F94C540
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F871DE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E29F871728 : node = 000001E29F94C2C0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94C650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2AD8 : node = 000001E29F94C900
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F871DE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F871728
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SoundI::getSubSound                      :     sound 000001E29F871DE8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94C3D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F871728
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2AD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94CA10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E29F871728.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2AD8
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2AD8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF843288)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F872B68)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2FE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACC8D8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACDDF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843438)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2928 : node = 000001E29CD11080
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2928
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11190
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2E38 : node = 000001E29CD111C0
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2FE8 : node = 000001E29F94B8C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2928
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2E38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD112D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2928.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2E38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94B9D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2FE8
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2E38.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2FE8.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18DAF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F871728)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D958)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F871DE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2AD8 : node = 000001E29CD11300
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2AD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2418 : node = 000001E29CD11440
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D3858 : node = 000001E2B3B105B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2AD8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29CD11550
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2AD8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D3858
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2B3B106C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D3858
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D3858.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2FE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843438)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF843288)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E29F871DE8 : node = 000001E29F31E6C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E29F871DE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E7D0
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2FF843288 : node = 000001E29F31E300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2FF843438 : node = 000001E29F31DF40
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E29F871DE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF843288
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF843288
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF843438
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F31E050
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E29F871DE8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2FF843288.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF843438
+[LOG] SoundI::getSubSound                      : sound 000001E2FF843438.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D958)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F872B68)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACDDF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F871728)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACC8D8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2778)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2418 : node = 000001E29F94CB80
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2778 : node = 000001E29F94BF00
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94CC90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2AD8 : node = 000001E29F94C900
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2778
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94C010
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2778
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2AD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94CA10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2778.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2AD8
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D2AD8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF843438)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF843288)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E29F871DE8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18DAF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E295FABEE8 : node = 000001E29F94CCC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E295FABEE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94CDD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 47500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AmbientNoise', format=2, channels=2, frequency=48000, lengthbytes=524064, lengthpcm=3072384, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206665.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E295FABEE8
+[LOG] SoundI::getSubSound                      : sound 000001E295FABEE8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : AmbientNoise (000001E2B4148738)
+[LOG] SoundI::release                          :     AmbientNoise (000001E291ACE618)
+[LOG] SoundI::release                          :     AmbientNoise (000001E2B4148DF8)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2FF843438 : node = 000001E29F94CE00
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF843438
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94CF10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2FF8435E8 : node = 000001E29F94C180
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B4148738 : node = 000001E29F94B8C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF843438
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2FF8435E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94C290
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SoundI::getSubSound                      :     sound 000001E2FF843438.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2FF8435E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B4148738
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E29F94B9D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2FF8435E8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B4148738
+[LOG] SoundI::getSubSound                      : sound 000001E2B4148738.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E295FAD178)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACDDF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2FE8)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000182E2FEEEC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD92AE7F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD92AE7EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD92AE7FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD92AE80B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001E2B39E6EB8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='MetalBoxSoft1', format=2, channels=1, frequency=48000, lengthbytes=2688, lengthpcm=14753, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.995697.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E2B14D2418 : node = 000001E2BA26E440
+[LOG] SystemI::createSound                     : add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2418
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D2778 : node = 000001E2BA26EE40
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 0
+[LOG] SystemI::createSound                     :     filename = Assets\FMOD_AudioManager\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001E2B14D3858 : node = 000001E2925FF5F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2BA26E550
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001E291ACCF08.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2418
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D2778
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2418.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2BA26EF50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D2778
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E2B14D3858
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\FMOD_AudioManager\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1540544
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 31072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E2925FF700
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 000001E2B14D2778.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='243952__metzik__strip-light', format=2, channels=2, frequency=48000, lengthbytes=679296, lengthpcm=2532980, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E2B14D3858
+[LOG] SoundI::getSubSound                      : sound 000001E2B14D3858.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B4148738)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18DAF8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B4148FA8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF8435E8)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACCC18)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B4148DF8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2FF843438)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE618)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B41488E8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D3858)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACD918)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2E38)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2778)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E291ACE478)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2AD8)
+[LOG] SoundI::release                          : 243952__metzik__strip-light (000001E2B14D2418)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E29F18D958)
+[LOG] SoundI::release                          :     243952__metzik__strip-light (000001E2B14D2928)
+[LOG] SoundI::release                          : AmbientNoise (000001E295FABEE8)
+[LOG] SoundI::release                          :     AmbientNoise (000001E291ACC8D8)
+[LOG] SoundI::release                          :     AmbientNoise (000001E2FF843288)
+[LOG] SoundI::release                          :  (000001E2B4410628)
+[LOG] SoundI::release                          :     WoodenBoxLanding (000001E2B10D3688)
+[LOG] SoundI::release                          :  (000001E2B18104A8)
+[LOG] SoundI::release                          :     Punch (000001E291ACD778)
+[LOG] SoundI::release                          :  (000001E296521D98)
+[LOG] SoundI::release                          :     ThudHigh (000001E2B10D3D08)
+[LOG] SoundI::release                          :  (000001E2B1442698)
+[LOG] SoundI::release                          :     Landing (000001E291F403F8)
+[LOG] SoundI::release                          :  (000001E2B440C298)
+[LOG] SoundI::release                          :     TimeStopGrains (000001E29CC2F9D8)
+[LOG] SoundI::release                          :  (000001E2B4415988)
+[LOG] SoundI::release                          :     HeelFootsteps (000001E291F410F8)
+[LOG] SoundI::release                          :  (000001E2965224C8)
+[LOG] SoundI::release                          :     TimePlayGrains (000001E2B10D3348)
+[LOG] SoundI::release                          :  (000001E295EC3B08)
+[LOG] SoundI::release                          :     MetalBoxSoft1 (000001E29F18D478)
+[LOG] SoundI::release                          :  (000001E2B4410908)
+[LOG] SoundI::release                          :     415873__inspectorj__buzzing-electric-lamp-a (000001E291ACE138)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -132,4 +1224,17 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.

@@ -134,12 +134,12 @@ public class ForceLineApplication : MonoBehaviour
 
         if (facingRight)
         {
-            model.transform.eulerAngles = new Vector3(0, 90, 0);
+            //model.transform.eulerAngles = new Vector3(0, 90, 0);
             facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
         }
         else
         {
-            model.transform.eulerAngles = new Vector3(0, -90, 0);
+            //model.transform.eulerAngles = new Vector3(0, -90, 0);
 
             facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, -Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
         }

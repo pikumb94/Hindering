@@ -31,7 +31,7 @@ public class RotatePlayerModel : MonoBehaviour
     {
         if (inputDir != Vector2.zero)
         {
-            float targetRotation = (inputDir.x > 0 ? 0 : 180);
+            float targetRotation = (inputDir.x > 0 ? 90 : -90);
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, GetModifiedSmoothTime(turnSmoothTime));
         }
     }

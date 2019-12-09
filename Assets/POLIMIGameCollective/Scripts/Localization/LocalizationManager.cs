@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityScript.Scripting.Pipeline;
+//using UnityScript.Scripting.Pipeline;
 
 public class LocalizationManager : MonoBehaviour
 {

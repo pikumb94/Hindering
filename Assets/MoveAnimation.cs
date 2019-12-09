@@ -15,10 +15,10 @@ public class MoveAnimation : MonoBehaviour
     void Update()
     {
         float vel = Input.GetAxis("Horizontal");
-       vel= Mathf.Abs(vel);
-        _animator.SetFloat("speed",vel);
+      // vel= Mathf.Abs(vel);
+       // _animator.SetFloat("speed",vel);
 
-        if (Input.GetAxisRaw("Fire1") != 0 )
+       /* if (Input.GetAxisRaw("Fire1") != 0 )
         {
             if (m_isAxisInUse == false)
             {
@@ -32,6 +32,6 @@ public class MoveAnimation : MonoBehaviour
         {
             _animator.SetBool("punch", false);
             m_isAxisInUse = false;
-        }
+        }*/
     }
 }

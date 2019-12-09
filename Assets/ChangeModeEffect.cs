@@ -154,7 +154,7 @@ public class ChangeModeEffect : MonoBehaviour
 
     IEnumerator restartPP()
     {
-        float totalAnimTime =1.5f;
+        float totalAnimTime =0.5f;
         float percAnim=0f;
 
         for (float ft = 0f; ft <= totalAnimTime; ft = ft+ .01f)

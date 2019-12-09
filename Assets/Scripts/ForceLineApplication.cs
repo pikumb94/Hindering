@@ -41,7 +41,6 @@ public class ForceLineApplication : MonoBehaviour
 
         coll = GetComponent<MeshCollider>();
         playerLayer = transform.parent.gameObject.layer;
-        //mouseScript = GetComponent<IndicatorMouseFollow>();
         catchInput = false;
         collidingObjects = new HashSet<Collider>();
     }
@@ -49,7 +48,8 @@ public class ForceLineApplication : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Input.GetAxis("Fire1"));
+        _animator.SetBool("punch", false);
+
         //se sto collidendo con uno o piu oggetti..
         if ((facingRight && mouseScript.getDst().normalized.x >= -0.001f) || (!facingRight && mouseScript.getDst().normalized.x <= 0.001f))
             isPointerOnFacingDir = true;
@@ -105,7 +105,8 @@ public class ForceLineApplication : MonoBehaviour
                                 if (!c.isTrigger)
                                 {
                                     forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
-
+                                    _animator.SetBool("punch", true);
+                                    Debug.Log("pugnato");
                                     FMODUnity.RuntimeManager.PlayOneShot(punchSound);
 
                                 }

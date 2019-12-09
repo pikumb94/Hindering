@@ -48,6 +48,7 @@ public class PlayerMovement_RB : TimeBehaviour
 
         GameObject go = transform.GetChild(0).gameObject;
         _animator= go.GetComponent<Animator>();
+        Debug.Log(_animator);
 
     }
     // Update is called once per frame
@@ -58,7 +59,7 @@ public class PlayerMovement_RB : TimeBehaviour
             hitCollVisibility.enabled = (hitCollVisibility.enabled ? false : true);
 
 
-        if (Physics.CheckSphere(transform.position - Vector3.up * (3f / 4f) * coll.height / 2f - Vector3.up * 0.01f, coll.radius, layerMask))
+        if (Physics.CheckSphere(transform.position - Vector3.up * (3f / 4f) * coll.height / 2f - Vector3.up * 0.1f, coll.radius, layerMask))
         {
             isGrounded = true;
             _animator.SetBool("isGrounded", true);
@@ -93,10 +94,11 @@ public class PlayerMovement_RB : TimeBehaviour
     {
         inputX = Input.GetAxis("Horizontal");
         magnitudeXMov = speed * inputX * Time.fixedDeltaTime;
-        if(canPlayerMove)
+       
+        if (canPlayerMove)
             rb.velocity = new Vector3(magnitudeXMov, rb.velocity.y, 0);
-
-        if(Mathf.Sign(inputX)!=Mathf.Sign(prevXinput) && isGrounded)//added to prevent jumping when going rapidly the opposite direction when you're on a slope
+       
+        if (Mathf.Sign(inputX)!=Mathf.Sign(prevXinput) && isGrounded)//added to prevent jumping when going rapidly the opposite direction when you're on a slope
             rb.velocity = new Vector3(rb.velocity.x, 0, 0);
 
         /*This Raycasting is to allow the player to climb stairs and slopes while allowing a little bit of edge climbing
@@ -189,6 +191,11 @@ public class PlayerMovement_RB : TimeBehaviour
         }
         prevXinput = inputX;
         playerHitsWall = false;
+        Debug.Log(rb.velocity.x);
+
+        float animatorSpeed = rb.velocity.x / 3;
+        animatorSpeed = Mathf.Abs(animatorSpeed);
+        _animator.SetFloat("speed", animatorSpeed);
     }
 
     private void playerJump(float fJM, ForceMode type)
@@ -200,9 +207,22 @@ public class PlayerMovement_RB : TimeBehaviour
     override protected void swapTime()
     {
         if (canPlayerMove)
+        {
             canPlayerMove = false;
+            if (_animator != null)
+            {
+                _animator.enabled = false;
+            }
+        }
         else
+        {
+            
             canPlayerMove = true;
+            if (_animator != null)
+            {
+                _animator.enabled = true;
+            }
+        }
 
 
     }

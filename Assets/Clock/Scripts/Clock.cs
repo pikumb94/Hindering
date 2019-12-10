@@ -44,7 +44,7 @@ void Start()
 //-----------------------------------------------------------------------------------------------------------------------------------------
 void Update()
 {
-  if(time)
+  if(time && !TimeHandler.Instance.isMenuActive)
   {
     //-- calculate time
     msecs += Time.deltaTime * clockSpeed;

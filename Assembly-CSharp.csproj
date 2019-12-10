@@ -81,6 +81,7 @@
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\MoveSinCos.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\SinRotationOffset.cs" />
+    <Compile Include="Assets\Breakable Windows\Scripts\BreakableWindow.cs" />
     <Compile Include="Assets\ChangeModeEffect.cs" />
     <Compile Include="Assets\Clock\Scripts\Clock.cs" />
     <Compile Include="Assets\ForceHandlerSeesaw.cs" />

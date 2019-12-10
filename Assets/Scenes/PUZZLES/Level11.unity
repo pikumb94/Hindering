@@ -120,13 +120,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!84 &24269094
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Aura Point Light (1) : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!43 &36076550
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1797278
+  m_Name: pb_Mesh-19953188
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4307,7 +4342,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-129198
+  m_Name: pb_Mesh-21690348
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6017,7 +6052,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-129248
+  m_Name: pb_Mesh-21690398
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7812,7 +7847,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1796482
+  m_Name: pb_Mesh-19951606
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8221,7 +8256,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3600154
+      value: -2.359292
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -8666,6 +8701,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1648428100}
+    - target: {fileID: 7458536267464908232, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50320004d78686c48accc1854b02ebbc, type: 3}
 --- !u!43 &1003757654
@@ -9000,7 +9040,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1799326
+  m_Name: pb_Mesh-19953560
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9357,48 +9397,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1032615568}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1032804352
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Aura Point Light : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!43 &1045328925
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1796928
+  m_Name: pb_Mesh-19952370
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10327,16 +10332,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 1942836584475747039, guid: 0aef6982e8dab8b4299c52b91cc4f41a,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1600262238}
-    - target: {fileID: 1942836584475747011, guid: 0aef6982e8dab8b4299c52b91cc4f41a,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1600262238}
     - target: {fileID: 1942836582744915777, guid: 0aef6982e8dab8b4299c52b91cc4f41a,
         type: 3}
       propertyPath: m_Mesh
@@ -10352,6 +10347,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1942836584475747039, guid: 0aef6982e8dab8b4299c52b91cc4f41a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1600262238}
+    - target: {fileID: 1942836584475747011, guid: 0aef6982e8dab8b4299c52b91cc4f41a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1600262238}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aef6982e8dab8b4299c52b91cc4f41a, type: 3}
 --- !u!1 &1181716914
@@ -10393,7 +10398,7 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 1, g: 1, b: 1, a: 1}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 1229097963}
+  shadowMapRenderTexture: {fileID: 24269094}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
@@ -10856,41 +10861,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1228766502}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1229097963
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Aura Point Light (1) : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!43 &1230740228
 Mesh:
   m_ObjectHideFlags: 0
@@ -11250,6 +11220,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 987560767}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1278675362
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Aura Point Light : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1301584443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12382,7 +12387,7 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 1, g: 1, b: 1, a: 1}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 1032804352}
+  shadowMapRenderTexture: {fileID: 1278675362}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
@@ -12655,7 +12660,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1799324
+  m_Name: pb_Mesh-19953558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14285,7 +14290,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-129246
+  m_Name: pb_Mesh-21690396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14927,7 +14932,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-129190
+  m_Name: pb_Mesh-21690340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15575,7 +15580,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1797580
+  m_Name: pb_Mesh-19953482
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16766,16 +16771,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: charge
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: maxForce
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 7681446998731100489, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_Mesh
@@ -16799,32 +16794,32 @@ PrefabInstance:
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3.9999998
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.49999976
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446186, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
@@ -16851,6 +16846,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7681446999045446181, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5.07
+      objectReference: {fileID: 0}
     - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_Mass
@@ -16861,10 +16861,15 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 56
       objectReference: {fileID: 0}
-    - target: {fileID: 7681446999045446181, guid: 8796b084c3155544cae250d03f3f0ca2,
+    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
-      propertyPath: m_Radius
-      value: 5.07
+      propertyPath: charge
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: maxForce
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8796b084c3155544cae250d03f3f0ca2, type: 3}
@@ -17776,7 +17781,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1796588
+  m_Name: pb_Mesh-19951752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18154,7 +18159,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1797732
+  m_Name: pb_Mesh-19953670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

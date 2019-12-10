@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088909150220123425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6}
+  m_LocalPosition: {x: 0.05, y: 0, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 3248444103664424263}
@@ -11042,12 +11042,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc1266a40fef6843b4901932d7fd352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
   hitRadius: 1
+  model: {fileID: 0}
   forceMagnitude: 25
   forceMagnitudeMaxValue: 250
   mouseScript: {fileID: 0}
   facingIndicator: {fileID: 3248444103664424263}
   fadeParameterCollidingObjects: 0.5
+  pointerGameObject: {fileID: 0}
+  fadePointer: 0.5
+  punchSound: 
 --- !u!64 &4915778281305663462
 MeshCollider:
   m_ObjectHideFlags: 0

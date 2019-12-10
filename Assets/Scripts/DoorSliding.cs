@@ -5,10 +5,14 @@ using UnityEngine;
 public class DoorSliding : TimeBehaviour
 {
 
-    public float standard_speed = 1f;
-    float speed;
+    //public float standard_speed = 1f;
+    //float speed;
     public float range = 2f;
-    public float arcLength = 0;
+    public float smoothTime = 1f;
+    float target;
+    float zVelocity;
+    float newPosition;
+    //public float arcLength = 0;
     public GameObject door;
     public Collider colDoor;
 
@@ -28,6 +32,7 @@ public class DoorSliding : TimeBehaviour
     {
         base.Start();
         zPos = door.transform.position.z;
+        target = zPos + range;
     }
 
     // void Update()
@@ -69,38 +74,61 @@ public class DoorSliding : TimeBehaviour
 
     void Update()
     {
-      if(time && !backward)
-      {
-        if(arcLength < 1)
+        if (time && !backward)
         {
-          colDoor.isTrigger = false;
-          Move(false);
+            if (door.transform.position.z < target)
+            {
+                colDoor.isTrigger = false;
+                Move(false);
+            }
         }
-      }else if(time && backward)
-      {
-        if(arcLength > 0.01f)
+        else if (time && backward)
         {
-          Move(true);
-        }else
-        {
-          door.transform.position = new Vector3(door.transform.position.x, door.transform.position.y, zPos);
-          arcLength = 0;
-          colDoor.isTrigger = false;
+            if (door.transform.position.z > zPos)
+            {
+                Move(true);
+            }
+            else if(door.transform.position.z == zPos)
+            {
+                colDoor.isTrigger = false;
+            }
         }
-      }
-      //
-      // if(time && backward && arcLength < 1)
-      // {
-      //   colDoor.isTrigger = true;
-      //   Move(true);
-      // }else if(time && !(backward) && arcLength > 0)
-      // {
-      //   Move(false);
-      //   if(arcLength <= 0)
-      //   {
-      //     colDoor.isTrigger = false;
-      //   }
-      // }
+        /*
+         if(time && !backward)
+         {
+           if(arcLength < 1)
+           {
+             colDoor.isTrigger = false;
+             Move(false);
+           }else
+           {
+             arcLength = 1;
+           }
+         }else if(time && backward)
+         {
+           if(arcLength > 0.01f)
+           {
+             Move(true);
+           }else
+           {
+             door.transform.position = new Vector3(door.transform.position.x, door.transform.position.y, zPos);
+             arcLength = 0;
+             colDoor.isTrigger = false;
+           }
+         } */
+        //
+        // if(time && backward && arcLength < 1)
+        // {
+        //   colDoor.isTrigger = true;
+        //   Move(true);
+        // }else if(time && !(backward) && arcLength > 0)
+        // {
+        //   Move(false);
+        //   if(arcLength <= 0)
+        //   {
+        //     colDoor.isTrigger = false;
+        //   }
+        // }
     }
 
     protected override void swapTime()
@@ -117,22 +145,36 @@ public class DoorSliding : TimeBehaviour
 
     public void Move(bool backward){
 
-      if (backward == false)
+
+        if (backward == false)
+        {
+            newPosition = Mathf.SmoothDamp(door.transform.position.z, target, ref zVelocity, smoothTime);
+            door.transform.position = new Vector3(door.transform.position.x, door.transform.position.y, newPosition);
+        }
+        else
+        {
+            newPosition = Mathf.SmoothDamp(door.transform.position.z, zPos, ref zVelocity, smoothTime);
+            door.transform.position = new Vector3(door.transform.position.x, door.transform.position.y, newPosition);
+        }
+    
+        /*if (backward == false)
       {
-        speed = standard_speed;
+            speed = standard_speed;
       }else
       {
         speed = -standard_speed;
       }
 
 
-      if(range != 0)
+        Debug.Log("arcLength = "+ arcLength);
+        Debug.Log("position = " + door.transform.position.z);
+        if (range != 0)
       {
         door.transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
         arcLength = Mathf.Abs(door.transform.position.z - zPos) / Mathf.Abs(range);
       }else
       {
         arcLength += Time.deltaTime * speed;
-      }
+      }*/
     }
   }

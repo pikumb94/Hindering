@@ -176,6 +176,7 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{7e471f91-c86e-4f29-804d-89ff7a209297}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{ad97d687-1769-4a34-8745-4e99fb844b00}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{78612090-fa68-4db2-943e-bff905193056}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c5c1f519-f188-4316-8eda-815cce1eb77b}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{eeb1c58e-7468-4b0e-a61c-55a4df3948f8}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{697aec7d-8841-40a1-ae3f-f9cd1db6d3b0}.xml" />
@@ -218,7 +219,9 @@
     <None Include="Assets\FMOD_AudioManager\Metadata\SnapshotGroup\{8a120dca-1a89-4b1b-9f0b-345cb8ed4596}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{4cc0ed87-ae18-409f-b8e0-838b313dd540}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{17519483-90bf-4973-9631-e7adfef792f4}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Group\{66770b19-ee0c-492b-a57c-b798482133b6}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\Event\{25be27d5-d3a8-4640-aedc-c26fa3c1cb57}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{2def5086-406a-4445-b489-844b3d01f978}.xml" />
     <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{92569708-691e-4598-b692-9d48111d487a}.xml" />
@@ -238,6 +241,7 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Asset\{af553242-fe35-408e-b6b2-50bfb336f969}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\EventFolder\{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}.xml" />
+    <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{c34a3c7c-26e9-450d-aa9c-5e31b3647bb9}.xml" />
     <None Include="Assets\FMOD_AudioManager\Metadata\Event\{c8c26f2c-04bb-4d71-8fb0-e244ffc9bfea}.xml" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <None Include="Assets\FMOD_AudioManager\Metadata\AudioFile\{5b431cf5-006c-4f06-a627-6e189da2545e}.xml" />

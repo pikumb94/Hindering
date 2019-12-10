@@ -5,7 +5,7 @@
 			<value>Footsteps</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0bb6e25c-39f7-4878-bc87-cefd99c28f1d}</destination>
@@ -53,7 +53,7 @@
 			<destination>{46c443af-718c-4e0d-80b8-2b599ac1481c}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{cef7fdc3-f2bb-4471-af78-53313e4c76c1}</destination>
+			<destination>{66770b19-ee0c-492b-a57c-b798482133b6}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{694ccf4f-ad81-472e-a401-fb0c335cc5d4}" />
@@ -90,13 +90,13 @@
 	<object class="MixerBusPanner" id="{46c443af-718c-4e0d-80b8-2b599ac1481c}" />
 	<object class="SingleSound" id="{48ee2946-e7e6-4694-9182-ed5266bc50cd}">
 		<property name="length">
-			<value>0.27513455328310027</value>
+			<value>0.25513455328310025</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.093476253558793673</value>
+			<value>0.10502978052751642</value>
 		</property>
 		<property name="pitch">
-			<value>-14.5</value>
+			<value>-9.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{191b14a9-6636-4455-abaa-a126febc628d}</destination>
@@ -123,7 +123,6 @@
 	<object class="MixerBusEffectChain" id="{37c07c5f-63c6-46f6-8554-824d722cf633}">
 		<relationship name="effects">
 			<destination>{eca186fb-55cf-41ff-b7d2-2d0d99134c98}</destination>
-			<destination>{40f36c44-3412-4247-b7ae-80157b7550c7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d8f00a02-9971-45c2-a072-af89cebcd5a9}" />
@@ -141,7 +140,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4.5</value>
+			<value>6.5</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{8e9ca312-a55d-4d60-8037-8f9bfdb2ef74}">
@@ -152,7 +151,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{bafb2dba-1a3e-41bd-a683-3c8debce8450}" />
 	<object class="MixerBusFader" id="{eca186fb-55cf-41ff-b7d2-2d0d99134c98}" />
-	<object class="SpatialiserEffect" id="{40f36c44-3412-4247-b7ae-80157b7550c7}" />
 	<object class="ThreeEQEffect" id="{04aff41e-3f02-4a15-857f-901f1c032398}">
 		<property name="lowGain">
 			<value>-11.5</value>

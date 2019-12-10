@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveAnimation : MonoBehaviour
-{private Animator  _animator ;
+{
+    [FMODUnity.EventRef]
+    public string walkingEvent = "";
+    [FMODUnity.EventRef]
+    public string footstepEvent = "";
+    [FMODUnity.EventRef]
+    public string landingEvent = "";
+
+    private Animator  _animator ;
     bool m_isAxisInUse;
     // Start is called before the first frame update
     void Start()
@@ -34,4 +42,21 @@ public class MoveAnimation : MonoBehaviour
             m_isAxisInUse = false;
         }*/
     }
+
+    public void playWalking()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(walkingEvent);
+    }
+
+    public void playFootstep()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(footstepEvent);
+    }
+
+    public void playLanding()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(landingEvent);
+    }
+
+    
 }

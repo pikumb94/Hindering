@@ -65,4 +65,7 @@ Assets/ProCore/ProBuilder/Data/ProBuilderPreferences.asset
 
 Assets/Prefab/Player_CC.prefab
 
-*.asset
+# FMOD files
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
+Assets/StreamingAssets/*.bank
+fmod_editor.log

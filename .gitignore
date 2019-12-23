@@ -69,3 +69,6 @@ Assets/Prefab/Player_CC.prefab
 Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
 Assets/StreamingAssets/*.bank
 fmod_editor.log
+Assets/Samples/ProBuilder/4.1.0/LWRP Support.meta
+
+Assets/Samples/ProBuilder/4.1.0/HDRP Support.meta

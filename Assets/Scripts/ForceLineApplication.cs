@@ -48,7 +48,7 @@ public class ForceLineApplication : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _animator.SetBool("punch", false);
+        _animator.SetInteger("punchType", 0);
 
         //se sto collidendo con uno o piu oggetti..
         if ((facingRight && mouseScript.getDst().normalized.x >= -0.001f) || (!facingRight && mouseScript.getDst().normalized.x <= 0.001f))
@@ -104,9 +104,36 @@ public class ForceLineApplication : MonoBehaviour
                             {
                                 if (!c.isTrigger)
                                 {
-                                    forceHandler.addBaricentricForce(mouseScript.getDst().normalized, forceMagnitude, forceMagnitudeMaxValue);
-                                    _animator.SetBool("punch", true);
-                                    Debug.Log("pugnato");
+                                    Vector3 direction = mouseScript.getDst().normalized;
+                                    float angleFromDown = Vector3.Angle(direction, new Vector3(0, -1, 0));
+                                    if(angleFromDown<=60 && angleFromDown >= 0)
+                                    {
+                                        _animator.SetInteger("punchType",1);
+                                    }
+                                    else
+                                    {
+                                        if(angleFromDown<=120 && angleFromDown >= 60)
+                                        {
+                                            _animator.SetInteger("punchType", 2);
+
+                                        }
+                                        else
+                                        {
+                                            if(angleFromDown <=180 && angleFromDown >= 120)
+                                            {
+                                                _animator.SetInteger("punchType", 3);
+
+                                            }
+                                            else
+                                            {
+                                                Debug.Log("Somenthing wrong with angleFromDown look for truble in forceLineApplication");
+                                            }
+                                        }
+                                    }
+                                    forceHandler.addBaricentricForce(direction, forceMagnitude, forceMagnitudeMaxValue);
+
+
+                                   // Debug.Log(Vector3.Angle(direction,new Vector3(0,-1,0)));
                                     FMODUnity.RuntimeManager.PlayOneShot(punchSound);
 
                                 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/FMOD_AudioManager/FMOD_AudioManager.fspro
+  sourceProjectPath: Assets\FMOD_AudioManager\FMOD_AudioManager.fspro
   sourceBankPath: Assets\FMOD_AudioManager\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1

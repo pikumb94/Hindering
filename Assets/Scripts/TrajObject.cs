@@ -13,6 +13,7 @@ public class TrajObject : TimeBehaviour
 
     public bool backward = true;
     public bool time = true;
+    public bool repeat = false;
     int endValue;
     float speed;
     float xspeed;
@@ -75,6 +76,7 @@ public class TrajObject : TimeBehaviour
         {
           rb.isKinematic = true;
           rb.velocity = Vector3.zero;
+          if(repeat) backward = false;
         }
       }else if(time)
       {
@@ -91,6 +93,7 @@ public class TrajObject : TimeBehaviour
         {
           rb.isKinematic = true;
           rb.velocity = Vector3.zero;
+          if(repeat) backward = true;
         }
       }
     }

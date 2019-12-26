@@ -71,7 +71,7 @@ public class TrajObject : TimeBehaviour
             break;
           }
         }
-        if(arcLength < 0)
+        if(arcLength <= 0)
         {
           rb.isKinematic = true;
           rb.velocity = Vector3.zero;
@@ -87,7 +87,7 @@ public class TrajObject : TimeBehaviour
             break;
           }
         }
-        if(arcLength > endValue)
+        if(arcLength >= endValue)
         {
           rb.isKinematic = true;
           rb.velocity = Vector3.zero;

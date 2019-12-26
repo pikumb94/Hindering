@@ -57,4 +57,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0ce6daf167bf443a144ffa76a4a17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawner: {fileID: 0}
+  respawnsPlayer: 1

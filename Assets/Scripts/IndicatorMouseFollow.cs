@@ -53,7 +53,7 @@ public class IndicatorMouseFollow : MonoBehaviour
             //ruoto il disco con la pallina fino a allinearlo col mouse
 
             //Hold shift to snap the angles
-            if (Input.GetButton("Fire3"))
+            if (Input.GetAxisRaw("Fire3")!=0)
             {
                 snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
                 dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad), 0);

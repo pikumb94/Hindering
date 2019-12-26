@@ -29,6 +29,8 @@ public class ForceLineApplication : MonoBehaviour
     public GameObject pointerGameObject;
     [Range(0, 1)]
     public float fadePointer=.5f;
+    [Range(0, 1)]
+    public float emissionCollidingObjects = .25f;
     bool isPointerOnFacingDir = true;
     Material[] materials;
 
@@ -132,17 +134,15 @@ public class ForceLineApplication : MonoBehaviour
         if (inputFacingDir != 0)
             facingRight = (inputFacingDir > 0 ? true : false);
 
-
-        if (facingRight)
-        {
-            //model.transform.eulerAngles = new Vector3(0, 90, 0);
-            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
-        }
-        else
-        {
-            //model.transform.eulerAngles = new Vector3(0, -90, 0);
-
-            facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, -Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
+        if (!TimeHandler.Instance.time) { 
+            if (facingRight)//this code swaps the collider, that detects near objects, from left to right following the walking player direction
+            {
+                facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
+            }
+            else
+            {
+                facingIndicator.localScale = new Vector3(facingIndicator.localScale.x, -Math.Abs(facingIndicator.localScale.y), facingIndicator.localScale.z);
+            }
         }
     }
 
@@ -164,10 +164,18 @@ public class ForceLineApplication : MonoBehaviour
             {
                 for(int i =0;i< test.materials.Length; i++)
                 {
+                    if (test.materials[i].name.Contains("MachineOrange")) { 
+                        Color finalColor = new Color(6,1,0) * Mathf.LinearToGammaSpace(emissionCollidingObjects);
+                        test.material.SetColor("_EmissionColor", finalColor);
+                        break;
+                    }
+                    /* This code is the one that gives the transparency to the interactable objects when the player is close to them
+                     * 
                     StandardShaderUtils.ChangeRenderMode(test.materials[i],StandardShaderUtils.BlendMode.Fade);
                     Color c = other.gameObject.GetComponent<MeshRenderer>().materials[i].color;
                     c.a = fadeParameterCollidingObjects;
                     other.gameObject.GetComponent<MeshRenderer>().materials[i].color = c;
+                    */
                 }
                 
             }
@@ -189,10 +197,18 @@ public class ForceLineApplication : MonoBehaviour
             {
                 for (int i = 0; i < test.materials.Length; i++)
                 {
+                    if (test.materials[i].name.Contains("MachineOrange"))
+                    {
+                        Color finalColor = new Color(6, 1, 0) * Mathf.LinearToGammaSpace(0);
+                        test.material.SetColor("_EmissionColor", finalColor);
+                        break;
+                    }
+                    /*
                     StandardShaderUtils.ChangeRenderMode(test.materials[i], StandardShaderUtils.BlendMode.Opaque);
                     Color c = other.gameObject.GetComponent<MeshRenderer>().materials[i].color;
                     c.a = 1;
                     other.gameObject.GetComponent<MeshRenderer>().materials[i].color = c;
+                    */
                 }
 
             }

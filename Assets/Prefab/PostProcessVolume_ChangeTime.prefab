@@ -64,7 +64,7 @@ MonoBehaviour:
   targetTemperatureVal: -10
   targetIntesityVal: 0.3
   targetFOV: 40
-  targetAberration: 1
+  targetAberration: 0.25
   targetDistorsionS2P: 30
   targetDistorsionP2S: -30
   transitionTime: 0.5

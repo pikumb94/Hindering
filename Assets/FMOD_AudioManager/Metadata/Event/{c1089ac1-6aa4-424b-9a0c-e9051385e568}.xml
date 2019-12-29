@@ -117,7 +117,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{796fd854-3763-4550-99bc-e9a6855add75}">
 		<property name="volume">
-			<value>-9</value>
+			<value>-29.5</value>
 		</property>
 		<property name="name">
 			<value>HeavyBuzz</value>
@@ -145,7 +145,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{416577a5-09df-4893-b7bb-f46f2c59bdee}">
 		<property name="volume">
-			<value>-8.5</value>
+			<value>-30</value>
 		</property>
 		<property name="name">
 			<value>SubtleBuzz</value>

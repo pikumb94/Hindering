@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{5d73fca6-0873-4b90-a11c-c287aa06d70a}">
 		<property name="name">
-			<value>DoorClosing</value>
+			<value>DoorClosingOld</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -61,6 +61,7 @@
 	<object class="GroupTrack" id="{ec0cd0ca-d201-4d20-8832-9b7e19368ddf}">
 		<relationship name="modules">
 			<destination>{ed120984-f355-42bb-8b24-58ded1f1997b}</destination>
+			<destination>{5658bf7f-4389-4535-822e-fc356aa06b4c}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{23b74e0e-0fff-45af-8a09-8604e4fed629}</destination>
@@ -69,6 +70,7 @@
 	<object class="Timeline" id="{5bb70691-838a-46e1-bfb7-d70fff82ed83}">
 		<relationship name="modules">
 			<destination>{ed120984-f355-42bb-8b24-58ded1f1997b}</destination>
+			<destination>{5658bf7f-4389-4535-822e-fc356aa06b4c}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{8cd5ecc2-fd5c-407e-8d4e-e2d52fd1e6c0}">
@@ -90,7 +92,21 @@
 	<object class="MixerBusPanner" id="{559d6aa7-aa54-4400-8e6e-7c0699cda7ca}" />
 	<object class="SingleSound" id="{ed120984-f355-42bb-8b24-58ded1f1997b}">
 		<property name="length">
-			<value>3.6000000000000001</value>
+			<value>2.8500000000000001</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{61042b42-42e5-4f56-bed9-1a4e872d8d68}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{5658bf7f-4389-4535-822e-fc356aa06b4c}">
+		<property name="start">
+			<value>2.8500000000000001</value>
+		</property>
+		<property name="length">
+			<value>0.75</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>2.8500000000000001</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{61042b42-42e5-4f56-bed9-1a4e872d8d68}</destination>

@@ -18,6 +18,15 @@ public class TrajObject : TimeBehaviour
     float speed;
     float xspeed;
 
+    [FMODUnity.EventRef]
+    public string movingSoundRef = "";
+    [FMODUnity.EventRef]
+    public string arrivalSound = "";
+    FMOD.Studio.EventInstance movingSound;
+
+    bool isArrived = false;
+
+
     void Start()
     {
       base.Start();
@@ -55,7 +64,13 @@ public class TrajObject : TimeBehaviour
         }
       }
 
-      endValue = trajectories.Length;
+        endValue = trajectories.Length;
+
+        movingSound = FMODUnity.RuntimeManager.CreateInstance(movingSoundRef);
+        movingSound.setVolume(0f);
+        movingSound.start();
+
+
     }
 
     void Update()
@@ -77,6 +92,13 @@ public class TrajObject : TimeBehaviour
           rb.isKinematic = true;
           rb.velocity = Vector3.zero;
           if(repeat) backward = false;
+
+            if (!isArrived)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(arrivalSound);
+                isArrived = true;
+            }
+
         }
       }else if(time)
       {
@@ -94,8 +116,23 @@ public class TrajObject : TimeBehaviour
           rb.isKinematic = true;
           rb.velocity = Vector3.zero;
           if(repeat) backward = true;
+
+            if (!isArrived)
+            {
+                    FMODUnity.RuntimeManager.PlayOneShot(arrivalSound);
+                    isArrived = true;
+            }
         }
       }
+
+        if (rb.isKinematic)
+            movingSound.setVolume(0f);
+        else if (!rb.isKinematic)
+        { 
+            movingSound.setVolume(1f);
+            isArrived = false;
+        }
+            
     }
 
 

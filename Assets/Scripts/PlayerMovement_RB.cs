@@ -8,7 +8,7 @@ public class PlayerMovement_RB : TimeBehaviour
     private Animator _animator;
     Vector3 playerDirection;
     bool isFalling = false;
-    bool isGrounded = true;
+    public bool isGrounded = true;
     float inputX;
     float magnitudeXMov;
     private CapsuleCollider coll;

@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PUZZLES/Level3.unity
     guid: 9c68ed12c6ae080488e8f4b039ad46b8
   - enabled: 1
-    path: Assets/Scenes/PUZZLES/Level4.unity
+    path: Assets/Scenes/PUZZLES/Tutorial6.unity
     guid: 83a54f4b77bf41b4280853f6a5a58b69
   - enabled: 1
     path: Assets/Scenes/PUZZLES/Level5.unity

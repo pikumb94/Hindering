@@ -663,7 +663,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HighPunch
-  m_Speed: 1.6
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5607265850647945372}
@@ -679,7 +679,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 5534bc1372e4812469695e9630f72634,
+  m_Motion: {fileID: -203655887218126122, guid: 2332c4f38a67d324e9babc53dce88cb0,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 

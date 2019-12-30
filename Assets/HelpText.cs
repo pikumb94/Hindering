@@ -10,8 +10,9 @@ public class HelpText : MonoBehaviour
     public float typeSpeed=0.3f;
     public float typeInitialDelay=2;
     private Text textComponent;
-    public int clipsCount;
-    public List<AudioClip> typeClips= new List<AudioClip>();
+    public bool startWithTrigger = false;
+   // public int clipsCount;
+   // public List<AudioClip> typeClips= new List<AudioClip>();
   
 
 
@@ -26,7 +27,7 @@ public class HelpText : MonoBehaviour
         
         textComponent = GetComponent<Text>();
         StartCoroutine("writeMessage");
-        clipsCount = typeClips.Count;
+      //  clipsCount = typeClips.Count;
 
     }
 
@@ -39,11 +40,11 @@ public class HelpText : MonoBehaviour
     public IEnumerator writeMessage()
     {
         yield return new WaitForSeconds(typeInitialDelay);
-
+        
         for (int i =0; i< messageToDisplay.Length+1;i++)
         {
-           // int clipIndexToDisplay = i % clipsCount;
-           GetComponent<AudioSource>().PlayOneShot(typeClips[0]);
+           //QUI LORE TALONE DOVREBBE AGGIUNGERE IL SUONO
+           //GetComponent<AudioSource>().PlayOneShot(typeClips[0]);
             textComponent.text = messageToDisplay.Substring(0,i);
             yield return new WaitForSeconds(typeSpeed);
         }

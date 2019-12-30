@@ -108,12 +108,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.125
       objectReference: {fileID: 0}
-    - target: {fileID: 1342816067423627148, guid: 551517dc34967434180c1286b181797f,
+    - target: {fileID: 7718901525219787739, guid: 551517dc34967434180c1286b181797f,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7718901525219787739, guid: 551517dc34967434180c1286b181797f,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342816067423627148, guid: 551517dc34967434180c1286b181797f,
         type: 3}
       propertyPath: m_Mesh
       value: 

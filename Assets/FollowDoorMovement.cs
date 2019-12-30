@@ -14,13 +14,10 @@ public class FollowDoorMovement : MonoBehaviour
     }
     void Update()
     {
-        if (isOneTimeOpened) { 
-            if (initPos - transform.position.x >= 1.9f)
-                return;
-            else
-                transform.localPosition = new Vector3(doorToFollow.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+        Debug.Log(transform.localPosition);
+        if (!isOneTimeOpened || transform.localPosition.x<2f)
+        {
+            transform.localPosition = new Vector3(doorToFollow.localPosition.x, transform.localPosition.y, transform.localPosition.z);
         }
-        else
-        transform.localPosition = new Vector3(doorToFollow.localPosition.x, transform.localPosition.y, transform.localPosition.z);
     }
 }

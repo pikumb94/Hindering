@@ -67,6 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -86,7 +87,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889208649562598}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8a30144e0c627294bae17dba6a934f4f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5939960396785374837}
   m_Layer: 0
-  m_Name: Door_Deck
+  m_Name: Deck_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,6 +91,12 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64457048562423822, guid: 79298396da72aeb4a9dbe792d38ccf1f,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8a30144e0c627294bae17dba6a934f4f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79298396da72aeb4a9dbe792d38ccf1f, type: 3}
 --- !u!4 &6566848886564903975 stripped

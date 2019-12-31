@@ -14,7 +14,6 @@ public class FollowDoorMovement : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(transform.localPosition);
         if (!isOneTimeOpened || transform.localPosition.x<2f)
         {
             transform.localPosition = new Vector3(doorToFollow.localPosition.x, transform.localPosition.y, transform.localPosition.z);

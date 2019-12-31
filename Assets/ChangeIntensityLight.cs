@@ -10,6 +10,7 @@ public class ChangeIntensityLight : MonoBehaviour
     float smoothTime = 1f;
     float velocity1;
     float velocity2;
+    public GameObject canvasDisplay;
 
     private void Start()
     {
@@ -33,10 +34,12 @@ public class ChangeIntensityLight : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPlayerInside = true;
+        canvasDisplay.SetActive(true);
     }
 
     private void OnTriggerExit(Collider collision)
     {
         isPlayerInside = false;
+        canvasDisplay.SetActive(false);
     }
 }

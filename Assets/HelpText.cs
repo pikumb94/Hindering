@@ -6,14 +6,15 @@ using UnityEngine.UI;
 
 public class HelpText : MonoBehaviour
 {
+    [TextArea]
     public String messageToDisplay;
     public float typeSpeed=0.3f;
     public float typeInitialDelay=2;
     private Text textComponent;
     public bool startWithTrigger = false;
-   // public int clipsCount;
-   // public List<AudioClip> typeClips= new List<AudioClip>();
-  
+    // public int clipsCount;
+    // public List<AudioClip> typeClips= new List<AudioClip>();
+    private int initialCharPos = 0;
 
 
 
@@ -34,7 +35,7 @@ public class HelpText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public IEnumerator writeMessage()
@@ -45,9 +46,24 @@ public class HelpText : MonoBehaviour
         {
            //QUI LORE TALONE DOVREBBE AGGIUNGERE IL SUONO
            //GetComponent<AudioSource>().PlayOneShot(typeClips[0]);
-            textComponent.text = messageToDisplay.Substring(0,i);
+            textComponent.text = messageToDisplay.Substring(initialCharPos,i-initialCharPos);
+
+            if (CheckTextHeight())
+            {
+                textComponent.text = "";
+                initialCharPos = i;
+            }
+                
             yield return new WaitForSeconds(typeSpeed);
         }
 
+    }
+
+    protected bool CheckTextHeight()
+    {
+        float textHeight = LayoutUtility.GetPreferredHeight(textComponent.rectTransform); //This is the height the text would LIKE to be
+        float parentHeight = GetComponentInParent<RectTransform>().rect.height; //This is the actual height of the text's parent container
+
+        return (textHeight > parentHeight );
     }
 }

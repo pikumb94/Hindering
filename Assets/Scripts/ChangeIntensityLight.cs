@@ -10,7 +10,7 @@ public class ChangeIntensityLight : MonoBehaviour
     float smoothTime = 1f;
     float velocity1;
     float velocity2;
-    public GameObject canvasDisplay;
+    public HelpText hP;
 
     private void Start()
     {
@@ -34,7 +34,7 @@ public class ChangeIntensityLight : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPlayerInside = true;
-        canvasDisplay.SetActive(true);
+        hP.enabled=true;
     }
 
     private void OnTriggerExit(Collider collision)

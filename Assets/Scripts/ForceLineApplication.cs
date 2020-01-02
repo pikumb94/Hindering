@@ -191,8 +191,16 @@ public class ForceLineApplication : MonoBehaviour
             {
                 for(int i =0;i< test.materials.Length; i++)
                 {
-                    if (test.materials[i].name.Contains("MachineOrange")) { 
-                        Color finalColor = new Color(6,1,0) * Mathf.LinearToGammaSpace(emissionCollidingObjects);
+                    String materialName = test.materials[i].name;
+                    if (materialName.Contains("magnetRed"))
+                        Debug.Log("MAGNETE");
+                    if (materialName.Contains("MachineOrange") || materialName.Contains("magnetRed"))
+                    {
+                        Color finalColor;
+                        if(materialName.Contains("magnetRed"))
+                            finalColor = new Color(255, 255, 0) * Mathf.LinearToGammaSpace(100f);
+                        else
+                            finalColor = new Color(6,1,0) * Mathf.LinearToGammaSpace(emissionCollidingObjects);
                         test.material.SetColor("_EmissionColor", finalColor);
                         break;
                     }
@@ -224,7 +232,8 @@ public class ForceLineApplication : MonoBehaviour
             {
                 for (int i = 0; i < test.materials.Length; i++)
                 {
-                    if (test.materials[i].name.Contains("MachineOrange"))
+                    String materialName = test.materials[i].name;
+                    if (materialName.Contains("MachineOrange") || materialName.Contains("magnetRed"))
                     {
                         Color finalColor = new Color(6, 1, 0) * Mathf.LinearToGammaSpace(0);
                         test.material.SetColor("_EmissionColor", finalColor);

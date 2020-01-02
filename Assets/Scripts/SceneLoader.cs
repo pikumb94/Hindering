@@ -13,9 +13,13 @@ public static class SceneLoader
         //Intro,
         Loading,
         MainMenu,
+        Tutorial1,
+        Tutorial2,
+        Tutorial3,
+        Tutorial4,
+        Tutorial5,
+        Tutorial6,
         Level1,
-        Level2,
-        Level3,
         Level4,
         Level5,
         Level6,
@@ -25,6 +29,7 @@ public static class SceneLoader
         Level10,
         Level11,
         Level12,
+        LastRoom,
         Ending,
     }
     public static Scenes ScenesFromString(String nome)

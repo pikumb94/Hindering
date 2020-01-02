@@ -21,6 +21,7 @@ public class NextPuzzleTrigger : MonoBehaviour
         {
             if(nextScene != "")
                 SceneLoader.HandleSceneSwitch((SceneLoader.Scenes)System.Enum.Parse(typeof(SceneLoader.Scenes), nextScene));
+
             else
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 

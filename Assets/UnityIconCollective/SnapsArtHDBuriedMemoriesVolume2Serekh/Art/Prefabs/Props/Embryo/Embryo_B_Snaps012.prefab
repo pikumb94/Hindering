@@ -23,19 +23,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
       propertyPath: m_Name
-      value: Embryo_B
+      value: Embryo_B_Snaps012
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 25.935123
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.016236879
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 12.207354
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -69,10 +69,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 04f4796b269f00946b8cc5fa7ae217c4, type: 2}
+      objectReference: {fileID: 2100000, guid: e2f5f12bf847c164db342a7f72ffba00, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6890621d8002934fb646c6594a377ff, type: 3}
 --- !u!1 &3516348337539348193 stripped

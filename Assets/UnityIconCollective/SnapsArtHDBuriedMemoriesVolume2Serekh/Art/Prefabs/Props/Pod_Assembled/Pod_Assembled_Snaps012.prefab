@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3a1b19f5dcaa6b54c8874153fbacde94, type: 3}
       propertyPath: m_Name
-      value: Pod_Assembled
+      value: Pod_Assembled_Snaps012
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3a1b19f5dcaa6b54c8874153fbacde94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,5 +55,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 3a1b19f5dcaa6b54c8874153fbacde94, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 30919b12b911cfe408f06b140c476396, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1b19f5dcaa6b54c8874153fbacde94, type: 3}

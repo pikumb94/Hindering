@@ -16,8 +16,10 @@ public class TimeBehaviour : MonoBehaviour
 
             //dico al sistema che quando viene chiamato "timeChange" io devo eseguire switchKinematic ecc..
            GameEvents.current.onTimeChange += swapTime;
-
-            rb = GetComponent<Rigidbody>();
+            if(GetComponent<Rigidbody>())
+            {
+              rb = GetComponent<Rigidbody>();
+            }
 
             //setto il rigidbody in base a ActiveOnTime
             if(!TimeHandler.Instance.time)

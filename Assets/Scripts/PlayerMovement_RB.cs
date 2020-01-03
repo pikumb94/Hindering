@@ -44,7 +44,6 @@ public class PlayerMovement_RB : TimeBehaviour
 
         stairHeightFromPlayerCenter = Mathf.Abs(coll.height/2 - heightStair);
         numRays = (int) ((coll.height) /raycastInterspace);
-        Debug.Log(numRays);
 
         GameObject go = transform.GetChild(0).gameObject;
         _animator= go.GetComponent<Animator>();
@@ -163,7 +162,6 @@ public class PlayerMovement_RB : TimeBehaviour
              Physics.Raycast(transform.position + Vector3.up * heightStair / 2f, horizontalMove, out hitMidHigh, magnStairRaycast, layerMask) ||
              Physics.Raycast(transform.position + Vector3.up * heightStair, horizontalMove, out hitHigh, magnStairRaycast, layerMask))*/
         {
-                Debug.Log("PLAYER HITS RAYCAST!");
                 rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
         else
@@ -174,7 +172,6 @@ public class PlayerMovement_RB : TimeBehaviour
                 //Debug.Log(hitKnee.distance + "  " + hitLow.distance);
                 if(Mathf.Abs(hitKnee.distance - hitLow.distance) <= Mathf.Epsilon)
                 {
-                    Debug.Log("Only last two and same distance");
                     rb.velocity = new Vector3(0, rb.velocity.y, 0);
                 }
 

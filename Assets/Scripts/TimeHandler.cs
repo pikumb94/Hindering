@@ -56,7 +56,6 @@ public class TimeHandler : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2") && !isMenuActive)
         {
-            Debug.Log("Cambio tempo");
             timeSwitch();
         }
 

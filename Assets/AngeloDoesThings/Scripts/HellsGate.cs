@@ -10,7 +10,6 @@ public class HellsGate : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collided with " + other.name);
 
         if (other.tag == "Player")
         {

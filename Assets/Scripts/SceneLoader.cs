@@ -20,6 +20,8 @@ public static class SceneLoader
         Tutorial5,
         Tutorial6,
         Level1,
+        Level2,
+        Level3,
         Level4,
         Level5,
         Level6,
@@ -27,8 +29,6 @@ public static class SceneLoader
         Level8,
         Level9,
         Level10,
-        Level11,
-        Level12,
         LastRoom,
         Ending,
     }

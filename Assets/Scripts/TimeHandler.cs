@@ -18,7 +18,7 @@ public class TimeHandler : MonoBehaviour
     public GameObject commandsMenuPanel;
 
     [HideInInspector]
-    public bool time = true;
+    public bool time = false;
     [HideInInspector]
     public bool isMenuActive = false;
 
@@ -112,6 +112,9 @@ public class TimeHandler : MonoBehaviour
 
     private void OnLevelWasLoaded()
     {
-        time = true;
+        if (SceneManager.GetActiveScene().name == "Tutorial1")
+            time = true;
+        else
+            time = false;
     }
 }

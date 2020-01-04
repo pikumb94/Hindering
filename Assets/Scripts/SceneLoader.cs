@@ -29,8 +29,9 @@ public static class SceneLoader
         Level8,
         Level9,
         Level10,
-        LastRoom,
-        Ending,
+        Ending1,
+        Ending2,
+        ThankYouForPlaying
     }
     public static Scenes ScenesFromString(String nome)
     {

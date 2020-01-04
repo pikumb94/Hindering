@@ -1597,41 +1597,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 280895930}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &281783473
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &289159455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2683,41 +2648,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f0c8a3c4801c314a9080fc9250d5f7b, type: 3}
---- !u!84 &498963517
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!43 &516989037
 Mesh:
   m_ObjectHideFlags: 0
@@ -6294,7 +6224,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.189788
+      value: -4.1897874
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -6365,6 +6295,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderingPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: StopEvent
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045836698613, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -6549,6 +6483,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1761632811}
+    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: fadeParameterCollidingObjects
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: forceMagnitude
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: forceMagnitudeMaxValue
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3070721353868499180, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
       propertyPath: m_RootOrder
@@ -6588,21 +6537,6 @@ PrefabInstance:
         type: 3}
       propertyPath: magnRaycast
       value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: fadeParameterCollidingObjects
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: forceMagnitude
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: forceMagnitudeMaxValue
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7925426817745062905, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
@@ -6865,32 +6799,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelpCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: messageToDisplay
-      value: "Waste\r.\nProtect.\r\nScatter.\r\nRemove\r.\nInfluence.\r\nIncrease.\r\nHarm.\nReach\r.\nAnnihilate.\r\nPrevent.\nPretend.\nFear.\nLive.
-        \     \n\n\nDie.               \n\n\n\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: startWithTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: typeInitialDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: typeSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9095226494979025664, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7001,6 +6909,52 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 188
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: messageToDisplay
+      value: "Waste\r.\nProtect.\r\nScatter.\r\nRemove\r.\nInfluence.\r\nIncrease.\r\nHarm.\nReach\r.\nAnnihilate.\r\nPrevent.\nPretend.\nFear.\nLive.
+        \     \n\n\nDie.               \n\n\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: startWithTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: typeInitialDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: typeSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_Text
@@ -7030,26 +6984,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 188
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225618313024841509, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 108b965702257af48885e2665cb94497, type: 3}
@@ -8285,6 +8219,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42e949fded9304745a989ca004f5bf58, type: 3}
+--- !u!84 &1379368270
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1381847576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8631,15 +8600,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 893414588773823054, guid: db2847fd62ccd6f4a94e72329767fff9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.02
-      objectReference: {fileID: 0}
     - target: {fileID: 893414588773823055, guid: db2847fd62ccd6f4a94e72329767fff9,
         type: 3}
       propertyPath: m_Intensity
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 893414588773823054, guid: db2847fd62ccd6f4a94e72329767fff9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db2847fd62ccd6f4a94e72329767fff9, type: 3}
@@ -14398,6 +14367,41 @@ PrefabInstance:
       objectReference: {fileID: 26091404}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea765ec3708f3b141a6535188af8c1dd, type: 3}
+--- !u!84 &1956709657
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &2012732501
 PrefabInstance:
   m_ObjectHideFlags: 0

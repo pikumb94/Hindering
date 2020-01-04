@@ -24,7 +24,7 @@ public class DoorSliding : TimeBehaviour
     public string doorOpeningSound = "";
     [FMODUnity.EventRef]
     public string doorClosingSound = "";
-    private bool canPlay = false;
+    private bool isOpen = false; 
 
 
 
@@ -80,6 +80,11 @@ public class DoorSliding : TimeBehaviour
             {
                 colDoor.isTrigger = false;
                 Move(false);
+                if (!isOpen)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(doorOpeningSound);
+                    isOpen = true;
+                }
             }
         }
         else if (time && backward)
@@ -87,6 +92,11 @@ public class DoorSliding : TimeBehaviour
             if (door.transform.position.z > zPos)
             {
                 Move(true);
+                if (isOpen)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(doorClosingSound);
+                    isOpen = false;
+                }
             }
             else if(door.transform.position.z == zPos)
             {

@@ -376,7 +376,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9264681
+      value: 2.7370114
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -4693,7 +4693,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 0.20000003
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -4708,7 +4708,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.20572092
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -4718,7 +4718,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9786107
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -4733,7 +4733,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -23.743002
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -5878,7 +5878,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -5893,7 +5893,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.9709463
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -5903,7 +5903,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.2392973
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -5918,7 +5918,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 207.68999
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -6417,41 +6417,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 507716314}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &511330608
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &516444037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7091,7 +7056,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -7106,7 +7071,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.92660844
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -7116,7 +7081,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.37602773
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -7131,7 +7096,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 135.824
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -9992,6 +9957,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 896413247}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &904348016
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &906242042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13817,7 +13817,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -13827,22 +13827,22 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -13857,7 +13857,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14641,7 +14641,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14656,7 +14656,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.9992645
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14666,7 +14666,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.038348157
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14681,7 +14681,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 184.39499
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14710,7 +14710,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 0.20000003
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14725,7 +14725,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.90531033
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14735,7 +14735,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.42475078
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -14750,7 +14750,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -129.73001
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -16164,7 +16164,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 0.20000003
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -16179,7 +16179,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.43491787
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -16189,7 +16189,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.90047014
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -16204,7 +16204,7 @@ PrefabInstance:
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -308.44
       objectReference: {fileID: 0}
     - target: {fileID: 6489129838994187997, guid: 047009135277970479dea33b8bd6628c,
         type: 3}
@@ -19318,41 +19318,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!84 &1819789571
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &1837743362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19572,6 +19537,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 236797469}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1871832559
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1872233969
 PrefabInstance:
   m_ObjectHideFlags: 0

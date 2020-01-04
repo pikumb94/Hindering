@@ -90,7 +90,7 @@ public class TimeHandler : MonoBehaviour
     }
 
 
-    void timeSwitch()
+    public void timeSwitch()
     {
 
         //inverto il tempo

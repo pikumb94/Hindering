@@ -11,6 +11,7 @@ public class ChangeIntensityLight : MonoBehaviour
     float velocity1;
     float velocity2;
     public HelpText hP;
+    public GameObject canvasFullstop;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class ChangeIntensityLight : MonoBehaviour
     {
         isPlayerInside = true;
         hP.enabled=true;
+        canvasFullstop.SetActive(false);
     }
 
     private void OnTriggerExit(Collider collision)

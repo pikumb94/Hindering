@@ -44,6 +44,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelpCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: messageToDisplay
+      value: MANIPULATES TIME.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: fullstopBlink
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9095226494979025664, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -164,6 +174,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_Text
+      value: .
+      objectReference: {fileID: 0}
     - target: {fileID: 9095226496766234227, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -193,31 +223,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_Text
-      value: .
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: messageToDisplay
-      value: MANIPULATES TIME.
       objectReference: {fileID: 0}
     - target: {fileID: 8166797533456055953, guid: 108b965702257af48885e2665cb94497,
         type: 3}

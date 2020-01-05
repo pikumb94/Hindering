@@ -194,8 +194,9 @@ public class ForceLineApplication : MonoBehaviour
                     String materialName = test.materials[i].name;
                     if (materialName.Contains("magnetRed"))
                         Debug.Log("MAGNETE");
-                    if (materialName.Contains("MachineOrange") || materialName.Contains("magnetRed"))
+                    if (materialName.Contains("MachineOrange") || materialName.Contains("magnetRed") || materialName.Contains("wanduhr"))
                     {
+                        Debug.Log(materialName);
                         Color finalColor;
                         if(materialName.Contains("magnetRed"))
                             finalColor = new Color(255, 255, 0) * Mathf.LinearToGammaSpace(100f);
@@ -233,7 +234,7 @@ public class ForceLineApplication : MonoBehaviour
                 for (int i = 0; i < test.materials.Length; i++)
                 {
                     String materialName = test.materials[i].name;
-                    if (materialName.Contains("MachineOrange") || materialName.Contains("magnetRed"))
+                    if (materialName.Contains("MachineOrange") || materialName.Contains("magnetRed") || materialName.Contains("wanduhr"))
                     {
                         Color finalColor = new Color(6, 1, 0) * Mathf.LinearToGammaSpace(0);
                         test.material.SetColor("_EmissionColor", finalColor);

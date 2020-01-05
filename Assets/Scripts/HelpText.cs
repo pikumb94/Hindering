@@ -15,7 +15,9 @@ public class HelpText : MonoBehaviour
     // public int clipsCount;
     // public List<AudioClip> typeClips= new List<AudioClip>();
     private int initialCharPos = 0;
-
+    public float fullstopBlink = 1f;
+    private bool isActive = true;
+    public bool isFullstopBlinking = true;
 
 
     // Start is called before the first frame update
@@ -61,6 +63,10 @@ public class HelpText : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }
 
+        if(isFullstopBlinking)
+            InvokeRepeating("BlinkFullStop", 0, 1/fullstopBlink);
+
+
     }
 
     protected bool CheckTextHeight()
@@ -69,5 +75,26 @@ public class HelpText : MonoBehaviour
         float parentHeight = GetComponentInParent<RectTransform>().rect.height; //This is the actual height of the text's parent container
 
         return (textHeight > parentHeight );
+    }
+
+    private void BlinkFullStop()
+    {
+
+        if (TimeHandler.Instance.time)
+        {
+            if (isActive)
+            {
+                textComponent.text = messageToDisplay.Substring(0, messageToDisplay.Length - 1);
+                isActive = false;
+            }
+            else
+            {
+                textComponent.text = messageToDisplay.Substring(0, messageToDisplay.Length);
+                isActive = true;
+            }
+        }
+
+        return;
+
     }
 }

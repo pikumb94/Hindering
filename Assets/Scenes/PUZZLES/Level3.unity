@@ -6608,6 +6608,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &751261382
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Aura Point Light (1) : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &754068668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12268,6 +12303,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorComplete
       objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: colDoor
+      value: 
+      objectReference: {fileID: 1446115730}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: backward
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: standard_speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: smoothTime
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: doorClosingSound
+      value: event:/DoorCloseFast
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: doorOpeningSound
+      value: event:/DoorOpenFast
+      objectReference: {fileID: 0}
     - target: {fileID: 8512180731782689888, guid: 169d76dce04872e42915a6bb755d7532,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12307,36 +12377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: colDoor
-      value: 
-      objectReference: {fileID: 1446115730}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: range
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: backward
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: standard_speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: smoothTime
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: doorClosingSound
-      value: event:/DoorClosing
       objectReference: {fileID: 0}
     - target: {fileID: 411891253837660627, guid: 169d76dce04872e42915a6bb755d7532,
         type: 3}
@@ -18027,6 +18067,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!84 &1768580775
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Aura Point Light : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &1771922907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7883379720353873564, guid: 21abac65408a6f942b9b6fdddf717819,

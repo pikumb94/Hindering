@@ -8,6 +8,10 @@ public class FollowDoorMovement : MonoBehaviour
     public bool isOneTimeOpened=false;
     private float initPos;
 
+    [FMODUnity.EventRef]
+    public string openSound = "";
+    bool isOpen = false;
+
     private void Start()
     {
         initPos = transform.position.x;
@@ -23,6 +27,12 @@ public class FollowDoorMovement : MonoBehaviour
         else
         {
             Debug.Log("Non muovo");
+            
+            if(!isOpen)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(openSound);
+                isOpen = true;
+            }
         }
     }
 }

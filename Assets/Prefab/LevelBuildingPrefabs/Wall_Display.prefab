@@ -54,6 +54,11 @@ PrefabInstance:
       propertyPath: fullstopBlink
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: typeSound
+      value: event:/MonitorTyping 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9095226494979025664, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -184,15 +189,15 @@ PrefabInstance:
       propertyPath: m_Text
       value: .
       objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234227, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Right Mouse Click or LB:'
-      objectReference: {fileID: 0}
     - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_Text
       value: .
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234227, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Right Mouse Click or LB:'
       objectReference: {fileID: 0}
     - target: {fileID: 9095226496766234227, guid: 108b965702257af48885e2665cb94497,
         type: 3}
@@ -227,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 8166797533456055953, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -913.9
+      value: -900
       objectReference: {fileID: 0}
     - target: {fileID: 8166797533456055953, guid: 108b965702257af48885e2665cb94497,
         type: 3}

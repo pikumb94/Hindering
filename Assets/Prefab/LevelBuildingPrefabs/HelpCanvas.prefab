@@ -272,6 +272,9 @@ MonoBehaviour:
   typeSpeed: 0.2
   typeInitialDelay: 0
   startWithTrigger: 0
+  fullstopBlink: 1
+  isFullstopBlinking: 1
+  typeSound: event:/MonitorTyping 4
 --- !u!82 &9095226496766234226
 AudioSource:
   m_ObjectHideFlags: 0

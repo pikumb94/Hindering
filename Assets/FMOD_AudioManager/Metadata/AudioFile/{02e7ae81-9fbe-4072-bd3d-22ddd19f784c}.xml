@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{02e7ae81-9fbe-4072-bd3d-22ddd19f784c}">
+		<property name="assetPath">
+			<value>ufx_imp_huge.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{af553242-fe35-408e-b6b2-50bfb336f969}</destination>
+		</relationship>
+	</object>
+</objects>

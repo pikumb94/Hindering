@@ -12,7 +12,7 @@ public class ParticleFront : TimeBehaviour
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
-        ps.Simulate(startingState + Random.Range(-1f, 1f));
+        ps.Simulate(startingState + Random.Range(0, 1f));
         ps.Play();
         base.Start();
     }

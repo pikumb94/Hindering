@@ -35,6 +35,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &-8669919897741055785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StoppedTime/SnapshotIntensity
+  m_EditorClassIdentifier: 
+  Name: SnapshotIntensity
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-8559863980893064201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +103,7 @@ MonoBehaviour:
   Path: event:/BarrelCollisionHard
   guid: 87d697ad6917344a87454e99fb844b00
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -251,7 +268,7 @@ MonoBehaviour:
   Path: event:/PlatformArrival
   guid: 54b8efe2d0ceac41a8a585e6469733ef
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -291,7 +308,7 @@ MonoBehaviour:
   Path: event:/MetalBarrelCollisionSoft
   guid: c1293368dadc1e4ba9f55267f8e704bc
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -314,7 +331,7 @@ MonoBehaviour:
   Path: event:/DoorClosing
   guid: a6fc735d7308904ba11cc287aa06d70a
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -440,12 +457,12 @@ MonoBehaviour:
   Path: snapshot:/StoppedTime
   guid: 6d7a48d65a89e340aa809fce9b33d06b
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1137452394581577992}
+  - {fileID: -8669919897741055785}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -482,7 +499,7 @@ MonoBehaviour:
   Path: event:/LightBuzz
   guid: c19a08c1a46a4b429a0ce9051385e568
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -523,7 +540,7 @@ MonoBehaviour:
   Path: event:/DoorOpening
   guid: 87edc04c18ae9f40b8e0838b313dd540
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -546,7 +563,7 @@ MonoBehaviour:
   Path: event:/FirstRoomMusic
   guid: a61bcda6a82a1d4c81615cbe36726565
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -586,7 +603,7 @@ MonoBehaviour:
   Path: event:/MonitorTyping 4
   guid: 17bc1e759befdf4fb72c6486e8ba6c5a
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -818,7 +835,7 @@ MonoBehaviour:
   Path: event:/MetalBarrelCollisionHard
   guid: 6f05189dd1bde4458420438bc9a267ce
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -858,7 +875,7 @@ MonoBehaviour:
   Path: event:/CrateCollisionHard
   guid: 83945117bf9073499631e7adfef792f4
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -899,7 +916,7 @@ MonoBehaviour:
   Path: event:/MonitorTyping 3
   guid: 7119cd9f71d5e348bd8644b3490e0402
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -922,7 +939,7 @@ MonoBehaviour:
   Path: event:/MonitorTyping 2
   guid: 111b68e06f388a41abd874630bf44571
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -998,7 +1015,7 @@ MonoBehaviour:
   Path: event:/StopToPlay
   guid: 2c6fc2c8bb04714d8fb0e244ffc9bfea
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1094,6 +1111,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-2854371680782764569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637138635196275831
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2459509237884010541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1144,7 @@ MonoBehaviour:
   Path: event:/LightFootsteps
   guid: d527be25a8d34046aedcc26fa3c1cb57
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1255,7 +1290,7 @@ MonoBehaviour:
   Path: event:/BarrelCollisionSoft
   guid: 8650ef2d6a404544b489844b3d01f978
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1296,7 +1331,7 @@ MonoBehaviour:
   Path: event:/Punch
   guid: 834b063433cac441972678e6632f6a3e
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1372,7 +1407,7 @@ MonoBehaviour:
   Path: event:/PlatformLoop
   guid: f026e36a8b6b1e4a910f206b11eee3da
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1430,7 +1465,7 @@ MonoBehaviour:
   Path: event:/CrateCollisionSoft
   guid: 1741811c6dfdcc4bb9e559366b8880d8
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1452,7 +1487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5393842842527021116}
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   EditorEvents:
   - {fileID: 3250731630376815407}
   - {fileID: -72207005523890953}
@@ -1492,10 +1527,10 @@ MonoBehaviour:
   - {fileID: 9136631447096179401}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   StringsBanks:
   - {fileID: 5393842842527021116}
-  stringsBankWriteTime: 637138489492642321
+  stringsBankWriteTime: 637138635195426310
   cacheVersion: 3
 --- !u!114 &74136844348561762
 MonoBehaviour:
@@ -1529,7 +1564,7 @@ MonoBehaviour:
   Path: event:/Landing
   guid: 19f5c1c588f116438eda815cce1eb77b
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1552,7 +1587,7 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: 1f2cb5559b86a24cb3c524f66b38f1b3
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1592,7 +1627,7 @@ MonoBehaviour:
   Path: event:/EasterEggSong
   guid: fbc8f53c0d78c64b880bc87aa52669cd
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1632,7 +1667,7 @@ MonoBehaviour:
   Path: event:/MetalBoxCollisionSoft
   guid: 6aaf54e23ab62442b63387be9aecd3a4
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1725,7 +1760,7 @@ MonoBehaviour:
   Path: event:/AmbientNoise
   guid: fec55559b09f8845a84d7613b515c53f
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1799,7 +1834,7 @@ MonoBehaviour:
   Path: event:/MetalBoxCollisionHard
   guid: d90522229cc3984cb7e693cb8b2a8704
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1875,7 +1910,7 @@ MonoBehaviour:
   Path: event:/MonitorTyping
   guid: 5302db78cb18884c91900d06fb0f2474
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1950,7 +1985,7 @@ MonoBehaviour:
   Path: event:/PlayToStop
   guid: 12cd908f6c26004a85f705ac936cc846
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2195,7 +2230,7 @@ MonoBehaviour:
   Path: event:/CalmMusic02
   guid: 9518fd1fc2018b40a81ec7f12a1c4053
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2252,7 +2287,7 @@ MonoBehaviour:
   Path: event:/DoorCloseFast
   guid: 005752b5d0d4f94f9ddea143d38a5ac6
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2275,7 +2310,7 @@ MonoBehaviour:
   Path: event:/CalmMusic01
   guid: 1ac8f569c04aad43b9eb1cb9f474a3f3
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2350,7 +2385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD_AudioManager/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637138489492642321
+  lastModified: 637138635195426310
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2424,7 +2459,7 @@ MonoBehaviour:
   Path: event:/FirstRoomDoorOpen
   guid: a561bbef451938428d020e6d4e93bc81
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2470,7 +2505,7 @@ MonoBehaviour:
   Path: event:/CalmMusic03
   guid: 1230fb1d72b83e47a28aa108c45287af
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2586,7 +2621,7 @@ MonoBehaviour:
   Path: event:/DoorOpenFast
   guid: c84939ce32b9be46aa393cdf318ab183
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2644,7 +2679,7 @@ MonoBehaviour:
   Path: event:/CalmMusic04
   guid: 729d4d84a7f98347aed15e9e783d9332
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2753,7 +2788,7 @@ MonoBehaviour:
   Path: snapshot:/NormalTime
   guid: d0904ba760edab44be6e462df4c85f13
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2945,7 +2980,7 @@ MonoBehaviour:
   Path: event:/AmbientNoise Impact
   guid: 46960ee3139d8e43af61e4703e7bdcfa
   Banks:
-  - {fileID: 5502140683029447891}
+  - {fileID: -2854371680782764569}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0

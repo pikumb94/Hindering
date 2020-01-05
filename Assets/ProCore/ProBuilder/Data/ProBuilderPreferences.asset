@@ -18,11 +18,13 @@ MonoBehaviour:
   - pbPlyApplyTransform
   - pbPlyQuads
   - pbPlyNGons
+  - pbFillHoleSelectsEntirePath
   m_Int_keys:
   - pbHandleAlignment
   - pbDefaultEditLevel
   - pbDefaultSelectionMode
   - pbDefaultExportFormat
+  - pb_GIWorkflowMode
   m_Float_keys:
   - pbEditorScroll.x
   - pbEditorScroll.y

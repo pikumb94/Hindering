@@ -42,14 +42,14 @@ EditorBuildSettings:
     path: Assets/Scenes/PUZZLES/Level3.unity
     guid: 59bdd91157cc14c4c9ac90a94bdaa20f
   - enabled: 1
-    path: Assets/Scenes/PUZZLES/Level4.unity
+    path: Assets/Scenes/PUZZLES/Level6.unity
     guid: 9ed2c50342fa5444f90c8123ce3bd8c1
   - enabled: 1
     path: Assets/Scenes/PUZZLES/Level5.unity
     guid: 7f3d93e98feb319429a2ebe0e38ccabb
-  - enabled: 1
-    path: Assets/Scenes/PUZZLES/Level6.unity
-    guid: 86f9964da3aee994699010cf281111d1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/PUZZLES/Level7.unity
     guid: f2209635000906b4f87772db7ee08763
@@ -65,6 +65,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PUZZLES/Ending1.unity
     guid: c11400a7cf0f91c439fd76e6ca3458c6
+  - enabled: 1
+    path: Assets/Scenes/PUZZLES/Ending2.unity
+    guid: 8ea16027c8f716d4e876e2fa15ba2edb
   - enabled: 1
     path: Assets/Scenes/PUZZLES/ThankYouForPlaying.unity
     guid: dc3a9629bac8a24469df9069748b876d

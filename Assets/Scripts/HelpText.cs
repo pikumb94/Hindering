@@ -16,6 +16,8 @@ public class HelpText : MonoBehaviour
     // public List<AudioClip> typeClips= new List<AudioClip>();
     private int initialCharPos = 0;
 
+    [FMODUnity.EventRef]
+    public string typeSound;
 
 
     // Start is called before the first frame update
@@ -50,6 +52,7 @@ public class HelpText : MonoBehaviour
                 yield return null;
             //QUI LORE TALONE DOVREBBE AGGIUNGERE IL SUONO
             //GetComponent<AudioSource>().PlayOneShot(typeClips[0]);
+            FMODUnity.RuntimeManager.PlayOneShot(typeSound);
             textComponent.text = messageToDisplay.Substring(initialCharPos,i-initialCharPos);
 
             if (CheckTextHeight())

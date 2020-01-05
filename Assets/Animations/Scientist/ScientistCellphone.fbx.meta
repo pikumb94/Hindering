@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: ScientistCellPhone
+    second: _ScientistCellPhone
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ScientistCellPhone
+      name: _ScientistCellPhone
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0

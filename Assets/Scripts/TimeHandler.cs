@@ -22,6 +22,7 @@ public class TimeHandler : MonoBehaviour
     [HideInInspector]
     public bool isMenuActive = false;
 
+    bool inEasterEgg = false;
 
     private static TimeHandler instance = null;
 
@@ -109,11 +110,37 @@ public class TimeHandler : MonoBehaviour
 
     }
 
-    private void OnLevelWasLoaded()
+    private void OnEnable()
     {
-        if (SceneManager.GetActiveScene().name == "Tutorial1")
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+
+        if (inEasterEgg)
+        {
+            inEasterEgg = false;
+            //togliere il commento in DontDestryOnLoad e appena viene ricaricata la scena Ending2(ovvero inEasterEgg == true) trovare il player e settare la posizione giusta
+            //GameObject.Find("Player_RB").transform.position = new Vector3(44, 1, 0);
+
+            
+        }
+
+        if (scene.name == "Tutorial1")
             time = true;
         else
             time = false;
+
+        if (scene.name.Contains("Ending2"))
+            inEasterEgg = true;
+
+        
+
     }
 }

@@ -53,7 +53,7 @@ public class IndicatorMouseFollow : MonoBehaviour
             //ruoto il disco con la pallina fino a allinearlo col mouse
 
             //Hold shift to snap the angles
-            if (Input.GetAxisRaw("Fire3")!=0)
+            if (Input.GetAxisRaw("Fire3") != 0)
             {
                 snapAngleRad = snapRadiants(Mathf.Atan2(dst.y, dst.x));
                 dst = new Vector3(Mathf.Cos(snapAngleRad), Mathf.Sin(snapAngleRad), 0);
@@ -67,8 +67,9 @@ public class IndicatorMouseFollow : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
 
-            if (prevMousMagn != mousePos.sqrMagnitude)
+            if (Mathf.Abs(prevMousMagn- mousePos.sqrMagnitude)>.1f/*prevMousMagn != mousePos.sqrMagnitude*/) {
                 usingJoystick = false;
+            }
 
             prevMousMagn = mousePos.sqrMagnitude;
         }

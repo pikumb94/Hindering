@@ -7,23 +7,31 @@ public class WallOfDeath_Switch : MonoBehaviour
     public ParticleSystem particleSystem;
     public Collider collider;
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            
+            if (other.transform.position.x < transform.position.x) {
+                
+                collider.enabled = false;
+                var emission = particleSystem.emission;
+                emission.rateOverTime = 0f;
+                Debug.Log("Player entrato a SX!");
+            }
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player uscito!");
-            if (other.transform.position.x > transform.position.x) {
-                collider.enabled = false;
-                var emission = particleSystem.emission;
-                emission.rateOverTime = 0f;
-                Debug.Log("ALLA DESTRA");
-            }
-            else
+            if (other.transform.position.x < transform.position.x)
             {
                 collider.enabled = true;
                 var emission = particleSystem.emission;
                 emission.rateOverTime = 20f;
-                Debug.Log("ALLA SINISTRA");
+                Debug.Log("Player uscito a SX!");
             }
         }
     }

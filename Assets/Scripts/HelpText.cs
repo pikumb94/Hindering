@@ -32,8 +32,7 @@ public class HelpText : MonoBehaviour
         
         textComponent = GetComponent<Text>();
         StartCoroutine("writeMessage");
-      //  clipsCount = typeClips.Count;
-
+        //  clipsCount = typeClips.Count;
     }
 
     // Update is called once per frame
@@ -52,10 +51,12 @@ public class HelpText : MonoBehaviour
         {
             while (!TimeHandler.Instance.time)
                 yield return null;
-            //QUI LORE TALONE DOVREBBE AGGIUNGERE IL SUONO
-            //GetComponent<AudioSource>().PlayOneShot(typeClips[0]);
-            FMODUnity.RuntimeManager.PlayOneShot(typeSound);
+            
             textComponent.text = messageToDisplay.Substring(initialCharPos,i-initialCharPos);
+
+
+            if( i < messageToDisplay.Length && messageToDisplay[i] != '\n' && messageToDisplay[i] != ' ')
+                FMODUnity.RuntimeManager.PlayOneShot(typeSound);
 
             if (CheckTextHeight())
             {

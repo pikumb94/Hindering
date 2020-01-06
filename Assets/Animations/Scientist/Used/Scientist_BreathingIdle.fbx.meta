@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 0bf1156c13422dd458b1491d16fce604
+guid: 51eb7c99609dffe43878ba1e31517450
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: PlayerWalking
+    second: ScientistBreathingIdle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,18 +35,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: PlayerWalking
+      name: ScientistBreathingIdle
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 275
+      lastFrame: 620
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

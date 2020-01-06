@@ -577,6 +577,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-6545630363511401786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637139460609447853
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6540955807269945573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1641,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2279582665583477303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StoppedTime/SnapshotIntensity
+  m_EditorClassIdentifier: 
+  Name: SnapshotIntensity
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-2269263668976767626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2641,6 +2676,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &2515063099164382139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StoppedTime/SnapshotIntensity
+  m_EditorClassIdentifier: 
+  Name: SnapshotIntensity
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &2515323440227976915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2783,6 +2835,24 @@ MonoBehaviour:
   Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637138705500466300
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3120537122894630314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637139493395531188
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -3357,6 +3427,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 27385
+--- !u!114 &5704839806949715174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StoppedTime/SnapshotIntensity
+  m_EditorClassIdentifier: 
+  Name: SnapshotIntensity
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &5813134735886790951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3798,6 +3885,24 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+  Exists: 0
+--- !u!114 &8003137260848610984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_AudioManager/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637139095224459958
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &8116026505296605851
 MonoBehaviour:

@@ -31,6 +31,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813341719761164488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073624212724856891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cdce8f320f5ec4bab9ed609e66ed6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingEvent: event:/LightBarefoot
+  footstepEvent: event:/Barefoot
+  landingEvent: event:/Landing
 --- !u!1001 &1282213294311654311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -578,6 +593,12 @@ PrefabInstance:
 --- !u!4 &8363448336406678776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7339664259688746847, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1282213294311654311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8073624212724856891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7043647686633847708, guid: 4712e5de4b6f0d04586ad8c937bebd0b,
     type: 3}
   m_PrefabInstance: {fileID: 1282213294311654311}
   m_PrefabAsset: {fileID: 0}

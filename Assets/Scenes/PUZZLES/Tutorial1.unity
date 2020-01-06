@@ -126,7 +126,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16898
+  m_Name: pb_Mesh-2620474
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -319,7 +319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16914
+  m_Name: pb_Mesh-2620490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1011,7 +1011,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16092
+  m_Name: pb_Mesh-2619684
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2131,7 +2131,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16884
+  m_Name: pb_Mesh-2620460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2747,7 +2747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16888
+  m_Name: pb_Mesh-2620464
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3384,7 +3384,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16802
+  m_Name: pb_Mesh-2620378
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3571,6 +3571,41 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!84 &697803929
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &707550358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3712,7 +3747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16900
+  m_Name: pb_Mesh-2620476
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3974,7 +4009,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16886
+  m_Name: pb_Mesh-2620462
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4165,7 +4200,7 @@ GameObject:
   - component: {fileID: 786803635}
   m_Layer: 0
   m_Name: BeginningSpotLight
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4258,7 +4293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hP: {fileID: 91630452}
   canvasFullstop: {fileID: 892509960}
-  backgroundMusic: event:/FirstRoomMusic
+  backgroundMusicRef: event:/FirstRoomMusic
 --- !u!65 &786803636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4382,7 +4417,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16170
+  m_Name: pb_Mesh-2619756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6313,14 +6348,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
-      propertyPath: StopEvent
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052881, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_RenderingPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: StopEvent
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045836698613, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -6334,41 +6369,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
---- !u!84 &962413850
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &970237118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6580,11 +6580,6 @@ PrefabInstance:
       propertyPath: magnRaycast
       value: 0.55
       objectReference: {fileID: 0}
-    - target: {fileID: 3221273996510804307, guid: 50320004d78686c48accc1854b02ebbc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5896152009534949880, guid: 50320004d78686c48accc1854b02ebbc,
         type: 3}
       propertyPath: fadeParameterCollidingObjects
@@ -6679,6 +6674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221273996510804307, guid: 50320004d78686c48accc1854b02ebbc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6825926553177959813, guid: 50320004d78686c48accc1854b02ebbc, type: 3}
@@ -6861,37 +6861,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelpCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: messageToDisplay
-      value: "Waste\r.\nProtect.\r\nScatter.\r\nRemove\r.\nInfluence.\r\nIncrease.\r\nHarm.\nReach\r.\nAnnihilate.\r\nPrevent.\nPretend.\nFear.\nLive.
-        \     \n\n\nDie.               \n\n\n\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: startWithTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: typeInitialDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: typeSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
-        type: 3}
-      propertyPath: isFullstopBlinking
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9095226494979025664, guid: 108b965702257af48885e2665cb94497,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7021,6 +6990,37 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: messageToDisplay
+      value: "Waste\r.\nProtect.\r\nScatter.\r\nRemove\r.\nInfluence.\r\nIncrease.\r\nHarm.\nReach\r.\nAnnihilate.\r\nPrevent.\nPretend.\nFear.\nLive.
+        \     \n\n\nDie.               \n\n\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: startWithTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: typeInitialDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: typeSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095226496766234225, guid: 108b965702257af48885e2665cb94497,
+        type: 3}
+      propertyPath: isFullstopBlinking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9095226496766234224, guid: 108b965702257af48885e2665cb94497,
         type: 3}
@@ -7575,6 +7575,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorComplete
       objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: colDoor
+      value: 
+      objectReference: {fileID: 8560105812349520653}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: backward
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: standard_speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: smoothTime
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
+        type: 3}
+      propertyPath: doorClosingSound
+      value: event:/DoorCloseFast
+      objectReference: {fileID: 0}
     - target: {fileID: 8512180731782689888, guid: 169d76dce04872e42915a6bb755d7532,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7614,36 +7644,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: colDoor
-      value: 
-      objectReference: {fileID: 8560105812349520653}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: range
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: backward
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: standard_speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: smoothTime
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 3890149124808285008, guid: 169d76dce04872e42915a6bb755d7532,
-        type: 3}
-      propertyPath: doorClosingSound
-      value: event:/DoorCloseFast
       objectReference: {fileID: 0}
     - target: {fileID: 411891253837660627, guid: 169d76dce04872e42915a6bb755d7532,
         type: 3}
@@ -8539,15 +8539,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 893414588773823055, guid: db2847fd62ccd6f4a94e72329767fff9,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 893414588773823054, guid: db2847fd62ccd6f4a94e72329767fff9,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 893414588773823055, guid: db2847fd62ccd6f4a94e72329767fff9,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db2847fd62ccd6f4a94e72329767fff9, type: 3}
@@ -8618,26 +8618,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00079345703
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -479.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 308.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -958.3
-      objectReference: {fileID: 0}
     - target: {fileID: 2353345309427440488, guid: a9cfed8d92b705648ade92a6bca543a8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8667,6 +8647,26 @@ PrefabInstance:
         type: 3}
       propertyPath: fullstopBlink
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00079345703
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -479.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 308.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -958.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9cfed8d92b705648ade92a6bca543a8, type: 3}
@@ -9304,6 +9304,41 @@ Transform:
   m_Father: {fileID: 2118623023}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!84 &1623471775
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1649295378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9450,7 +9485,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16894
+  m_Name: pb_Mesh-2620470
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10010,7 +10045,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16162
+  m_Name: pb_Mesh-2619748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10504,41 +10539,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42e949fded9304745a989ca004f5bf58, type: 3}
---- !u!84 &1850173230
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &1850603774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10610,7 +10610,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16890
+  m_Name: pb_Mesh-2620466
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11018,7 +11018,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16892
+  m_Name: pb_Mesh-2620468
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14816,6 +14816,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45c41f59dbb9894cb895ef86d325026, type: 3}
+--- !u!1 &2094216045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8363448335248846603, guid: 50320004d78686c48accc1854b02ebbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 987560767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094216046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094216045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Music
+  Event: event:/FirstRoomMusic
+  PlayEvent: 3
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &2094610295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15147,7 +15176,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31912
+  m_Name: pb_Mesh91392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15657,26 +15686,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -478.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.410605e-10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00076293945
-      objectReference: {fileID: 0}
-    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -956.9
-      objectReference: {fileID: 0}
     - target: {fileID: 2353345309427440488, guid: a9cfed8d92b705648ade92a6bca543a8,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -15711,6 +15720,26 @@ PrefabInstance:
         type: 3}
       propertyPath: typeSound
       value: event:/MonitorTyping
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -478.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.410605e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442496474902358922, guid: a9cfed8d92b705648ade92a6bca543a8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -956.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9cfed8d92b705648ade92a6bca543a8, type: 3}

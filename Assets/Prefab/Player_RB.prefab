@@ -95640,6 +95640,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b659ae4d8f4491d48b93a8bc39bb2da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4628402412651564618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043647686633847708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cdce8f320f5ec4bab9ed609e66ed6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingEvent: event:/LightBarefoot
+  footstepEvent: event:/Barefoot
+  landingEvent: event:/Landing
 --- !u!1 &7339664258766744748
 GameObject:
   m_ObjectHideFlags: 0
@@ -96139,12 +96154,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864f6c17487c8654e80e6ad70e272afe, type: 3}
---- !u!23 &5078112487927131357 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3248444103664424265, guid: 864f6c17487c8654e80e6ad70e272afe,
-    type: 3}
-  m_PrefabInstance: {fileID: 7741088339251329428}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5078112487927131347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3248444103664424263, guid: 864f6c17487c8654e80e6ad70e272afe,
@@ -96154,6 +96163,12 @@ Transform:
 --- !u!1 &5078112487927131353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3248444103664424269, guid: 864f6c17487c8654e80e6ad70e272afe,
+    type: 3}
+  m_PrefabInstance: {fileID: 7741088339251329428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5078112487927131357 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3248444103664424265, guid: 864f6c17487c8654e80e6ad70e272afe,
     type: 3}
   m_PrefabInstance: {fileID: 7741088339251329428}
   m_PrefabAsset: {fileID: 0}

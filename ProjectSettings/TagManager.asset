@@ -8,6 +8,7 @@ TagManager:
   - ArmPivot
   - Metal
   - PauseMenu
+  - Music
   layers:
   - Default
   - TransparentFX

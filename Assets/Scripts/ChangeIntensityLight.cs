@@ -12,15 +12,12 @@ public class ChangeIntensityLight : MonoBehaviour
     float velocity2;
     public HelpText hP;
     public GameObject canvasFullstop;
-
-    [FMODUnity.EventRef]
-    public string backgroundMusic = "";
-    bool isPlaying = false;
-
+    
     private void Start()
     {
         light = GetComponent<Light>();
         newIntensity = 0f;
+        
     }
 
     private void Update()
@@ -41,12 +38,6 @@ public class ChangeIntensityLight : MonoBehaviour
         isPlayerInside = true;
         hP.enabled=true;
         canvasFullstop.SetActive(false);
-        if (!isPlaying)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(backgroundMusic);
-            isPlaying = true;
-        }
-        
     }
 
     private void OnTriggerExit(Collider collision)

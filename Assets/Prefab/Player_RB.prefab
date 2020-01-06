@@ -95900,11 +95900,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7339664259688746847}
     m_Modifications:
-    - target: {fileID: 4513507939139155741, guid: 187dd37cfd6eb2e4ca296227f1c3bddd,
-        type: 3}
-      propertyPath: m_Name
-      value: CharacterV3_mixamo
-      objectReference: {fileID: 0}
     - target: {fileID: 646383466088072462, guid: 187dd37cfd6eb2e4ca296227f1c3bddd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95975,6 +95970,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3000002
       objectReference: {fileID: 0}
+    - target: {fileID: 4513507939139155741, guid: 187dd37cfd6eb2e4ca296227f1c3bddd,
+        type: 3}
+      propertyPath: m_Name
+      value: CharacterV3_mixamo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692361299725293778, guid: 187dd37cfd6eb2e4ca296227f1c3bddd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187dd37cfd6eb2e4ca296227f1c3bddd, type: 3}
 --- !u!95 &4112149684322936053 stripped
@@ -96002,11 +96007,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7339664259688746847}
     m_Modifications:
-    - target: {fileID: 3248444103664424269, guid: 864f6c17487c8654e80e6ad70e272afe,
-        type: 3}
-      propertyPath: m_Name
-      value: ArmPivot
-      objectReference: {fileID: 0}
     - target: {fileID: 3248444103664424263, guid: 864f6c17487c8654e80e6ad70e272afe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96061,6 +96061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248444103664424269, guid: 864f6c17487c8654e80e6ad70e272afe,
+        type: 3}
+      propertyPath: m_Name
+      value: ArmPivot
       objectReference: {fileID: 0}
     - target: {fileID: 2099948263571040251, guid: 864f6c17487c8654e80e6ad70e272afe,
         type: 3}

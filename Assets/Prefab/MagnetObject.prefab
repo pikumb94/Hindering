@@ -2107,6 +2107,7 @@ GameObject:
   - component: {fileID: 7681446999045446187}
   - component: {fileID: 6654225907351905394}
   - component: {fileID: 6270150941563306144}
+  - component: {fileID: 9188589515803492304}
   m_Layer: 12
   m_Name: MagnetObject
   m_TagString: Untagged
@@ -2204,3 +2205,17 @@ MonoBehaviour:
   lParams: {fileID: 11400000, guid: fadbec9823934a34e9905ed81f528374, type: 2}
   fm: 1
   maxLineLength: 5
+--- !u!64 &9188589515803492304
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681446999045446182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}

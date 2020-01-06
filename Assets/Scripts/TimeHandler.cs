@@ -70,7 +70,7 @@ public class TimeHandler : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
-        if (Input.GetButtonDown("Start"))
+        if (Input.GetButtonDown("Start") && SceneManager.GetActiveScene().name!="Ending1")
         {
             if (pauseMenu.activeSelf || commandsMenuPanel.activeSelf)
             {

@@ -6,6 +6,12 @@ public class WallOfDeath_Switch : MonoBehaviour
 {
     public ParticleSystem particleSystem;
     public Collider collider;
+    private Material m;
+
+    private void Start()
+    {
+        //m=particleSystem.GetComponent<ParticleSystemRenderer>().trailMaterial;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +23,8 @@ public class WallOfDeath_Switch : MonoBehaviour
                 collider.enabled = false;
                 var emission = particleSystem.emission;
                 emission.rateOverTime = 0f;
-                Debug.Log("Player entrato a SX!");
+                m = particleSystem.GetComponent<ParticleSystemRenderer>().trailMaterial;
+                StartCoroutine("FadeOn");
             }
         }
     }
@@ -31,8 +38,33 @@ public class WallOfDeath_Switch : MonoBehaviour
                 collider.enabled = true;
                 var emission = particleSystem.emission;
                 emission.rateOverTime = 20f;
-                Debug.Log("Player uscito a SX!");
+                m = particleSystem.GetComponent<ParticleSystemRenderer>().trailMaterial;
+                StartCoroutine("FadeOff");
             }
+        }
+    }
+
+    IEnumerator FadeOn()
+    {
+        Color c;
+        for (float ft = 1f; ft >= 0f; ft -= 0.1f)
+        {
+            c = m.color;
+            c.a = ft;
+            m.color = c;
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
+    IEnumerator FadeOff()
+    {
+        Color c;
+        for (float ft = 0; ft <= 1; ft += 0.1f)
+        {
+            c = m.color;
+            c.a = ft;
+            m.color = c;
+            yield return new WaitForSeconds(.1f);
         }
     }
 }

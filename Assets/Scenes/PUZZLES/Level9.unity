@@ -1697,41 +1697,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 141595991}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &186191620
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Aura Point Light (1) : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &198782444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2639,41 +2604,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 473331847}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &485018633
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Aura Point Light : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!43 &485845658
 Mesh:
   m_ObjectHideFlags: 0
@@ -2837,41 +2767,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!84 &496290397
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Aura Point Light (1) : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &498478429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2996,6 +2891,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f0c8a3c4801c314a9080fc9250d5f7b, type: 3}
+--- !u!84 &504891540
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Aura Point Light (1) : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &520153114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8535,7 +8465,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3616123
+      value: -2.3603787
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -8606,6 +8536,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderingPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: Event
+      value: event:/DarkMusic04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
@@ -10687,7 +10633,7 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 1, g: 1, b: 1, a: 1}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 186191620}
+  shadowMapRenderTexture: {fileID: 504891540}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
@@ -12804,7 +12750,7 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 1, g: 1, b: 1, a: 1}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 1665769191}
+  shadowMapRenderTexture: {fileID: 1947453596}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
@@ -15053,41 +14999,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1664785557}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1665769191
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Aura Point Light : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &1668253777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16697,6 +16608,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1930421703}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1947453596
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Aura Point Light : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1947842008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17278,41 +17224,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7455897697544087204, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 617945828}
-    - target: {fileID: 2939210653919956671, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 617945828}
-    - target: {fileID: 7681446999045446181, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: m_Radius
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: charge
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: maxForce
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 7681446998731100489, guid: 8796b084c3155544cae250d03f3f0ca2,
         type: 3}
       propertyPath: m_Mesh
@@ -17353,6 +17264,41 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1419476633}
+    - target: {fileID: 7681446999045446181, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681446999045446187, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: charge
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654225907351905394, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: maxForce
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455897697544087204, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 617945828}
+    - target: {fileID: 2939210653919956671, guid: 8796b084c3155544cae250d03f3f0ca2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 617945828}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8796b084c3155544cae250d03f3f0ca2, type: 3}
 --- !u!1001 &2029013391

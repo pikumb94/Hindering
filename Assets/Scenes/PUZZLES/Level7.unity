@@ -1869,41 +1869,6 @@ Transform:
   m_Father: {fileID: 831929281}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &284060087
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_End : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &295565231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,41 +2859,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 469511450}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &469640532
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Light_Begin : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &474445586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,16 +3365,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2041257155}
-    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2041257155}
     - target: {fileID: 3022496478502448942, guid: f98ab0542ffd32b4cb8902d15858b119,
         type: 3}
       propertyPath: m_Intensity
@@ -3475,6 +3395,16 @@ PrefabInstance:
       propertyPath: m_Range
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2041257155}
+    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2041257155}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98ab0542ffd32b4cb8902d15858b119, type: 3}
 --- !u!1001 &567049454
@@ -4679,16 +4609,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 351977064}
-    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 351977064}
     - target: {fileID: 3022496478502448942, guid: f98ab0542ffd32b4cb8902d15858b119,
         type: 3}
       propertyPath: m_Intensity
@@ -4719,6 +4639,16 @@ PrefabInstance:
       propertyPath: m_Range
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 351977064}
+    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 351977064}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98ab0542ffd32b4cb8902d15858b119, type: 3}
 --- !u!43 &753914193
@@ -5162,6 +5092,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 194891621}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &804195594
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_End : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &825363940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5866,16 +5831,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1162265291}
-    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1162265291}
     - target: {fileID: 3022496478502448942, guid: f98ab0542ffd32b4cb8902d15858b119,
         type: 3}
       propertyPath: m_Intensity
@@ -5906,6 +5861,16 @@ PrefabInstance:
       propertyPath: m_Range
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1162265291}
+    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1162265291}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98ab0542ffd32b4cb8902d15858b119, type: 3}
 --- !u!4 &872173011 stripped
@@ -5914,6 +5879,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1823461564}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &874168262
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Light_Begin : Shadow Map Render Texture'
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 512
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 52
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &893721049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8864,16 +8864,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1211812757}
-    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1211812757}
     - target: {fileID: 3022496478502448942, guid: f98ab0542ffd32b4cb8902d15858b119,
         type: 3}
       propertyPath: m_Intensity
@@ -8904,6 +8894,16 @@ PrefabInstance:
       propertyPath: m_Range
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8016442550847506329, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1211812757}
+    - target: {fileID: 2189347164842092042, guid: f98ab0542ffd32b4cb8902d15858b119,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1211812757}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98ab0542ffd32b4cb8902d15858b119, type: 3}
 --- !u!4 &1387726582 stripped
@@ -9502,7 +9502,7 @@ PrefabInstance:
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.358846
+      value: -9.360378
       objectReference: {fileID: 0}
     - target: {fileID: 1057445045408052880, guid: 3a4451e0c48c18d488363661f1607cb4,
         type: 3}
@@ -9568,6 +9568,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: Event
+      value: event:/DarkMusic03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653982880, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}
+      propertyPath: StopEvent
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4451e0c48c18d488363661f1607cb4, type: 3}

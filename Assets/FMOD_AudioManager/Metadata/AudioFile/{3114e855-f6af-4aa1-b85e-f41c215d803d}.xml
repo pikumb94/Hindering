@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{3114e855-f6af-4aa1-b85e-f41c215d803d}">
+		<property name="assetPath">
+			<value>DarkRhythm04.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>27.431999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{af553242-fe35-408e-b6b2-50bfb336f969}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -244,4 +244,9 @@ public class TrajObject : TimeBehaviour
         time = true;
       }
     }
-  }
+
+    private void OnDestroy()
+    {
+        movingSound.setVolume(0f);
+    }
+}

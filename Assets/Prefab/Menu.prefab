@@ -4571,7 +4571,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: COMMANDS
+  m_Text: CONTROLS
 --- !u!1 &2364941765616796266
 GameObject:
   m_ObjectHideFlags: 0

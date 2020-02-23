@@ -9,9 +9,8 @@ public static class SceneLoader
     private static Action targetScene;
     public enum Scenes
     {
-        //examples
-        //Intro,
         Loading,
+        SplashScreenDisplay,
         MainMenu,
         Tutorial1,
         Tutorial2,

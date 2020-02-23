@@ -30,7 +30,8 @@ public class SplashFade : MonoBehaviour
         }
 
         if (sceneName != "")
-            SceneLoader.HandleSceneSwitch((SceneLoader.Scenes)System.Enum.Parse(typeof(SceneLoader.Scenes), sceneName));
+            //SceneLoader.HandleSceneSwitch((SceneLoader.Scenes)System.Enum.Parse(typeof(SceneLoader.Scenes), sceneName));
+            SceneLoader.LoadMainMenu();
 
         else
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
